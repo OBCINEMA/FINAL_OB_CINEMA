@@ -15,10 +15,10 @@ public class Find_PasswordImpl implements Find_PasswordService {
 	private Find_PasswordDAO find_PasswordDAO;
 
 	@Override
-	public void send_mail(UsersVO vo, String div) throws Exception {
+	public String send_mail(UsersVO vo, String div) throws Exception {
 		// Mail Server 설정
 		String charSet = "utf-8";
-		String hostSMTP = "smtp.naver.com";
+		String hostSMTP = "smtp.gmail.com";
 		String hostSMTPid = "gukbongworld@gmail.com";
 		String hostSMTPpwd = "bitcamp1!";
 
@@ -56,6 +56,7 @@ public class Find_PasswordImpl implements Find_PasswordService {
 		} catch (Exception e) {
 			System.out.println("메일발송 실패 : " + e);
 		}
+		return "mailsendOk";
 	}
 
 }
