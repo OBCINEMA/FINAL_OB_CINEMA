@@ -169,7 +169,7 @@
 	  		location.href="movieRes.do";
 	  	} else {
 	  		alert("아이디없음");
-	  		document.getElementById("id01").style="display:block";
+	  		modal.style.display = "block";
 		} 
 	}
 	

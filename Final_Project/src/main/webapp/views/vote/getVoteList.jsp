@@ -62,7 +62,7 @@
 		<!-- //Header 끝 -->
 			
 		<!--메인 영역 Content -->
-		<main class="page-content"  style="margin-top:146px"> 
+		<main class="page-content"  style="margin-top:146px; border: 1px solid #999; border-radius:4px;"> 
 			<div class="container">
 			
 				<div class="votedmovie" style="display:flex"></div>
@@ -137,7 +137,7 @@
 				var loginChk = result.loginChk;
 				if(loginChk==0){
 					alert("로그인하셔야 투표에 참여할 수 있습니다");
-					document.getElementById('id01').style.display='block';
+			  		modal.style.display = "block";
 				}else if(loginChk!=0){
 					getVoteList();
 				}
