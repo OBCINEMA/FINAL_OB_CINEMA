@@ -78,28 +78,28 @@
 			data : commentData,
 			dataType : "text",
 			success : function(result) {
-	            var okID = result;
-	            var noID = "notfound";
+				var okID = result;
+				var noID = "notfound";
 
-	            if (result == noID) {
-	               $("#show").css("display", "block");
-	               $("#nouser").css("display","none");
-	               $("#userID").html("일치하는 정보가 없습니다").css("color", "red");
+				if (result == noID) {
+					$("#show").css("display", "block");
+					$("#nouser").css("display", "none");
+					$("#userID").html("일치하는 정보가 없습니다").css("color", "red");
 
-	            } else if (result == okID) {
-	               alert("아이디가 있고");
-	               $("#userID").html("회원님의 아이디는  : "+ result).css("color", "blue");
-	               $("#show").css("display", "block");
+				} else if (result == okID) {
+					alert("아이디가 있고");
+					$("#userID").html("회원님의 아이디는  : " + result).css("color",
+							"blue");
+					$("#show").css("display", "block");
 
-	            }
+				}
 
-	         }
+			}
 		});
 
 		/* 여기까지 */
 	}
-	
-	
+
 	/* 여기서부턴 비밀번호 찾기 */
 	function findPWGO(frm) {
 		var email = $("#email_2").val();
@@ -130,11 +130,19 @@
 			data : commentData,
 			dataType : "text",
 			success : function(result) {
-				
+				var getMSG = result;
+				if (getMSG == "mailsendOk") {
+					alert("임시 비밀번호를 Mail로 보내드렸습니다.");
+					location.href="/mainGO.do";
 
+
+
+				} else if (getMSG == "mailsendNo") {
+					$("#nocheck").css("display", "block");
 				}
 
-			
+			}
+
 		});
 
 		/* 여기까지 */
@@ -224,7 +232,8 @@
 										<h6 style="margin-bottom: 0px; margin-top: 20px;">EMAIL:</h6>
 									</div>
 									<div class="col-md-4 ">
-										<input type="text" name="email" placeholder="Email" id="email_2">
+										<input type="text" name="email" placeholder="Email"
+											id="email_2">
 									</div>
 									<div class="col-md-2">
 										<div class="single-input">
@@ -236,6 +245,8 @@
 									</div>
 
 								</div>
+								<div class="col-md-7" id="nocheck"
+									style="color: red; display: none">등록정보가 일치하지 않습니다.</div>
 
 
 							</form>

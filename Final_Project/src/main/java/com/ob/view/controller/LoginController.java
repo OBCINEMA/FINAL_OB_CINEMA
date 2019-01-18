@@ -116,15 +116,16 @@ public class LoginController {
 					System.out.println("바뀐 vo" +vo);
 					String mailsendOk = find_PasswordService.send_mail(vo, "find_pw");
 					System.out.println(mailsendOk);
-					return "redirect:/mainGO.do";
+					return mailsendOk;
 					
 					
 					
 				}else {
 					System.out.println("없네");
+					return "mailsendNo";
 				}
 				
-				return null;
+				
 				
 			}
 			
