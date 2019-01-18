@@ -62,38 +62,68 @@
 		<!-- //Header 끝 -->
 			
 		<!--메인 영역 Content -->
-		<main class="page-content"  style="margin-top:146px; border: 1px solid #999; border-radius:4px;"> 
+		<main class="page-content"  style="margin-top:146px;"> 
 			<div class="container">
 			
+				<div class="row" style="margin: 30px;">
+					<h1 style="margin:auto; font-size:60px;">보고싶은 명화</h1>
+				</div>
+				
 				<div class="votedmovie" style="display:flex"></div>
 				<div class="mListByVote" style="display:flex"></div>
 				<div class="mList" style="display:flex"></div>
 				
 				
-				<div class="votedmovie-content" style="width:80%; height:auto; margin:auto; padding:20px;">
-				<div class="row">
-				<h1>내가 선택한 영화</h1>
-				</div>
-				<div class="row">
-					<div class="col-3">
-						<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg"
-							style="height: inherit">
+				<div class="votedmovie-content" style="width:80%; height:auto; margin:auto; padding:30px; border: 1px solid #999; border-radius:10px;">
+					<div class="row" style="margin:0;">
+						<h1 style="color:black;">내가 선택한 영화</h1>
 					</div>
-					<div class="col-5">
-						<h2 class="votedmovie_title" style="margin:auto;">국가부도의 날</h2>
-						<ul style="list-style:none; margin: 5px 0; padding:0 0 0 10px">
-						<li><h6 class="votedmovie_gnr">장르 : 로맨스</h6></li>
-						<li><h6 class="votedmovie_director">감독 : 누구누구</h6></li>
-						<li><h6 class="votedmovie_runningtime">상영시간 : 20000분</h6></li>
-						<li><h6 class="votedmovie_restrict"> 제한상영가 : 7세 시청가</h6></li>
-						</ul>
-						<a href="" style="margin:">영화정보 상세보기</a>
-					</div>
-					<div class="col-4">
-						그래프 뽷
+					<hr>
+					<div class="row" style="margin:0;">
+						<div class="col-3">
+							<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg"
+								style="height: inherit">
+						</div>
+						<div class="col-5">
+							<h2 class="votedmovie_title" style="margin:auto;">국가부도의 날</h2>
+							<ul style="list-style:none; margin: 5px 0; padding:0 0 0 10px">
+							<li><h6 class="votedmovie_gnr">장르 : 로맨스</h6></li>
+							<li><h6 class="votedmovie_director">감독 : 누구누구</h6></li>
+							<li><h6 class="votedmovie_runningtime">상영시간 : 20000분</h6></li>
+							<li><h6 class="votedmovie_restrict"> 제한상영가 : 7세 시청가</h6></li>
+							</ul>
+							<a href="" style="margin:">영화정보 상세보기</a>
+						</div>
+						<div class="col-4">
+							<span class="votedmovie_vote" style="font-size:50px">43표</span>
+						</div>
 					</div>
 				</div>
+				
+				<div class="mListByVote-content" style="width:80%; height:auto; margin:auto; padding:30px; border: 1px solid #999; border-radius:10px;">
+					<div class="row" style="margin:0;">
+						<h1 style="color:black;">득표수 상위 영화 5개</h1>
+					</div>
+					<hr>
+					<div class="row" style="margin:0;">
+						<div class="row mListByVote-content-one" style="height:130px; margin:0;">
+							<a href="#" style="display:inline">
+							<div class="col-3">
+								<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg"
+									style="width:auto;">
+								<span>국가 부도의 날</span>
+							</div>
+							</a>
+							<div class="col-3">
+								차트 ----------------------- 123표
+							</div>
+						</div>
+					</div>
+					
 				</div>
+				
+				
+				
 			</div>
 		</main>	
 		<!--// 메인 영역 Content -->
@@ -153,20 +183,40 @@
 		var mListByVote = result.mListByVote;
 		var mList = result.mList;
 		
-		
 		console.log(votedmovie);
 		console.log(mListByVote);
 		console.log(mList);
 		
 		if(loginChk!=0){
-			if(votedmovie!=undefined){
+			if(votedmovie.title!=1){
 				//	내가 선택한 영화(votedmovie)******************************
 				var str = '';
-				str += '<center>';
-				str += '<div class="votedmovie-content container">';
-				str += '<h1>'+votedmovie.title+'</h1>';
+				str += '<div class="votedmovie-content" style="width:80%; height:auto; margin:10px auto; padding:30px; border: 1px solid #999; border-radius:10px;">';
+				str += '<div class="row" style="margin:0;">';
+				str += '		<h1 style="color:black;">내가 선택한 영화</h1>';
+				str += '		</div>';
+				str += '		<hr>';
+				str += '	<div class="row" style="margin:0;">';
+				str += '		<div class="col-3">';
+				str += '			<img class="votedmovie_img" src="/resources/img/'+ votedmovie.poster +'" alt="'+ votedmovie.poster +'"';
+				str += '				style="height: inherit">';
 				str += '</div>';
-				str += '</center>';
+				str += '		<div class="col-5">';
+				str += '			<h2 class="votedmovie_title" style="margin:auto;">'+ votedmovie.title + '</h2>';
+				str += '			<ul style="list-style:none; margin: 5px 0; padding:0 0 0 10px">';
+				str += '			<li><h6 class="votedmovie_gnr">장르 : ' + votedmovie.gnr + '</h6></li>';
+				str += '			<li><h6 class="votedmovie_director">감독 : ' + votedmovie.director + '</h6></li>';
+				str += '			<li><h6 class="votedmovie_runningtime">상영시간 : ' + votedmovie.runningtime + '</h6></li>';
+				str += '			<li><h6 class="votedmovie_restrict"> 제한상영가 : ' + votedmovie.restrict + '</h6></li>';
+				str += '			</ul>';
+				str += '			<a href="#" style="margin:auto">영화정보 상세보기</a>';
+				str += '		</div>';
+				str += '		<div class="col-4" style="text-align:center;">';
+				str += '			<span class="votedmovie_vote" style="font-size:100px; height:270px; line-height:270px;">' + votedmovie.vote + '표</span>';
+				str += '		</div>';
+				str += '	</div>';
+				str += '</div>';
+				
 				$('.votedmovie').html(str);
 			}
 		}
