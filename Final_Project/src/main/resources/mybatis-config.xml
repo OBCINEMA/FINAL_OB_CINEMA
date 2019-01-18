@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <typeAliases>
+  	<typeAlias alias="board" type="com.ob.biz.vo.BoardVO"/>
+  	<typeAlias alias="users" type="com.ob.biz.vo.UsersVO"/>
+  	<typeAlias alias="no_users" type="com.ob.biz.vo.No_UsersVO"/>
+  	<typeAlias alias="comments" type="com.ob.biz.vo.CommentsVO"/>
+  	<typeAlias alias="movie" type="com.ob.biz.vo.MovieVO"/>
+  	<typeAlias alias="movie_history" type="com.ob.biz.vo.Movie_HistoryVO"/>
+  	<typeAlias alias="reservation" type="com.ob.biz.vo.ReservationVO"/>
+ 	<typeAlias alias="theater" type="com.ob.biz.vo.TheaterVO"/>
+	<typeAlias alias="screen" type="com.ob.biz.vo.ScreenVO"/>
+	<typeAlias alias="schedule" type="com.ob.biz.vo.ScheduleVO"/>
+	<typeAlias alias="plus" type="com.ob.biz.vo.PlusVO"/>
+	<typeAlias alias="page" type="com.ob.biz.vo.PageVO"/>
+	
+	<!--  -->
+  </typeAliases>
+  
+  <mappers>
+    <mapper resource="mappings/board-mapper.xml"/>
+    <mapper resource="mappings/users-mapper.xml"/>
+    <mapper resource="mappings/no_users-mapper.xml"/>
+    <mapper resource="mappings/comments-mapper.xml"/>
+    <mapper resource="mappings/movie-mapper.xml"/>
+    <mapper resource="mappings/movie_history-mapper.xml"/>
+    <mapper resource="mappings/reservation-mapper.xml"/>
+    <mapper resource="mappings/schedule-mapper.xml" />
+	<mapper resource="mappings/theater-mapper.xml" />
+	<mapper resource="mappings/screen-mapper.xml" />
+	<mapper resource="mappings/plus-mapper.xml" />
+  </mappers>
+</configuration>

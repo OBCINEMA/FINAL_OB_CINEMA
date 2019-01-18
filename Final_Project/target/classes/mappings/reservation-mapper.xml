@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 	private int r_id, u_id, nu_id, sch_id, seat_row, seat_col;
+	private Date r_date;
+
+	//사용 편의를 위한 변수 선언
+	//세션에 모든 정보를 다 담아서 쓰면 서버가 과부하 될 수 있으므로
+	//그때그때 필요한 정보들을 VO에 담아서 쓰는 형태로 쓸 수 있게함
+	
+	private String title, runningtime;	//영화제목,상영시간(러닝타임)	- movie
+	private String t_name, t_phone, t_address;	//극장정보	- theater
+	private String scr_name, etc;	//상영관 이름, 층 정보	- screen
+	private String time, price;	//영화시작시간, 가격	- schedule
+	private String id, name;	//예약자 아이디, 성명	- users
+	private String nu_phone, nu_name;	//예약자(비회원) 핸드폰번호, 성명	- no_users -->
+	
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="ReservationDAO">
+	<resultMap id="reservationResult" type="reservation">
+		<result property="r_id" column="R_ID"/>
+		<result property="u_id" column="U_ID"/>
+		<result property="nu_id" column="NU_ID"/>
+		<result property="sch_id" column="SCH_ID"/>
+		<result property="seat_row" column="SEAT_ROW"/>
+		<result property="seat_col" column="SEAT_COL"/>
+		<result property="r_date" column="R_DATE"/>
+	</resultMap>
+	
+	<insert id="insertReservation" parameterType="reservation">
+		INSERT INTO RESERVATION (R_ID, U_ID, NU_ID, SCH_ID, SEAT_ROW, SEAT_COL, R_DATE) 
+		VALUES ((SELECT NVL(MAX(R_ID),0)+1 FROM RESERVATION), #{u_id}, #{nu_id}, #{sch_id}, #{seat_row}, #{seat_col}, #{r_date})
+	</insert>
+	
+	<update id="updateReservation" parameterType="reservation">
+		UPDATE RESERVATION
+		   SET SCH_ID = #{sch_id}, SEAT_ROW = #{seat_row}, SEAT_COL = #{seat_col}
+		 WHERE R_ID = #{r_id}
+	</update>
+	
+	<delete id="deleteReservation" parameterType="reservation">
+		DELETE FROM RESERVATION WHERE R_ID = #{r_id} 
+	</delete>
+	
+	<select id="getReservation" parameterType="reservation" resultType="reservation">
+		SELECT * FROM RESERVATION WHERE R_ID = #{r_id}
+	</select>
+	
+	<!-- 예매 조회(회원) - 회원인덱스값 -->
+	<select id="getReservationUsers" parameterType="users" resultType="reservation">
+		SELECT * FROM RESERVATION WHERE U_ID = #{u_id}
+	</select>
+	
+	<!-- 예매 조회(비회원) - 비회원인덱스값 -->
+	<select id="getReservationNo_Users" parameterType="no_users" resultType="reservation">
+		SELECT * FROM RESERVATION WHERE R_ID = #{r_id}
+	</select>
+	
+	<!-- 예매 조회(비회원) - 비회원 휴대폰번호값 -->
+	<select id="getReservationNo_UsersPhone" parameterType="no_users" resultType="reservation">
+		SELECT * FROM RESERVATION
+		 WHERE NU_ID = (SELECT NU_ID
+		 				  FROM NO_USERS
+		 				 WHERE NU_PHONE = #{nu_phone})
+	</select>
+	
+	<!-- 예매 전체조회 -->
+	<select id="getReservationList" resultType="reservation">
+		SELECT * FROM RESERVATION
+		 ORDER BY R_ID DESC
+	</select>
+	
+	<!-- 예매 전체조회(영화,스크린,시간으로 조회) -->
+	<select id="getReservationList_id" resultMap="reservationResult">
+		SELECT * FROM RESERVATION
+		WHERE  SCH_ID IN
+		(SELECT SCH_ID FROM SCHEDULE
+		WHERE M_ID=#{m_id} AND SCR_ID=#{scr_id} AND TIME=#{time}) AND R_DATE = #{date}
+	</select>
+	
+	<!-- 사용자별 예매관련정보 전체조회(회원) -->
+	<select id="getReservationListUsers" parameterType="users" resultType="reservation">
+		SELECT * FROM RESERVATION
+		 WHERE U_ID = #{u_id}
+		 ORDER BY R_ID
+	</select>
+	
+	<!-- 사용자별 예매 전체조회(비회원인덱스) -->
+	<select id="getReservationListNo_Users" parameterType="no_users" resultType="reservation">
+		SELECT * FROM RESERVATION
+		 WHERE NU_ID = #{nu_id}
+		 ORDER BY R_ID
+	</select>
+	
+	<!-- 사용자별 예매 전체조회(비회원 휴대폰번호) -->
+	<select id="getReservationListNo_UsersPhone" parameterType="no_users" resultType="reservation">
+		SELECT * FROM RESERVATION 
+		 WHERE NU_ID = (SELECT NU_ID 
+		 				  FROM NO_USERS
+		 				 WHERE NU_PHONE = #{nu_phone})
+		 ORDER BY R_ID
+	</select>
+</mapper>  
+
+
+
+
+
+

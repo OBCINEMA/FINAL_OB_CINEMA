@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- mapper 태그의 namespace 속성 필수 작성 -->
+<mapper namespace="CommentsDAO">
+	<!-- <resultMap type="comments" id="commentsResult">
+		<result property="c_id" column="C_ID"/>
+		<result property="b_id" column="B_ID"/>
+		<result property="u_id" column="U_ID"/>
+		<result property="id" column="ID"/>
+		<result property="nickname" column="NICKNAME"/>
+		<result property="content" column="CONTENT"/>
+		<result property="priv" column="PRIV"/>
+		<result property="likes" column="LIKES"/>
+		<result property="regdate" column="REGDATE"/>
+	</resultMap> -->
+	
+	<insert id="insertComments" parameterType="comments">
+		INSERT INTO COMMENTS (C_ID, B_ID, ID, NICKNAME, CONTENT, REGDATE, LIKES, PRIV, U_ID)
+		VALUES (SEQ_COMMENTS.NEXTVAL, #{b_id}, #{id}, #{nickname}, #{content}, SYSDATE, 0, #{priv}, #{u_id})
+	</insert>
+	
+	<update id="updateComments" parameterType="comments">
+		UPDATE COMMENTS 
+		   SET CONTENT = #{content}, REGDATE = SYSDATE, PRIV = #{priv}
+		 WHERE C_ID = #{c_id}
+	</update>
+	
+	<delete id="deleteComments" parameterType="comments">
+		DELETE COMMENTS WHERE C_ID = #{c_id} 
+	</delete>
+	
+	<select id="getComments" parameterType="comments" resultType="comments">
+			<!-- resultMap="commentsResult"> -->
+		SELECT * FROM COMMENTS
+		 WHERE C_ID = #{c_id}
+	</select>
+	
+	<select id="getCommentsList" resultType="comments">
+			<!-- resultMap="commentsResult"> -->
+		SELECT * FROM COMMENTS
+		 WHERE B_ID = #{b_id}
+		 ORDER BY C_ID DESC
+	</select>
+	
+</mapper>

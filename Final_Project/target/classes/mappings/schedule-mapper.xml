@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="ScheduleDAO">
+	<resultMap id="scheduleResult" type="schedule">
+		<result property="sch_id" column="SCH_ID"/>
+		<result property="m_id" column="M_ID"/>
+		<result property="t_id" column="T_ID"/>
+		<result property="scr_id" column="SCR_ID"/>
+		<result property="time" column="TIME"/>
+		<result property="price" column="PRICE"/>
+	</resultMap>
+	
+	<!-- 스케쥴 조회 -->
+	<select id="getSchList" 
+	resultMap="scheduleResult" parameterType="schedule">
+		SELECT * FROM SCHEDULE 
+		WHERE T_ID = #{t_id} and M_ID=#{m_id}
+		ORDER BY SCR_ID,SCH_ID
+	</select>
+	
+	<!-- 스케쥴 상세조회 -->
+	<select id="getSchOne" 
+	resultMap="scheduleResult" parameterType="schedule">
+		SELECT * FROM SCHEDULE 
+		WHERE T_ID = #{t_id} AND M_ID=#{m_id} AND SCR_ID=#{scr_id} AND TIME=#{time}
+		ORDER BY SCR_ID,SCH_ID
+	</select>
+	
+	<!-- 아이디 조회 -->
+	<select id="getSchId" 
+	resultMap="scheduleResult" parameterType="schedule">
+		SELECT * FROM SCHEDULE 
+		WHERE SCR_ID = #{scr_id} AND M_ID=#{m_id} AND TIME=#{time}
+	</select>
+	
+	<!-- 상영정보 입력 -->
+	<insert id="insertSchedule" parameterType="screen">
+	<![CDATA[
+		INSERT INTO SCHEDULE (SCH_ID,M_ID,T_ID,SCR_ID,TIME,PRICE)
+		VALUES ((SELECT NVL(MAX(SCH_ID),0)+1 FROM SCHEDULE),
+		       #{m_id}, #{t_id}, #{scr_id}, #{time}, #{price}) 
+	]]>
+	</insert>
+	
+		<select id="getTIME" 
+	 parameterType="schedule" resultType="schedule">
+		select time from schedule where scr_id = #{scr_id} and t_id = #{t_id}
+	</select>
+	
+		<!-- 스케쥴 업데이트 -->		
+	<update id="updateSchedule" parameterType="schedule">
+		UPDATE SCHEDULE
+		SET M_ID = #{m_id}, TIME = #{time}, PRICE = #{price} WHERE SCH_ID = #{sch_id}
+	</update>
+	
+	<!-- 스케쥴 삭제 -->
+	<delete id="deleteSchedule" parameterType="schedule">
+		DELETE FROM SCHEDULE
+		WHERE sch_id = #{sch_id}
+
+	</delete>
+	
+			<!-- 관리자 메인에서 쓸것 -->
+		<select id="getCountSchedule" resultType="int">
+		 select count(sch_id) from SCHEDULE
+	</select>
+	
+</mapper>
+
+
+
+

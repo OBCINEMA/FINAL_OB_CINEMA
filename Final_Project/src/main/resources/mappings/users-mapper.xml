@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="UsersDAO">
+	<resultMap id="usersResult" type="users">
+		<result property="u_id" column="U_ID"/>
+		<result property="id" column="ID"/>
+		<result property="password" column="PASSWORD"/>
+		<result property="name" column="NAME"/>
+		<result property="birth" column="BIRTH"/>
+		<result property="phone" column="PHONE"/>
+		<result property="grade" column="GRADE"/>
+		<result property="email" column="EMAIL"/>
+	</resultMap>
+
+	<insert id="insertUsers" parameterType="users">
+		INSERT INTO USERS (U_ID, ID, PASSWORD, NAME, BIRTH
+			 , PHONE, GRADE, EMAIL)
+		VALUES(SEQ_USERS.NEXTVAL, #{id}, #{password}, #{name}
+			 , #{birth}, #{phone} , #{grade}, #{email} )
+	</insert>
+	
+	<update id="updateUsers" parameterType="users">
+		UPDATE USERS 
+		   SET GRADE = #{grade}, ID = #{id}, PASSWORD = #{password}, NAME = #{name}
+			 , BIRTH = #{birth}, PHONE = #{phone}, EMAIL = #{email}, VOTEDMOVIE = #{votedmovie}
+		 WHERE U_ID = #{u_id}
+	</update>
+	
+	<!-- 투표용 -->
+	<update id="updateUsersVote" parameterType="users">
+		UPDATE USERS 
+		   SET VOTEDMOVIE = #{votedmovie}
+		 WHERE U_ID = #{u_id}
+	</update>
+	
+	<!-- votedmovie 초기화 -->
+	<update id="resetVotedMovie" parameterType="users">
+		UPDATE USERS 
+		   SET VOTEDMOVIE = 0
+	</update>
+	
+	<delete id="deleteUsers" parameterType="users">
+		DELETE FROM USERS WHERE U_ID = #{u_id}
+	</delete>
+	
+	<select id="getUsers" parameterType="users" resultType="users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM USERS WHERE ID = #{id} AND PASSWORD = #{password}
+	</select>
+	
+	<select id="getUserOne" resultMap="usersResult" parameterType="users">
+	<!-- resultMap="userResult"> -->
+	SELECT * FROM USERS WHERE U_ID = 1
+	</select>
+	
+	<select id="getUsersList" resultType="users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM USERS ORDER BY U_ID DESC
+	</select>
+	
+	<select id="idcheck" parameterType="users" resultType="int">
+	SELECT count(*) FROM USERS WHERE ID = #{id}
+	</select>
+	
+		<select id="getApiUsers" parameterType="users" resultType="users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM USERS WHERE ID = #{id}
+	</select>
+	
+	<update id="updateUsersEmail" parameterType="users">
+		UPDATE USERS 
+		   SET  EMAIL = #{email}
+		 WHERE U_ID = #{u_id}
+	</update>
+	
+	<select id="findIDchk" parameterType="users" resultType="String">
+	 select id  from users where name = #{name} and email = #{email} and NOT id LIKE ('%n_%') AND NOT id like ('%k_%')
+	</select>
+	
+	<update id="update_pw" parameterType="users">
+		update USERS set password = #{password} where id = #{id}
+	</update>
+	<select id="findPWchk" parameterType="users" resultType="int">
+	select count(*) from USERS where ID = #{id} AND email= #{email}
+	</select>
+</mapper>  
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그의 namespace 속성 필수 작성 -->
+<mapper namespace="BoardDAO">
+
+	<resultMap id="boardResult" type="board">
+		<result property="b_id" column="B_ID" />
+		<result property="b_type" column="B_TYPE" />
+		<result property="id" column="ID" />
+		<result property="nickname" column="NICKNAME" />
+		<result property="m_id" column="M_ID" />
+		<result property="title" column="TITLE" />
+		<result property="content" column="CONTENT" />
+		<result property="regdate" column="REGDATE" />
+		<result property="hit" column="HIT" />
+		<result property="u_id" column="U_ID" />
+		<result property="t_id" column="T_ID" />
+		<result property="img1" column="IMG1" />
+		<result property="img2" column="IMG2" />
+		<result property="img3" column="IMG3" />
+		<result property="img4" column="IMG4" />
+		<result property="img5" column="IMG5" />
+	</resultMap>
+
+	<!-- 공지사항 부분 -->
+	<insert id="insertNotice" parameterType="board">
+
+		INSERT INTO BOARD (B_ID,
+		B_TYPE, TITLE, ID, CONTENT, REGDATE, HIT)
+		VALUES ((SELECT NVL(MAX(B_ID),0)+1 FROM BOARD), #{b_type}, #{title},
+		#{id},
+		#{content}, SYSDATE, 0)
+		<!-- <![CDATA[ INSERT INTO BOARD (B_ID, B_TYPE, TITLE, ID, CONTENT, REGDATE, 
+			HIT, IMG1, IMG2, IMG3, IMG4, IMG5) VALUES ((SELECT NVL(MAX(B_ID),0)+1 FROM 
+			BOARD), #{b_type}, #{title}, #{id}, #{content}, SYSDATE, 0, #{img1}, #{img2}, 
+			#{img3}, #{img4}, #{img5}) ]]> -->
+	</insert>
+
+	<update id="updateNotice" parameterType="board">
+		UPDATE BOARD
+		SET TITLE =
+		#{title},
+		CONTENT = #{content}
+		WHERE B_ID = #{b_id}
+	</update>
+
+	<delete id="deleteNotice" parameterType="board">
+		DELETE FROM BOARD WHERE
+		B_ID = #{b_id}
+	</delete>
+
+	<select id="getNoticeList" resultType="board">
+		SELECT R_NUM, B_ID,
+		B_TYPE, ID, TITLE, CONTENT, REGDATE, HIT, NAME
+		FROM (SELECT ROWNUM
+		R_NUM, B.*
+		FROM (SELECT BOARD.B_ID, BOARD.B_TYPE, BOARD.ID,
+		BOARD.TITLE,
+		BOARD.CONTENT, BOARD.REGDATE, BOARD.HIT, USERS.NAME
+		FROM
+		BOARD, USERS
+		WHERE BOARD.ID = USERS.ID ORDER BY B_ID DESC)B )
+		WHERE
+		R_NUM BETWEEN #{begin} AND #{end}
+	</select>
+
+	<select id="getNotice" parameterType="board" resultType="board">
+		SELECT *
+		FROM BOARD WHERE B_ID = #{b_id}
+	</select>
+
+	<update id="noticeViewCnt" parameterType="board">
+		UPDATE BOARD
+		SET HIT =
+		HIT + 1
+		WHERE B_ID = #{b_id}
+	</update>
+
+	<select id="totalCnt" resultType="int">
+		SELECT COUNT(B_ID) FROM BOARD
+	</select>
+</mapper> 

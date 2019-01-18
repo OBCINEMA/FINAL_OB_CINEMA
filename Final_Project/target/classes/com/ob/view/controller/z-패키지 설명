@@ -1,0 +1,10 @@
+<설명> 
+com.ob.view.controller
+  모든 controller만 넣는 패키지 
+  
+  
+  
+  아이디 찾기 비밀번호 찾기 :
+  login_modal 에서 아이디찾기 비밀번호 찾기를 누른다.
+  findIDPW.do 실행 LoginController에서 
+       "/findIDPW.do" 에서 return find_id_pw.jsp 페이지로 단순 이동

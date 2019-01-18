@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Movie_HistoryDAO">
+   <insert id="insertMovie_History" parameterType="movie_history">
+      INSERT INTO MOVIE_HISTORY (H_ID, M_ID, DAY_START, DAY_END)
+      VALUES ((SELECT NVL(MAX(H_ID),0)+1 FROM MOVIE_HISTORY)
+      		, #{m_id}, #{day_start}, #{day_end}) 
+   </insert>
+   
+   
+   <insert id="insertMovie_History_Onair" parameterType="movie">
+      INSERT INTO MOVIE_HISTORY (H_ID, M_ID, DAY_START, DAY_END)
+      SELECT SEQ_MOVIE_HISTORY.NEXTVAL, M_ID, SYSDATE, SYSDATE+7
+        FROM MOVIE
+       WHERE ONAIR=1
+   </insert>
+   
+   
+   <update id="updateMovie_History" parameterType="movie_history">
+   	  UPDATE MOVIE_HISTORY
+   	  	 SET DAY_START = #{day_start}, DAY_END = #{day_end}
+   	   WHERE H_ID = #{h_id}
+   </update>
+   
+   <delete id="deleteMovie_History" parameterType="movie_history">
+      DELETE FROM MOVIE_HISTORY WHERE H_ID = #{h_id}
+   </delete>
+   
+   <select id="getMovie_History" resultType="movie_history">
+      SELECT * FROM MOVIE_HISTORY WHERE H_ID = #{h_id}
+   </select>
+   
+   <!-- 전체 상영내역 -->
+   <select id="getMovie_HistoryList" resultType="movie_history">
+      SELECT * FROM MOVIE_HISTORY ORDER BY H_ID DESC
+   </select>
+   
+   <!-- 영화별 상영내역 -->
+   <select id="getMovie_HistoryListMovie" resultType="movie_history">
+      SELECT * FROM MOVIE_HISTORY WHERE M_ID= #{m_id} ORDER BY H_ID DESC
+   </select>
+   
+   <!-- M_ID TITLE GNR DIRECTOR RUNNINGTIME RESTRICT ONAIR POSTER IMG1 IMG2 
+      IMG3 IMG4 IMG5 -->
+</mapper>  
+
+
+
+
+

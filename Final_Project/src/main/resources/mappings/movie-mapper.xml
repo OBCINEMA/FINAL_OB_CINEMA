@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MovieDAO">
+	<resultMap id="movieResult" type="movie">
+		<result property="m_id" column="M_ID" />
+		<result property="onair" column="ONAIR" />
+		<result property="vote" column="VOTE" />
+		<result property="title" column="TITLE" />
+		<result property="gnr" column="GNR" />
+		<result property="director" column="DIRECTOR" />
+		<result property="runningtime" column="RUNNINGTIME" />
+		<result property="restrict" column="RESTRICT" />
+		<result property="poster" column="POSTER" />
+		<result property="content" column="CONTENT" />
+
+		<!-- <result property="uploadFile" column="IMG1"/> -->
+
+		<result property="img1" column="IMG1" />
+		<result property="img2" column="IMG2" />
+		<result property="img3" column="IMG3" />
+		<result property="img4" column="IMG4" />
+		<result property="img5" column="IMG5" />
+	</resultMap>
+
+
+	<insert id="insertMovie" parameterType="movie">
+	<![CDATA[
+		INSERT INTO MOVIE (M_ID, TITLE, GNR, DIRECTOR, RUNNINGTIME, RESTRICT, ONAIR ,POSTER ,IMG1, IMG2, 
+		IMG3, IMG4, IMG5,CONTENT,VOTE)
+		VALUES ((SELECT NVL(MAX(M_ID),0)+1 FROM MOVIE),
+		       #{title}, #{gnr}, #{director}, #{runningtime}, #{restrict}, #{onair} ,#{poster} ,#{img1}, #{img2},       
+		#{img3}, #{img4}, #{img5} ,#{content},0) 
+	]]>
+	</insert>
+
+	<update id="updateMovie" parameterType="movie">
+		UPDATE MOVIE
+		   SET TITLE = #{title}, GNR = #{gnr}, DIRECTOR = #{director}
+			 , RUNNINGTIME = #{runningtime}, RESTRICT = #{restrict}, ONAIR = #{onair}
+			 , POSTER = #{poster}, IMG1 = #{img1}, IMG2 = #{img2}, IMG3 = #{img3}, IMG4 = #{img4}, IMG5 = #{img5}
+			 , CONTENT = #{content}, VOTE = #{vote}
+		 WHERE m_id = #{m_id}
+	</update>
+
+	<!-- 투표수 초기화 -->
+	<update id="updateMovieVoteTo0" parameterType="movie">
+		UPDATE MOVIE SET VOTE = 0
+	</update>
+
+	<!-- 상영예정(ONAIR=-1) -> 상영중(ONAIR=1)  -->
+	<!-- parameterType="movie" 없어도 되나 -->
+	<update id="updateMovieOnair1" >
+		UPDATE MOVIE
+		   SET ONAIR = 1
+		 WHERE ONAIR = -1
+	</update>
+
+	<!-- 상영중(ONAIR=1) -> 상영종료(ONAIR=0)  -->
+	<update id="updateMovieOnair0" >
+		UPDATE MOVIE
+		   SET ONAIR = 0
+		 WHERE ONAIR = 1
+	</update>
+
+	<!-- 득표수 상위 5개 영화 -> 상영예정(ONAIR=-1) -->
+	<update id="updateMoviePreair" >
+	<![CDATA[
+		UPDATE MOVIE M
+		   SET ONAIR = -1
+		 WHERE EXISTS (SELECT *
+		 				 FROM (SELECT *
+		 				 		 FROM (SELECT *
+		 				 		 		 FROM MOVIE
+		 				 		 		WHERE VOTE>0 AND ONAIR=0
+		 				 		 		ORDER BY VOTE DESC, TITLE ASC)
+		 				 		WHERE ROWNUM<=5) S
+		 				WHERE M.M_ID = S.M_ID)
+ 	]]>
+	</update>
+	
+
+	<delete id="deleteMovie" parameterType="movie">
+		DELETE FROM MOVIE WHERE m_id = #{m_id}
+	</delete>
+
+	<select id="getMovie" parameterType="movie" resultType="movie">
+		SELECT * FROM MOVIE WHERE M_ID = #{m_id}
+	</select>
+
+	<select id="getMovieList" resultType="movie">
+		SELECT * FROM MOVIE ORDER BY M_ID
+	</select>
+	
+	<select id="getMovieListOnair" resultType="movie">
+		SELECT *
+		  FROM MOVIE
+		 WHERE ONAIR = 1
+		 ORDER BY M_ID
+	</select>
+
+	<!-- 상영중 상태인 영화 목록 조회 -->
+	<select id="getMovieListOnair0" resultType="movie">
+		SELECT * FROM MOVIE WHERE ONAIR=0 ORDER BY TITLE
+	</select>
+
+	<!-- 상영중 상태인 영화 목록 조회 -->
+	<select id="getMovieListOnair1" resultType="movie">
+		SELECT * FROM MOVIE WHERE ONAIR=1 ORDER BY M_ID
+	</select>
+
+	<!-- 상영예정 상태인 영화 목록 조회 -->
+	<select id="getMovieListPreair" resultType="movie">
+		SELECT * FROM MOVIE Where ONAIR=-1 ORDER BY M_ID 
+	</select>
+
+	<!-- 상영예정 상태인 영화 장르별 조회 -->
+	<select id="getMovieListPreairGnr" resultType="movie">
+		SELECT DISTINCT GNR FROM MOVIE Where ONAIR=-1 AND GNR IS NOT NULL
+	</select>
+
+	<!-- 득표수 상위 5개 영화 목록 조회(득표수 내림차순, 영화제목순) -->
+	<select id="getMovieListByVote" resultType="movie">
+	<![CDATA[
+		SELECT *
+		  FROM (SELECT ROWNUM RN, M.*
+		          FROM (SELECT * FROM MOVIE WHERE VOTE > 0 AND ONAIR=0 ORDER BY VOTE DESC, TITLE ASC) M)
+		 WHERE RN<=5
+	]]>
+	</select>
+	
+	<select id="getMovieGnr" resultType="movie">
+		SELECT DISTINCT GNR FROM
+		MOVIE WHERE GNR IS NOT NULL AND ONAIR=1
+	</select>
+
+	<!-- 영화 상세조회 -->
+	<select id="getMovieOne" resultMap="movieResult">
+		SELECT * FROM MOVIE WHERE
+		M_ID = #{m_id}
+	</select>
+
+<!-- 영화 m_id 한개를 상영종료(-1) -> 상영중(1)로 바꾸기 -->
+	<update id="updateMovieOnairOne" >
+		UPDATE MOVIE
+		   SET ONAIR = 1
+		 WHERE m_id = #{m_id}
+	</update>
+	<!-- M_ID TITLE GNR DIRECTOR RUNNINGTIME RESTRICT ONAIR POSTER IMG1 IMG2 
+		IMG3 IMG4 IMG5 -->
+		
+		<!-- 관리자 메인에서 쓸것 -->
+		<select id="getCountMovie" resultType="int">
+		 select count(m_id) from movie 
+	</select>
+</mapper>
+
+
+
+

@@ -1,0 +1,7 @@
+<설명> 
+mappings => 
+  모든 mappings만 넣는폴더     
+ log4j.xml => 필요없음
+  
+  
+  DB연동 및 테스트는 BOARD_EX와 USERS_EX를 이용하길 바랍니다 강의때 사용한 DB

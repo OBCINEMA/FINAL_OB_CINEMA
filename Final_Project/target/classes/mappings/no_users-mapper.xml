@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<!-- private int nu_id;
+	private String nu_name, nu_pw, nu_phone; -->
+	
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="No_UsersDAO">
+	<insert id="insertNo_Users" parameterType="no_users">
+		INSERT INTO NO_USERS (NU_ID, NU_NAME, NU_PW, NU_PHONE)
+		VALUES((SELECT NVL(MAX(NU_ID),0)+1, #{nu_name}, #{nu_pw}, #{nu_phone})
+	</insert>
+	
+	<update id="updateNo_Users" parameterType="no_users">
+		UPDATE NO_USERS 
+		   SET 
+		 WHERE NU_ID = #{nu_id}
+	</update>
+	
+	<delete id="deleteNo_Users" parameterType="no_users">
+		DELETE FROM NO_USERS WHERE NU_ID = #{nu_id}
+	</delete>
+	
+	<select id="getNo_Users" parameterType="no_users" resultType="no_users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM NO_USERS WHERE NU_ID = #{nu_id}
+	</select>
+	
+	<!-- 폰번호,비밀번호로 조회 -->
+	<select id="getNo_UsersPhone" parameterType="no_users" resultType="no_users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM NO_USERS WHERE NU_PHONE = #{nu_phone} AND NU_PW = #{nu_pw}
+	</select>
+	
+	<select id="getNo_UsersList" resultType="no_users">
+		<!-- resultMap="userResult"> -->
+		SELECT * FROM NO_USERS ORDER BY NU_ID DESC
+	</select>
+</mapper>  
+
+
+
+
+
+

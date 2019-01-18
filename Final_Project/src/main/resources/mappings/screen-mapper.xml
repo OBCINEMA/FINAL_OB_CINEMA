@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="ScreenDAO">
+	<resultMap id="screenResult" type="screen">
+		<result property="scr_id" column="SCR_ID"/>
+		<result property="t_id" column="T_ID"/>
+		<result property="scr_name" column="SCR_NAME"/>
+		<result property="scr_seat_row" column="SCR_SEAT_ROW"/>
+		<result property="scr_seat_col" column="SCR_SEAT_COL"/>
+		<result property="scr_seat_tot" column="SCR_SEAT_TOT"/>
+	</resultMap>
+	
+	<!-- 상영관 list 조회 -->
+	<select id="getScreenList" resultMap="screenResult" parameterType="screen">
+		SELECT * FROM SCREEN
+	</select>
+	
+	<!-- 상영관vo 조회 -->
+	<select id="getScrOne" resultMap="screenResult" parameterType="screen">
+		SELECT * FROM SCREEN WHERE SCR_ID = #{scr_id}
+	</select>
+	
+	<!-- 상영관 업데이트 -->		
+	<update id="updateScreen" parameterType="screen">
+		UPDATE SCREEN
+		SET T_ID =
+		#{t_id}, SCR_NAME = #{scr_name}, SCR_SEAT_ROW = #{scr_seat_row}, SCR_SEAT_COL =
+		#{scr_seat_col},SCR_SEAT_TOT = #{scr_seat_tot} WHERE scr_id = #{scr_id}
+	</update>
+	
+	<!-- 상영관 입력 -->
+	<insert id="insertScreen" parameterType="screen">
+	<![CDATA[
+		INSERT INTO SCREEN (SCR_ID,T_ID,SCR_NAME,SCR_SEAT_ROW,SCR_SEAT_COL,SCR_SEAT_TOT)
+		VALUES ((SELECT NVL(MAX(SCR_ID),0)+1 FROM SCREEN),
+		       #{t_id}, #{scr_name}, #{scr_seat_row}, #{scr_seat_col}, #{scr_seat_tot}) 
+	]]>
+	</insert>
+	
+	<!-- 상영관 삭제 -->
+	<delete id="deleteScreen" parameterType="screen">
+		DELETE FROM SCREEN
+		WHERE scr_id = #{scr_id}
+
+	</delete>
+	
+	<!-- m_id로 상영관 가져오기 -->
+	<select id="getScrOne_m" parameterType="screen" resultType="screen">
+	        select * from screen where t_id =#{t_id}
+	</select>
+	
+			<!-- 관리자 메인에서 쓸것 -->
+		<select id="getCountScreen" resultType="int">
+		 select count(scr_id) from SCREEN
+	</select>
+	
+</mapper>
+
+
+
+
+
+
+
+
