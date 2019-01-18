@@ -9,10 +9,13 @@
 %>
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
+<link rel="stylesheet"
+	href="<%=contextPath%>/resources/addcss/login_main.css">
 
 <!-- 이거말고 다른 jQuery는 지울것. 각 페이지의 JavaScript는 Body 하단에 작성할 것-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 </head>
 <body>

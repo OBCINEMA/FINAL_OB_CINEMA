@@ -3,7 +3,7 @@ package com.ob.biz.vo;
 import java.sql.Date;
 
 public class ReservationVO {
-	private int r_id, u_id, nu_id, sch_id, seat_row, seat_col;
+	private int r_id, u_id, nu_id, sch_id, seat_row, seat_col, p_id;
 	private Date r_date;
 
 	//사용 편의를 위한 변수 선언
@@ -137,12 +137,18 @@ public class ReservationVO {
 	public void setR_date(Date r_date) {
 		this.r_date = r_date;
 	}
+	public int getP_id() {
+		return p_id;
+	}
+	public void setP_id(int p_id) {
+		this.p_id = p_id;
+	}
 	@Override
 	public String toString() {
 		return "ReservationVO [r_id=" + r_id + ", u_id=" + u_id + ", nu_id=" + nu_id + ", sch_id=" + sch_id
-				+ ", seat_row=" + seat_row + ", seat_col=" + seat_col + ", r_date=" + r_date + "]";
+				+ ", seat_row=" + seat_row + ", seat_col=" + seat_col + ", r_date=" + r_date + ", title=" + title
+				+ ", runningtime=" + runningtime + ", t_name=" + t_name + ", t_phone=" + t_phone + ", t_address="
+				+ t_address + ", scr_name=" + scr_name + ", etc=" + etc + ", time=" + time + ", price=" + price
+				+ ", id=" + id + ", name=" + name + ", nu_phone=" + nu_phone + ", nu_name=" + nu_name + "]";
 	}
-	
-	
-	
 }

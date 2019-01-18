@@ -6,6 +6,7 @@
 	// theme 까지 들어온 경로 
 	String KPath = contextPath + "/resources/theme";
 	String MovieIMGPath = contextPath + "/resources/movieimg";
+	String TheaterIMGPath = contextPath + "/resources/theaterimg";
 	String IMGPath = contextPath + "/resources/img";
 %>
 
@@ -39,13 +40,18 @@
 
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
 
+<!-- Cusom css -->
+<link rel="stylesheet" href="<%=KPath%>/css/custom.css">
+
 <script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
 
 <!-- Modernizer js -->
 <title>Insert title here</title>
 <script>
+
 function idChk(){
-	if("${Logininformation}" != null) {
+	alert("idChk실행 - Logininformaion : " + "${Logininformaion}");
+	if("${Logininformaion}" != null) {
 		return 1;
 	} else {
 		return 0;
@@ -53,11 +59,15 @@ function idChk(){
 }
  function res(m_id){
  	console.log("${Logininformation}");
+ 	alert("${Logininformation}");
+ 	alert("${Logininformation.u_id}");
  	
  	var u_id = "${Logininformation.u_id}";
  	if(u_id != ""){
-  		location.href="movieRes.do?m_id=" + m_id;
+ 		alert("아이디있음");
+  		location.href="movieRes.do";
   	} else {
+  		alert("아이디없음");
   		document.getElementById("id01").style="display:block";
 	} 
 }
@@ -84,38 +94,30 @@ function idChk(){
 			<div class="container" style="margin-top: 50px;">
 				<div class="row">
 					<div class="col-lg-12">
-						<h2 class="pg-service-title">${movieOne.title }</h2>
+						<h2 class="pg-service-title">${theaterVO.name }</h2>
 					</div>
 					<div class="col-lg-7">
 						<div class="pg-service-thumbs">
-							<img src="/resources/movieimg/${movieOne.poster }" alt="service thumb" style="width: 500px; height: 650px">
+							<img src="<%=TheaterIMGPath %>/${theaterVO.img1 }" alt="service thumb" style="width: 500px; height: 650px">
 						</div>
 					</div>
 					<div class="col-lg-5">
 						<div class="pg-service-details">
 							<div class="small-title">
-								<h4>작품소개</h4>
+								<h4>극장소개</h4>
 							</div>
-							<p>${movieOne.content }</p>
+							<p>${theaterVO.content }</p>
 						</div>
 						<div class="pg-service-description">
 							<div class="small-title">
 								<h4>상세정보</h4>
 							</div>
 							<ul>
-								<li>감독 : <span>${movieOne.director }</span>
+								<li>전화번호 : <span>${theaterVO.phone }</span>
 								</li>
-								<li>장르 : <span>${movieOne.gnr }</span>
-								</li>
-								<li>상영시간 : <span> ${movieOne.runningtime } </span>
-								</li>
-								<li>등급 : <span> ${movieOne.restrict } </span>
+								<li>주소 : <span>${theaterVO.adress }</span>
 								</li>
 							</ul>
-							<div>			
-								<a href="#" onclick="res(${movieOne.m_id })" class="cr-btn cr-btn-sm" 
-								style="background-color: #ce2c3c; float: right">예매</a>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -123,14 +125,14 @@ function idChk(){
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="small-title">
-								<h4>스틸컷</h4>
+								<h4>상세사진</h4>
 							</div>
 						</div>
 						<!-- Signle Service -->
 						<div class="col-lg-4 col-md-6 col-12">
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
-									<img src="<%=MovieIMGPath %>/${movieOne.img1 }"
+									<img src="<%=TheaterIMGPath %>/${theaterVO.img2 }"
 										alt="service thumb">
 								</div>
 							</div>
@@ -141,18 +143,26 @@ function idChk(){
 						<div class="col-lg-4 col-md-6 col-12">
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
-									<img src="<%=MovieIMGPath %>/${movieOne.img2 }"
+									<img src="<%=TheaterIMGPath %>/${theaterVO.img3 }"
 										alt="service thumb">
 								</div>
 							</div>
 						</div>
 						<!--// Signle Service -->
-
+					</div>
+				</div>
+				<div class="container related-services">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="small-title">
+								<h4>지역맛집</h4>
+							</div>
+						</div>
 						<!-- Signle Service -->
 						<div class="col-lg-4 col-md-6 col-12">
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
-									<img src="<%=MovieIMGPath %>/${movieOne.img3 }"
+									<img src="<%=TheaterIMGPath %>/${theaterVO.img4 }"
 										alt="service thumb">
 								</div>
 							</div>

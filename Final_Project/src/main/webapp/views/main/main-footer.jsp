@@ -43,6 +43,7 @@
 
 
 	<!-- JS Files -->
+	<script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="<%=KPath%>/js/popper.min.js"></script>
 	<script src="<%=KPath%>/js/bootstrap.min.js"></script>
 	<script src="<%=KPath%>/js/plugins.js"></script>
