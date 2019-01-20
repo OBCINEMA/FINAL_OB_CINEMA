@@ -179,7 +179,11 @@
 			
 	</div>
 	<!--// Main wrapper -->
-
+	
+	
+	<!-- 구글차트(가로 바) -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	
 	<script>
 	
 	//페이지 로딩시 투표 목록 갱신
@@ -200,13 +204,6 @@
 			}
 		})
 	}
-	
-	//목록에서 영화 클릭시 상세정보 모달로 띄움
-	
-	//목록에서 영화 더블클릭시 투표됨
-	$(".mList-content-one").on("click",function(){
-		alert(this.val());
-	})
 	
 	//투표
 	function vote(m_id){
@@ -233,6 +230,7 @@
 	//투표 현황 출력
 	function voteListing(result){
 		console.log("voteListing 실행됨");
+		alert("voteListing 실행됨");
 		console.log("result : " + result);
 		var loginChk = result.loginChk;
 		var votedmovie = result.votedmovie;
@@ -301,7 +299,7 @@
 		str += '			</a>';
 		str += '			</div>';
 		str += '			<div class="col" style="height:100px; line-height:100px;">';
-		str += '				<span style="margin:auto;"><chart></chart>' + mListByVote[i].vote + '</span>';
+		str += '				<span style="margin:auto;"><div class="chart_div" id="'+mListByVote[i].vote+'" vote="'+mListByVote[i].vote+'" style="width : 100%;"></div>' + mListByVote[i].vote + '</span>';
 		str += '			</div>';
 		str += '		</div>';
 		str += '	</div>';
@@ -398,6 +396,37 @@
 		
 	}
 	
+
+// 	google.charts.load('current', {'packages':['corechart']});
+// 	google.charts.setOnLoadCallback(drawChart);
+	
+// 	function drawChart(){
+// 		alert("drawChart 실행");
+// // 		var divs = document.getElementsByClass('chart_div');
+// 		var divs = $('.chart_div');
+// 		console.log("divs : " + divs);
+// 		for(var i in divs){
+// 			console.log("vote : " + $(divs[i]).attr('vote'));
+			
+// // 			var data = google.visualization.arrayToDataTable([
+// // 				['제목', '득표수', { role: 'style' }],
+// // 				['', vote, 'color: #76A7FA']
+// // 			]);
+			
+// // 			var options = {
+// // 					chartArea: {
+// // 				        bar: {groupWidth: "30%"}},
+// // 					hAxis : {
+// // 						minValue: 0},
+// // 				    legend: { position: "none" }
+// // 			};
+// // 			var id = $(divs[i]).attr('id');
+// // 			console.log("id : " + id);
+// // 			var chart = new google.visualization.BarChart(document.getElementById(id));
+// // 			chart.draw(data, options);
+// 		}
+// 	}
 	</script>
+	
 </body>
 </html>

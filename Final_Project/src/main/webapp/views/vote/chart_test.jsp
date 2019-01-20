@@ -7,30 +7,28 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
-
-function drawBasic() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['City', '2010 Population',],
-        ['New York City, NY', 10],
-      ]);
-
-      var options = {
-        title: 'Population of Largest U.S. Cities',
-        chartArea: {width: '50%'},
-        hAxis: {
-          minValue: 0
-        },
-        vAxis: {
-        }
-      };
-
-      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
+	google.charts.load('current', {'packages':['corechart']});
+	google.charts.setOnLoadCallback(drawChart);
+	
+	function drawChart(){
+	var data = google.visualization.arrayToDataTable([
+			['제목', '득표수', { role: 'style' }],
+			['', 23, 'color: #76A7FA']
+		]);
+	
+	var options = {
+			chartArea: {
+// 		        width: 300,
+// 		        height: 50,
+		        bar: {groupWidth: "100%"}},
+			hAxis : {
+				minValue: 0},
+		    legend: { position: "none" }
+	};
+	
+	var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+	chart.draw(data, options);
+	}
 </script>
 </head>
 
