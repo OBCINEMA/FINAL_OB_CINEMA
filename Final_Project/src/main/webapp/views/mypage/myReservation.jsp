@@ -103,6 +103,15 @@
 //     money = money.toLocaleString();
 //     $("#totPrice").append(money);
 //     });
+function deleteRes(r_id){
+	location.href = "deleteRes.do?r_id=" + r_id;
+}
+
+function sendSeat(form) {
+	form.action = "pay.do";
+	form.submit();
+}
+
 </script>
 </head>
 <body>
@@ -158,6 +167,7 @@
 		</tr>
 	</thead>
 	<tbody>
+	<c:if test="${reservationList.size() != 0}">
  		<c:forEach var="i" begin="0"
 								end="${reservationList.size()-1 }" step="1"> 
 		<tr>
@@ -169,9 +179,17 @@
 			<td style="text-align: center">${scheduleList[i].time}</td>
 			<td style="text-align: center">${reservationList[i].seat_row}/${reservationList[i].seat_col}</td>
 			<td style="text-align: center" id="totPrice">&#8361;${scheduleList[i].price}</td>
-			<td style="text-align: center"><input type="button" value="예매취소" onclick="sendPay(this.form)" class="cr-btn cr-btn-sm" style="background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px"></td>
+			<td style="text-align: center"><input type="button" value="예매취소" onclick="deleteRes('${reservationList[i].r_id}')" class="cr-btn cr-btn-sm" style="background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px"></td>
 		</tr>
  		</c:forEach> 
+ 	</c:if>
+ 	<c:if test="${reservationList.size() == 0}">
+ 	<tr>
+			<td style="text-align: center" colspan="9"><h2>예약하신 정보가 없습니다</h2></td>
+	</tr>
+ 	
+ 	</c:if>
+ 	
 	</tbody>
 	</table>
 	</div>

@@ -17,4 +17,5 @@ public interface ReservationService {
 	List<ReservationVO> getReservationList_id(ScheduleVO scheduleVO);
 	
 	List<ReservationVO> getReservationListUsers(UsersVO usersVO);
+	
 }

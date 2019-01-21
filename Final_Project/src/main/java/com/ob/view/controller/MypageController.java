@@ -104,6 +104,12 @@ public class MypageController {
 		return "/views/mypage/updateUsers.jsp";
 	}
 	
+	@RequestMapping(value="/deleteRes.do", method= {RequestMethod.POST, RequestMethod.GET})
+	public String deleteReservation(ReservationVO vo) {
+		reservationService.deleteReservation(vo);
+		return "/myReservation.do";
+	}
+	
 	@RequestMapping(value="/updateUsers.do", method= {RequestMethod.POST, RequestMethod.GET})
 	@ResponseBody
 	public String updateUsers(UsersVO uvo, HttpSession session) {
