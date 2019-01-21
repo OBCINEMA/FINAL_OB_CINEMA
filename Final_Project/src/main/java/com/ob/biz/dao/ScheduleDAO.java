@@ -40,4 +40,7 @@ public class ScheduleDAO {
 	public int getCountSchedule() {
 		return mybatis.selectOne("ScheduleDAO.getCountSchedule");
 	}
+	public ScheduleVO getScheduleOne(ScheduleVO vo) {
+		return mybatis.selectOne("ScheduleDAO.getScheduleOne",vo);
+	}
 }

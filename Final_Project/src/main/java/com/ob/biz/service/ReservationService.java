@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.ob.biz.vo.ReservationVO;
 import com.ob.biz.vo.ScheduleVO;
+import com.ob.biz.vo.UsersVO;
 
 public interface ReservationService {
 	void insertReservation(ReservationVO vo);
@@ -13,5 +14,7 @@ public interface ReservationService {
 	List<ReservationVO> getReservationList();
 	
 	//예매조회(영화,스크린,극장)
-	List<ReservationVO>  getReservationList_id(ScheduleVO scheduleVO);
+	List<ReservationVO> getReservationList_id(ScheduleVO scheduleVO);
+	
+	List<ReservationVO> getReservationListUsers(UsersVO usersVO);
 }

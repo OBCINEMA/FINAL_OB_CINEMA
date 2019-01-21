@@ -51,7 +51,7 @@ public class ReservationDAO {
 	}
 	//예매 전체조회(회원별)
 	public List<ReservationVO> getReservationListUsers(UsersVO vo){
-		return mybatis.selectList("ReservationDAO.getReservationListUsers");
+		return mybatis.selectList("ReservationDAO.getReservationListUsers", vo);
 	}
 	//예매 전체조회(비회원별)
 	public List<ReservationVO> getReservationListNo_Users(No_UsersVO vo){

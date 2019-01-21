@@ -100,9 +100,9 @@
 												<c:forEach var="movie" items="${movieList}">
 													<tr>
 														<td>${movie.m_id }</td>
-														<td><img style="width: 60px; height: 100px"
+														<td><a href="admin_getMovie.do?m_id=${movie.m_id }" ><img style="width: 60px; height: 100px"
 															alt="${movie.poster}"
-															src="<%=MovieIMGPath %>/${movie.poster}"></td>
+															src="<%=MovieIMGPath %>/${movie.poster}"></a></td>
 														<td><a href="admin_getMovie.do?m_id=${movie.m_id }">
 																${movie.title } </a></td>
 														<td>${movie.gnr }</td>

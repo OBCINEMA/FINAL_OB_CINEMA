@@ -9,6 +9,7 @@ import com.ob.biz.dao.ReservationDAO;
 import com.ob.biz.service.ReservationService;
 import com.ob.biz.vo.ReservationVO;
 import com.ob.biz.vo.ScheduleVO;
+import com.ob.biz.vo.UsersVO;
 
 @Service("reservationService")
 public class ReservationServiceImpl implements ReservationService {
@@ -43,6 +44,11 @@ public class ReservationServiceImpl implements ReservationService {
 	@Override
 	public List<ReservationVO> getReservationList_id(ScheduleVO scheduleVO) {
 		return reservationDAO.getReservationList_id(scheduleVO);
+	}
+
+	@Override
+	public List<ReservationVO> getReservationListUsers(UsersVO usersVO) {
+		return reservationDAO.getReservationListUsers(usersVO);
 	}
 
 }

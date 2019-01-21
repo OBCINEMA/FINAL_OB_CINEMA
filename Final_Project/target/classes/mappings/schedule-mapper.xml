@@ -15,7 +15,7 @@
 	</resultMap>
 	
 	<!-- 스케쥴 조회 -->
-	<select id="getSchList" 
+	<select id="getSchList"
 	resultMap="scheduleResult" parameterType="schedule">
 		SELECT * FROM SCHEDULE 
 		WHERE T_ID = #{t_id} and M_ID=#{m_id}
@@ -67,6 +67,11 @@
 			<!-- 관리자 메인에서 쓸것 -->
 		<select id="getCountSchedule" resultType="int">
 		 select count(sch_id) from SCHEDULE
+	</select>
+	
+	<!-- 스케쥴 아이디로조회 -->
+	<select id="getScheduleOne" resultMap="scheduleResult" parameterType="schedule">
+		SELECT * FROM SCHEDULE WHERE SCH_ID = #{sch_id}
 	</select>
 	
 </mapper>

@@ -97,7 +97,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = posterFile.getOriginalFilename();
-			posterFile.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/"
+			posterFile.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setPoster(("(" + to + ")" + fileName));
 		} else {
@@ -109,7 +109,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img1File.getOriginalFilename();
-			img1File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img1File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg1(("(" + to + ")" + fileName));
 		} else {
@@ -121,7 +121,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img2File.getOriginalFilename();
-			img2File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img2File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg2(("(" + to + ")" + fileName));
 		} else {
@@ -133,7 +133,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img3File.getOriginalFilename();
-			img3File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img3File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg3(("(" + to + ")" + fileName));
 		} else {
@@ -145,7 +145,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img4File.getOriginalFilename();
-			img4File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img4File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg4(("(" + to + ")" + fileName));
 		} else {
@@ -157,7 +157,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img5File.getOriginalFilename();
-			img5File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img5File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg5(("(" + to + ")" + fileName));
 		} else {
@@ -166,7 +166,7 @@ public class AdminController {
 		}
 
 		movieService.insertMovie(vo);
-		return "/admin_searchMovie.do";
+		return "redirect:/admin_searchMovie.do";
 	}
 
 	@RequestMapping(value = "/admin_deleteMovie.do", method = { RequestMethod.GET, RequestMethod.POST })
@@ -219,7 +219,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = posterFile.getOriginalFilename();
-			posterFile.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/"
+			posterFile.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setPoster(("(" + to + ")" + fileName));
 		} else {
@@ -231,7 +231,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img1File.getOriginalFilename();
-			img1File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img1File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg1(("(" + to + ")" + fileName));
 		} else {
@@ -243,7 +243,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img2File.getOriginalFilename();
-			img2File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img2File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg2(("(" + to + ")" + fileName));
 		} else {
@@ -255,7 +255,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img3File.getOriginalFilename();
-			img3File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img3File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg3(("(" + to + ")" + fileName));
 		} else {
@@ -267,7 +267,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img4File.getOriginalFilename();
-			img4File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img4File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg4(("(" + to + ")" + fileName));
 		} else {
@@ -279,7 +279,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img5File.getOriginalFilename();
-			img5File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/movieimg/" + "("
+			img5File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/movieimg/" + "("
 					+ to + ")" + fileName));
 			vo.setImg5(("(" + to + ")" + fileName));
 		} else {
@@ -328,7 +328,7 @@ public class AdminController {
 			System.out.println(random);
 			String to = Integer.toString(random);
 			String fileName = img1File.getOriginalFilename();
-			img1File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img1File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg1(("(" + to + ")" + fileName));
 		} else {
@@ -341,7 +341,7 @@ public class AdminController {
 			System.out.println(random);
 			String to = Integer.toString(random);
 			String fileName = img2File.getOriginalFilename();
-			img2File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img2File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg2(("(" + to + ")" + fileName));
 		} else {
@@ -354,7 +354,7 @@ public class AdminController {
 			System.out.println(random);
 			String to = Integer.toString(random);
 			String fileName = img3File.getOriginalFilename();
-			img3File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img3File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg3(("(" + to + ")" + fileName));
 		} else {
@@ -367,7 +367,7 @@ public class AdminController {
 			System.out.println(random);
 			String to = Integer.toString(random);
 			String fileName = img4File.getOriginalFilename();
-			img4File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img4File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg4(("(" + to + ")" + fileName));
 		} else {
@@ -380,7 +380,7 @@ public class AdminController {
 			System.out.println(random);
 			String to = Integer.toString(random);
 			String fileName = img5File.getOriginalFilename();
-			img5File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img5File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg5(("(" + to + ")" + fileName));
 		} else {
@@ -433,7 +433,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img1File.getOriginalFilename();
-			img1File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img1File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg1(("(" + to + ")" + fileName));
 		} else {
@@ -445,7 +445,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img2File.getOriginalFilename();
-			img2File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img2File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg2(("(" + to + ")" + fileName));
 		} else {
@@ -457,7 +457,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img3File.getOriginalFilename();
-			img3File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img3File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg3(("(" + to + ")" + fileName));
 		} else {
@@ -469,7 +469,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img4File.getOriginalFilename();
-			img4File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img4File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg4(("(" + to + ")" + fileName));
 		} else {
@@ -481,7 +481,7 @@ public class AdminController {
 			int random = (int) (Math.random() * 10000) + 1;
 			String to = Integer.toString(random);
 			String fileName = img5File.getOriginalFilename();
-			img5File.transferTo(new File("C:/gitobfinal/obfinal/Final_Project/src/main/webapp/resources/theaterimg/"
+			img5File.transferTo(new File("C:/gitobfinal/FINAL_OB_CINEMA/Final_Project/src/main/webapp/resources/theaterimg/"
 					+ "(" + to + ")" + fileName));
 			vo.setImg5(("(" + to + ")" + fileName));
 		} else {
