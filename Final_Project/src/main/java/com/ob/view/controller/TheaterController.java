@@ -42,7 +42,7 @@ public class TheaterController {
 		return scheduleList;
 	}
 	@RequestMapping("theaterList.do")
-	public String theaterList(TheaterVO theaterVO,Model model) {
+	public String theaterList(TheaterVO theaterVO, Model model) {
 		theaterVO = theaterService.getTheater(theaterVO);
 		
 		System.out.println("theaterList : " + theaterVO);

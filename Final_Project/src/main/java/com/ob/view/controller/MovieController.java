@@ -44,6 +44,17 @@ public class MovieController {
 //		session.setAttribute("pageType","MovieDetail");
 		return "/views/reservation/MovieDetail.jsp";
 	}
+	//영화 상세보기(ajax용)
+	@RequestMapping("movieDetailOne.do")
+	@ResponseBody
+	public MovieVO movieDetailOne(MovieVO vo) {
+		
+		MovieVO selectedMovie = movieService.getMovieOne(vo);
+		
+		System.out.println("movieService.getMovieOne(vo) : " + selectedMovie);
+		
+		return selectedMovie;
+	}
 	
 	//영화 상세보기(상영예정작)
 	@RequestMapping("movieDetailPreair.do")

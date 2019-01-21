@@ -87,6 +87,8 @@ public class VoteController {
 	public String getVoteList(Model model, HttpSession session){
 		System.out.println("getVoteList실행");
 		session.setAttribute("pageType", "vote");
+		List<MovieVO> mList = movieService.getMovieList();
+		model.addAttribute("movieListAll", mList);
 //		map = voteRefresh(session);
 //		model.addAttribute("voteMap", map);
 //		System.out.println("voteMap(getVoteList) : " + map);

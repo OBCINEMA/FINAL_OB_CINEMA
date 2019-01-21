@@ -33,8 +33,8 @@
 <!-- Color Variations -->
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
 
-<!-- 투표페이지 CSS -->
-<!-- <link rel="stylesheet" href="/views/vote/voteList.css"> -->
+<!-- 투표페이지 영화상세 모달용 CSS -->
+<link rel="stylesheet" href="/resources/modal/modalMovieDetail.css">
 
 <style>
 .disabled {
@@ -73,103 +73,10 @@
 				<div class="mListByVote" style="display:flex"></div>
 				<div class="mList" style="display:flex"></div>
 				
-				
-<!-- 				<div class="votedmovie-content" style="width:80%; height:auto; margin:auto; padding:30px; border: 1px solid #999; border-radius:10px; min-width:550px;"> -->
-<!-- 					<div class="row" style="margin:0;"> -->
-<!-- 						<h1 style="color:black;" style="margin:0;">내가 선택한 영화</h1> -->
-<!-- 					</div> -->
-<!-- 					<hr> -->
-<!-- 					<div class="row" style="margin:0;"> -->
-<!-- 						<div class="col-3" style="height:200px; line-height:200px;"> -->
-<!-- 							<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg" -->
-<!-- 								style="height: auto;"> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-5"> -->
-<!-- 							<h2 class="votedmovie_title" style="margin:auto;">국가부도의 날</h2> -->
-<!-- 							<ul style="list-style:none; margin: 5px 0; padding:0 0 0 10px"> -->
-<!-- 							<li><h6 class="votedmovie_gnr">장르 : 로맨스</h6></li> -->
-<!-- 							<li><h6 class="votedmovie_director">감독 : 누구누구</h6></li> -->
-<!-- 							<li><h6 class="votedmovie_runningtime">상영시간 : 20000분</h6></li> -->
-<!-- 							<li><h6 class="votedmovie_restrict"> 제한상영가 : 7세 시청가</h6></li> -->
-<!-- 							</ul> -->
-<!-- 							<a href="" style="margin:">영화정보 상세보기</a> -->
-<!-- 						</div> -->
-<!-- 						<div class="col-4" style="height:200px; line-height:200px; "> -->
-<!-- 							<span class="votedmovie_vote" style="font-size:50px">43표</span> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-				
-<!-- 				<div class="mListByVote-content" style="width:80%; height:auto; margin:auto; padding:30px; border: 1px solid #999; border-radius:10px;  min-width:550px;"> -->
-<!-- 					<div class="row" style="margin:0;"> -->
-<!-- 						<h1 style="color:black;" style="margin:0;">득표수 상위 영화 5개</h1> -->
-<!-- 					</div> -->
-<!-- 					<hr> -->
-<!-- 					<div class="row" style="margin:0;"> -->
-<!-- 						<div class="row mListByVote-content-one" style="width: 100%; height:auto; margin:0 0 5px 0;"> -->
-<!-- 							<div class="col-3" style="height:100px; line-height:100px;"> -->
-<!-- 							<a href="#"> -->
-<!-- 								<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg" -->
-<!-- 									style="height: 100px; margin:auto;"> -->
-<!-- 							</a> -->
-<!-- 							</div> -->
-<!-- 							<div class="col-4" style="height:100px; line-height:100px;"> -->
-<!-- 							<a href="#"> -->
-<!-- 								<span style="margin:auto;">국가 부도의 날</span> -->
-<!-- 							</a> -->
-<!-- 							</div> -->
-<!-- 							<div class="col-5" style="height:100px; line-height:100px;"> -->
-<!-- 								<span style="margin:auto;">차트 ------------------ 123표</span> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 						<div class="row mListByVote-content-one" style="width: 100%; height:auto; margin:0 0 5px 0;"> -->
-<!-- 							<div class="col-3" style="height:100px; line-height:100px;"> -->
-<!-- 							<a href="#"> -->
-<!-- 								<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg" -->
-<!-- 									style="height: 100px; margin:auto;"> -->
-<!-- 							</a> -->
-<!-- 							</div> -->
-<!-- 							<div class="col-4" style="height:100px; line-height:100px;"> -->
-<!-- 							<a href="#"> -->
-<!-- 								<span style="margin:auto;">국가 부도의 날</span> -->
-<!-- 							</a> -->
-<!-- 							</div> -->
-<!-- 							<div class="col-5" style="height:100px; line-height:100px;"> -->
-<!-- 								<span style="margin:auto;">차트 ------------------ 123표</span> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-					
-<!-- 				</div> -->
-				
-<!-- 				<div class="mList-content" style="width:100%; height:auto; margin: 0 auto 10px; padding:30px; border: 1px solid #999; border-radius:10px; min-width:550px;"> -->
-<!-- 					<div class="row" style="margin:0;"> -->
-<!-- 						<h1 style="color:black; margin:0 auto;">전체 영화 목록</h1> -->
-<!-- 					</div> -->
-<!-- 					<hr> -->
-<!-- 					<div class="row" style="margin:0; padding: 10px"> -->
-<!-- 						<div class="mList-content-one" style="width: auto; height:auto; margin:0 5px 5px 0;"> -->
-<!-- 							<div class="col" style="width:auto; min-width:130px; border:1px solid #ddd; border-radius: 8px;"> -->
-<!-- 								<div class="row mList-content-one-vote"  style="margin:0; padding: 0"> -->
-<!-- 									<p style="margin:0 auto; font-size:0.8em">23</p> -->
-<!-- 								</div> -->
-<!-- 								<div class="row mList-content-one-chart"  style="margin:0; padding: 0"> -->
-<!-- 									<p style="margin:auto;">|</p> -->
-<!-- 									<p style="margin:auto;">|</p> -->
-<!-- 								</div> -->
-<!-- 								<div class="row mList-content-one-poster"  style="margin:0; padding: 0; height:auto;"> -->
-<!-- 									<img class="votedmovie_img" src="/resources/img/국가부도의날 포스터.jpg" alt="이미지파일명.jpg" -->
-<!-- 										style="height: 130px; margin:auto;"> -->
-<!-- 								</div> -->
-<!-- 								<div class="row mList-content-one-title"  style="margin:0; padding: 0; height:20px; line-height:20px;"> -->
-<!-- 									<h6 style="margin: 2px auto; font-size:0.8em">국가부도의 날</h6> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
+				<jsp:include page="/views/vote/myModalMovieDetail.jsp"></jsp:include>
 				
 			</div>
+			
 		</main>	
 		<!--// 메인 영역 Content -->
 		
@@ -193,19 +100,80 @@
 
 	//전역변수 선언
 	var maxVote = 0;
+	var votedmovie;
+	var mListByVote;
+	var mList;
+	
+	//영화상세 모달 script**************************************************************
+// 		// Get the modal
+// 		var modal = document.getElementById('modalMovieDetail');
+		 
+// 		// Get the <span> element that closes the modal
+// 		var span = document.getElementById("myModal-close");                                          
+		 
+// 		// When the user clicks on <span> (x), close the modal
+// 		span.onclick = function() {
+// 		    modal.style.display = "none";
+// 		}
+		 
+// 		// When the user clicks anywhere outside of the modal, close it
+// 		window.onclick = function(event) {
+// 			if (event.target == modal) {
+// 					modal.style.display = "none";
+// 			}
+// 		}
+	//**********************************************************************************
+	
+	
+	//영화 상세 모달
+	function movieDetailModalOn(){
+		
+		var detail_title = votedmovie.title;
+		var detail_poster = votedmovie.poster;
+		var detail_content = votedmovie.content;
+		var detail_director = votedmovie.director;
+		var detail_gnr = votedmovie.gnr;
+		var detail_runningtime = votedmovie.runningtime;
+		var detail_ristrict = votedmovie.ristrict;
+		var detail_img1 = votedmovie.img1;
+		var detail_img2 = votedmovie.img2;
+		var detail_img3 = votedmovie.img3;
+		
+		console.log('detail_title : ' + detail_title);
+		console.log('detail_poster : ' + detail_poster);
+		console.log('detail_content : ' + detail_content);
+		console.log('detail_director : ' + detail_director);
+		console.log('detail_gnr : ' + detail_gnr);
+		console.log('detail_runningtime : ' + detail_runningtime);
+		console.log('detail_ristrict : ' + detail_ristrict);
+		console.log('detail_img1 : ' + detail_img1);
+		console.log('detail_img2 : ' + detail_img2);
+		console.log('detail_img3 : ' + detail_img3);
+		console.log('test완료');
+		
+		$('#movieDetailModal-title').html(detail_title);
+		$('#movieDetailModal-poster').html('<img src="/resources/movieimg/'+detail_poster+' alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-content').html(detail_content);
+		$('#movieDetailModal-director').html(detail_director);
+		$('#movieDetailModal-gnr').html(detail_gnr);
+		$('#movieDetailModal-runningtime').html(detail_runningtime);
+		$('#movieDetailModal-ristrict').html(detail_ristrict);
+		$('#movieDetailModal-img1').html(detail_img1);
+		$('#movieDetailModal-img2').html(detail_img2);
+		$('#movieDetailModal-img3').html(detail_img3);
+		
+	    modal.style.display = "block";
+	}
+	
 	
 	//차트 그리기(득표순 5개 차트)
 	function drawChart(){
 // 		alert("drawChart 실행");
 		var divs = [];
 		divs = document.getElementsByClassName('chart_div');
-// 		var divs = $('.chart_div');
 		console.log("divs : " + divs);
-// 		var maxVote = $(divs[0]).attr('vote');
-// 		var maxVote = divs[0].getAttribute('vote');
 		console.log('maxVote : ' + maxVote);
 		for(var i in divs){ 
-// 			console.log('vote[' + i + '] : ' + $(divs[i]).attr('vote'));
 			var votes = divs[i].getAttribute('vote');
 			var voteInt = parseInt(votes, 10);
 			console.log('voteInt : ' +  voteInt);
@@ -224,11 +192,11 @@
 				        bar: {groupWidth: "30%"}},
 					hAxis : {
 						minValue: 0,
-						maxValue: maxVote},
+						maxValue: maxVote,
+						textPosition: 'none'},
 				    legend: { position: "none" }
 			};
 			var id = $(divs[i]).attr('id');
-// 			console.log("id : " + id);
 			var chart = new google.visualization.BarChart(document.getElementById(id));
 			chart.draw(data, options);
 		}
@@ -239,11 +207,9 @@
 // 		alert("drawChart2 실행");
 		var divs2 = [];
 		divs2 = document.getElementsByClassName('chart_div2');
-// 		var divs = $('.chart_div');
 		console.log("divs2 : " + divs2);
 		console.log('maxVote : ' + maxVote);
 		for(var i in divs2){ 
-// 			console.log('vote[' + i + '] : ' + $(divs[i]).attr('vote'));
 			var votes2 = divs2[i].getAttribute('vote');
 			var voteInt2 = parseInt(votes2, 10);
 			console.log('voteInt2 : ' +  voteInt2);
@@ -266,17 +232,8 @@
 						textPosition: 'none'},
 				    legend: { position: "none" }
 			};
-
-// 		     var options = {
-// 		       width: 600,
-// 		       height: 400,
-// 		       bar: {groupWidth: "95%"},
-// 		       legend: { position: "none" },
-// 		     };
-
 			
 			var id = $(divs2[i]).attr('id');
-// 			console.log("id : " + id);
 			var chart = new google.visualization.ColumnChart(document.getElementById(id));
 			chart.draw(data, options);
 		}
@@ -327,13 +284,13 @@
 // 		alert("voteListing 실행됨");
 		console.log("result : " + result);
 		var loginChk = result.loginChk;
-		var votedmovie = result.votedmovie;
-		var mListByVote = result.mListByVote;
-		var mList = result.mList;
+		votedmovie = result.votedmovie;
+		mListByVote = result.mListByVote;
+		mList = result.mList;
 		
-		console.log(votedmovie);
-		console.log(mListByVote);
-		console.log(mList);
+		console.log("votedmovie : " + votedmovie);
+		console.log("mListByVote : " + mListByVote);
+		console.log("mList : " + mList);
 		
 		if(loginChk!=0){
 			if(votedmovie.title!=null){
@@ -350,14 +307,14 @@
 				str += '				style="height: 100%;">';
 				str += '</div>';
 				str += '		<div class="col-5">';
-				str += '			<h2 class="votedmovie_title" style="margin:auto; color:#333">'+ votedmovie.title + '</h2>';
+				str += '			<h4 class="votedmovie_title" style="display:inline; margin:auto; color:#333">'+ votedmovie.title + '</h4>';
 				str += '			<ul style="list-style:none; margin: 5px 0; padding:0 0 0 10px">';
 				str += '			<li><h6 class="votedmovie_gnr">장르 : ' + votedmovie.gnr + '</h6></li>';
 				str += '			<li><h6 class="votedmovie_director">감독 : ' + votedmovie.director + '</h6></li>';
 				str += '			<li><h6 class="votedmovie_runningtime">상영시간 : ' + votedmovie.runningtime + '</h6></li>';
 				str += '			<li><h6 class="votedmovie_restrict"> 제한상영가 : ' + votedmovie.restrict + '</h6></li>';
 				str += '			</ul>';
-				str += '			<p><a href="#" style="margin:auto;">영화정보 상세보기</a></p>';
+				str += '			<p><a onclick="movieDetailModalOn()" style="margin:auto;">영화정보 상세보기</a></p>';
 				str += '		</div>';
 				str += '		<div class="col-4"  style="height:200px; line-height:200px;">';
 				str += '			<span class="votedmovie_vote" style="font-size:80px; margin:auto;">' + votedmovie.vote + '표</span>';
@@ -426,12 +383,13 @@
 		if(onair==0){
 		str += '		<a onclick="vote(' + mList[i].m_id + ')">';
 		str += '		<div class="mList-content-one" style="width: auto; height:auto; margin:0 5px 5px 0;">';
+		str += '			<div class="col" style="width:auto; min-width:130px; border:1px solid #888; border-radius: 8px;">';
 		} else {
 // 		str += '		<a class="disabledMovie" style="color: currentColor; cursor: not-allowed; opacity: 0.5; text-decoration: none;">';
 		str += '		<a class="disabledMovie" style="color: currentColor; opacity: 0.5; text-decoration: none;">';
 		str += '		<div class="mList-content-one" style="width: auto; height:auto; margin:0 5px 5px 0;">';
-		}
 		str += '			<div class="col" style="width:auto; min-width:130px; border:1px solid #ddd; border-radius: 8px;">';
+		}
 		str += '				<div class="row mList-content-one-vote"  style="margin:0; padding: 0">';
 		str += '					<p style="margin:0 auto; font-size:0.8em">' + mList[i].vote + '</p>';
 		str += '				</div>';
