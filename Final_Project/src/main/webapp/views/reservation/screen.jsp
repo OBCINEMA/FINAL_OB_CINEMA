@@ -13,6 +13,10 @@
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 	rel="stylesheet" id="bootstrap-css">
 <script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
+<style>
+
+
+</style>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -30,10 +34,12 @@
 <link rel="apple-touch-icon" href="<%=KPath%>/images/icon.png">
 
 <!-- Google font (font-family: 'Roboto', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	rel="stylesheet">
 <!-- Google font (font-family: 'Roboto Condensed', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
 	rel="stylesheet">
 
 <!-- Stylesheets -->
@@ -42,33 +48,108 @@
 <link rel="stylesheet" href="<%=KPath%>/style.css">
 
 <!-- Color Variations -->
+<!-- 헤더 로그인 버튼 색상 -->
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
 
+<!-- Cusom css -->
+<link rel="stylesheet" href="<%=KPath%>/css/custom.css">
 
+<!-- Modernizer js -->
+<script src="<%=KPath%>/js/vendor/modernizr-3.5.0.min.js"></script>
+
+
+<script>
+    // html 이 다 로딩된 후 실행
+    $(document).ready(function() {
+        // 체크박스들이 변경됬을때
+        $('[name="check_seat"]').change(function() {
+        	
+            var cnt = $("#person").val();
+             
+            // 셀렉트박스의 값과 체크박스중 체크된 갯수가 같을때, 다른 체크박스들을 disable 처리
+            if( cnt==$('[name="check_seat"]:checked').length ) {
+                $('[name="check_seat"]:not(:checked)').attr("disabled", true);
+            }
+            // 체크된 갯수가 다르면 활성화 시킴
+            else {
+                $('[name="check_seat"]').prop("disabled",false);
+            }
+        });
+         
+        // 셀렉트박스에서 다른 인원수를 선택하면 초기화 시킴
+        $("#person").change(function(){
+            
+            $('[name="check_seat"]').attr("disabled",false);
+            $('[name="check_seat"]').prop("checked",false);
+            $("#seat").empty();
+
+        });
+    });
+    
+    function seat(rowCol) {
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : "seat.do?rowCol=" + rowCol,
+			success : function(data) {
+				
+				var str = data.toString();
+				var row = str.substring(0, 1);
+				var col = str.substring(1, 2);
+				var rowCol = row + "/" + col
+				
+				console.log($("#seat").html());
+				
+				if($("#seat").html() == "") {
+// 					alert("내용없음");
+					$("#seat").html(rowCol);
+				} else if ($("#seat").html() != "") {
+					if($("#seat").html().indexOf(rowCol) == -1) {
+// 						alert("내용없음");
+						$("#seat").append(" " + rowCol);
+					} else {
+// 						alert("내용있음");
+// 						alert($("#seat").html().indexOf(rowCol));
+// 						alert($("#seat").html());
+						$("#seat").html($("#seat").html().replace(rowCol, ''));
+					}
+				}
+			},
+			error : function(jqXHR, textStatus, errorThrown) {
+		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+		    }
+		})
+    }
+    
+    function sendSeat(form) {
+    	form.action = "pay.do";
+    	form.submit();
+    }
+    
+</script>
 
 </head>
 <body>
-	<!-- 메인 영역 -->
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
 
-	<div class="container"  style="margin-top:146px">
+	<div class="container" style="margin-top: 140px;margin-bottom: 40px;"">
 
 		<div class="container"
 			style="display: inline-block; text-align: center;">
-			<div class='col-sm-3'>
-				<img src="resources/img/영화.png" width="100">
-			</div>
-			<div class='col-sm-3'>
-				<img src="resources/img/상영관.png" width="100">
-			</div>
-			<div class='col-sm-3'>
-				<img src="resources/img/좌석.png" width="100">
-			</div>
-			<div class='col-sm-3'>
-				<img src="resources/img/화살표.png" width="100">
-			</div>
+<!-- 			<div class='col-sm-3'> -->
+<!-- 				<img src="resources/img/영화.png" width="100"> -->
+<!-- 			</div> -->
+<!-- 			<div class='col-sm-3'> -->
+<!-- 				<img src="resources/img/상영관.png" width="100"> -->
+<!-- 			</div> -->
+<!-- 			<div class='col-sm-3'> -->
+<!-- 				<img src="resources/img/좌석.png" width="100"> -->
+<!-- 			</div> -->
+<!-- 			<div class='col-sm-3'> -->
+<!-- 				<img src="resources/img/화살표.png" width="100"> -->
+<!-- 			</div> -->
 		</div>
 
 
@@ -127,7 +208,7 @@
 								    			var resCol = "${k }";
 								    			
 								    			$("#"+resRow+resCol).remove();
-								    			$("."+resRow+resCol).attr('style', 'background-color:gray; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;width: 27px;height: 27px;');
+								    			$("."+resRow+resCol).attr('style', 'background-color:gray; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;width: 27px;height: 27px; margin-right: 10px;');
 									    	</script>
 												</c:if>
 											</c:forEach>
@@ -195,11 +276,9 @@
 									<input type="hidden" name="t_id" value=${scheduleVO.t_id }>
 									<input type="hidden" name="time" value=${scheduleVO.time }>
 									<input type="hidden" name="date" value=${scheduleVO.date }>
-									<input type="button" value="결제하기" onclick="sendSeat(this.form)" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #f6644f;height: 58px;">
+									<input type="button" value="결제하기" onclick="sendSeat(this.form)" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #ce2c3c;height: 58px;">
 								</div>
 							</li>
-
-
 						</ul>
 					</div>
 				</div>
@@ -213,76 +292,6 @@
 	<jsp:include page="../main/main-footer.jsp"></jsp:include>
 	<!-- //Footer Area -->
 
-	<script>
-	    // html 이 다 로딩된 후 실행
-	    $(document).ready(function() {
-	        // 체크박스들이 변경됬을때
-	        $('[name="check_seat"]').change(function() {
-	        	
-	            var cnt = $("#person").val();
-	             
-	            // 셀렉트박스의 값과 체크박스중 체크된 갯수가 같을때, 다른 체크박스들을 disable 처리
-	            if( cnt==$('[name="check_seat"]:checked').length ) {
-	                $('[name="check_seat"]:not(:checked)').attr("disabled", true);
-	            }
-	            // 체크된 갯수가 다르면 활성화 시킴
-	            else {
-	                $('[name="check_seat"]').prop("disabled",false);
-	            }
-	        });
-	         
-	        // 셀렉트박스에서 다른 인원수를 선택하면 초기화 시킴
-	        $("#person").change(function(){
-	            
-	            $('[name="check_seat"]').attr("disabled",false);
-	            $('[name="check_seat"]').prop("checked",false);
-	            $("#seat").empty();
-	
-	        });
-	    });
-	    
-	    function seat(rowCol) {
-			$.ajax({
-				type : "POST",
-				dataType : "json",
-				url : "seat.do?rowCol=" + rowCol,
-				success : function(data) {
-					
-					var str = data.toString();
-					var row = str.substring(0, 1);
-					var col = str.substring(1, 2);
-					var rowCol = row + "/" + col
-					
-					console.log($("#seat").html());
-					
-					if($("#seat").html() == "") {
-						alert("내용없음");
-						$("#seat").html(rowCol);
-					} else if ($("#seat").html() != "") {
-						if($("#seat").html().indexOf(rowCol) == -1) {
-							alert("내용없음");
-							$("#seat").append(" " + rowCol);
-						} else {
-							alert("내용있음");
-							alert($("#seat").html().indexOf(rowCol));
-							alert($("#seat").html());
-							$("#seat").html($("#seat").html().replace(rowCol, ''));
-						}
-					}
-				},
-				error : function(jqXHR, textStatus, errorThrown) {
-			        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
-			    }
-			})
-	    }
-	    
-	    function sendSeat(form) {  
-	    	form.action = "pay.do";
-	    	form.submit();
-	    }
-	    
-	</script>
-	
 </body>
 </html>
 

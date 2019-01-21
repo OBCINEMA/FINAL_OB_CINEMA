@@ -33,6 +33,8 @@ public interface ScheduleService {
 		//메인에서 쓸 스케쥴 총 수
 		int getCountSchedule();
 	
+	//스케쥴 조회 아이디로
+	ScheduleVO getScheduleOne(ScheduleVO vo);
 	
 	
 }

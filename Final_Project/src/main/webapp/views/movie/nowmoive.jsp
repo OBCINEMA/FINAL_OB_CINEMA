@@ -57,12 +57,13 @@
 		<!-- //Header -->
 
 		<!-- Page Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Portfolio Area -->
-		<section class="portfolio-area section-padding-lg bg-white" style="padding:0;">
+		<main class="page-content"> <!-- Portfolio Area -->
+		<section class="portfolio-area section-padding-lg bg-white">
 			<div class="container" style="margin-top: 50px;">
 			
 				<div class="row">
-					<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0">
+					<div
+						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0">
 						<div class="section-title text-center">
 							<h4>상영중 영화</h4>
 						</div>
@@ -85,7 +86,7 @@
 
 					<!-- Portfolios -->
 					<div class="row no-gutters portfolios portfolios-style-1"
-						style="height: 900px; width: 700px;" data-show="9" data-load="6">
+						style="height: 900px; width: 700px; position: relative;left: 50px;" data-show="9" data-load="6">
 
 						<c:forEach var="movieidx" items="${movieList}">
 							<c:if test="${not empty movieidx.poster}">
@@ -105,7 +106,7 @@
 												<h3>		
 													<a href="<%=contextPath%>/movieDetail.do?m_id=${movieidx.m_id}"><img alt="영화정보"
 														src="<%=IMGPath%>/영화정보.png"></a>
-														<a href="#" onclick="res(${movieOne.m_id })"><img alt="예매하기"
+														<a href="#" onclick="res(${movieidx.m_id })"><img alt="예매하기"
 														src="<%=IMGPath%>/예매.png"></a>
 												</h3>
 											</div>
@@ -151,7 +152,7 @@
 		
 	<script>
 	function idChk(){
-		alert("idChk실행 - Logininformaion : " + "${Logininformaion}");
+// 		alert("idChk실행 - Logininformaion : " + "${Logininformaion}");
 		if("${Logininformaion}" != null) {
 			return 1;
 		} else {
@@ -159,20 +160,20 @@
 		}
 	}
 	 function res(m_id){
-	 	console.log("${Logininformation}");
-	 	alert("${Logininformation}");
-	 	alert("${Logininformation.u_id}");
+// 		 alert("m_id : " + m_id);
+// 	 	console.log("${Logininformation}");
+// 	 	alert("${Logininformation}");
+// 	 	alert("${Logininformation.u_id}");
 	 	
 	 	var u_id = "${Logininformation.u_id}";
 	 	if(u_id != ""){
-	 		alert("아이디있음");
-	  		location.href="movieRes.do";
+// 	 		alert("아이디있음");
+	  		location.href="movieRes.do?m_id=" + m_id;
 	  	} else {
-	  		alert("아이디없음");
+// 	  		alert("아이디없음");
 	  		modal.style.display = "block";
 		} 
 	}
-	
 	</script>
 </body>
 

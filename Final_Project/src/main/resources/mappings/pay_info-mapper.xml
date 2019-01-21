@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Pay_infoDAO">
+	<resultMap id="pay_infoResult" type="pay_info">
+		<result property="pay_id" column="PAY_ID" />
+		<result property="pay_type" column="PAY_TYPE" />
+		<result property="pay_price" column="PAY_PRICE" />
+		<result property="pay_date" column="PAY_DATE" />
+		<result property="u_id" column="U_ID" />
+	</resultMap>
+	
+	<insert id="insertPay_info" parameterType="pay_info">
+	<![CDATA[
+        INSERT INTO PAY_INFO (PAY_ID,PAY_TYPE,PAY_PRICE,PAY_DATE, U_ID)
+		VALUES ((SELECT NVL(MAX(PAY_ID),0)+1 FROM PAY_INFO),#{pay_type},#{pay_price},SYSDATE, #{u_id})
+	]]>
+	</insert>
+</mapper>
+

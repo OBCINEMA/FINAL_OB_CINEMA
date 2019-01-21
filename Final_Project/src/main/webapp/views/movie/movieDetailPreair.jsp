@@ -15,20 +15,21 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Karbar - Multipurpose Bootstrap 4 Template</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>개봉예정영화 상세페이지</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="<%=KPath%>/images/favicon.ico">
 <link rel="apple-touch-icon" href="<%=KPath%>/images/icon.png">
 
 <!-- Google font (font-family: 'Roboto', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	rel="stylesheet">
 <!-- Google font (font-family: 'Roboto Condensed', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
 	rel="stylesheet">
 
 <!-- Stylesheets -->
@@ -38,6 +39,35 @@
 
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
 
+<script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
+
+<!-- Modernizer js -->
+<title>Insert title here</title>
+<script>
+// function idChk(){
+// 	alert("idChk실행 - Logininformaion : " + "${Logininformaion}");
+// 	if("${Logininformaion}" != null) {
+// 		return 1;
+// 	} else {
+// 		return 0;
+// 	}
+// }
+//  function res(m_id){
+//  	console.log("${Logininformation}");
+//  	alert("${Logininformation}");
+//  	alert("${Logininformation.u_id}");
+ 	
+//  	var u_id = "${Logininformation.u_id}";
+//  	if(u_id != ""){
+//  		alert("아이디있음");
+//   		location.href="movieRes.do";
+//   	} else {
+//   		alert("아이디없음");
+//   		document.getElementById("id01").style="display:block";
+// 	} 
+// }
+
+</script>
 </head>
 <body>
 
@@ -54,8 +84,8 @@
 
 
 		<!-- Page Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Service Details -->
-		<div class="pg-service-area section-padding-lg bg-white" style="padding:0;">
+		<main class="page-content"> <!-- Service Details -->
+		<div class="pg-service-area section-padding-lg bg-white">
 			<div class="container" style="margin-top: 50px;">
 				<div class="row">
 					<div class="col-lg-12">
@@ -63,7 +93,7 @@
 					</div>
 					<div class="col-lg-7">
 						<div class="pg-service-thumbs">
-							<img src="/resources/movieimg/${movieOne.poster }" alt="service thumb" style="width: 500px; height: 650px">
+							<img src="/resources/movieimg/${movieOne.poster }" alt="service thumb" style="width: 100px; height: 650px">
 						</div>
 					</div>
 					<div class="col-lg-5">
@@ -147,6 +177,13 @@
 
 	</div>
 	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/active.js"></script>
+	<script src="js/scripts.js"></script>
 
 </body>
 </html>

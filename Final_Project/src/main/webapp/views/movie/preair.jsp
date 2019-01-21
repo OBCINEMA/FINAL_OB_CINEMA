@@ -18,20 +18,21 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>현재 상영작</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>현재 상영작</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="<%=KPath%>/images/favicon.ico">
 <link rel="apple-touch-icon" href="<%=KPath%>/images/icon.png">
 
 <!-- Google font (font-family: 'Roboto', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	rel="stylesheet">
 <!-- Google font (font-family: 'Roboto Condensed', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
 	rel="stylesheet">
 
 <!-- Stylesheets -->
@@ -42,9 +43,42 @@
 <!-- Color Variations -->
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
 
+<!-- Modernizer js -->
+<script src="<%=KPath%>/js/vendor/modernizr-3.5.0.min.js"></script>
+<script>
+// function idChk(){
+// 	alert("idChk실행 - Logininformaion : " + "${Logininformaion}");
+// 	if("${Logininformaion}" != null) {
+// 		return 1;
+// 	} else {
+// 		return 0;
+// 	}
+// }
+//  function res(m_id){
+//  	console.log("${Logininformation}");
+//  	alert("${Logininformation}");
+//  	alert("${Logininformation.u_id}");
+ 	
+//  	var u_id = "${Logininformation.u_id}";
+//  	if(u_id != ""){
+//  		alert("아이디있음");
+//   		location.href="movieRes.do";
+//   	} else {
+//   		alert("아이디없음");
+//   		document.getElementById("id01").style="display:block";
+// 	} 
+// }
+
+</script>
+
+
 </head>
 
 <body>
+
+
+	<!-- Add your site or application content here -->
+
 
 	<!-- 메인 영역 -->
 	<div class="wrapper" id="wrapper">
@@ -54,8 +88,8 @@
 		<!-- //Header -->
 
 		<!-- Page Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Portfolio Area -->
-		<section class="portfolio-area section-padding-lg bg-white" style="padding:0;">
+		<main class="page-content"> <!-- Portfolio Area -->
+		<section class="portfolio-area section-padding-lg bg-white">
 			<div class="container" style="margin-top: 50px;">
 			
 				<div class="row">
@@ -83,7 +117,7 @@
 
 					<!-- Portfolios -->
 					<div class="row no-gutters portfolios portfolios-style-1"
-						style="height: 900px; width: 700px;" data-show="9" data-load="6">
+						style="height: 900px; width: 700px; position: relative;left: 50px;" data-show="9" data-load="6">
 
 						<c:forEach var="movieidx" items="${movieListPreair}">
 							<c:if test="${not empty movieidx.poster}">
@@ -136,7 +170,6 @@
 		</section>
 		<!--// Portfolio Area --> </main>
 		<!--// Page Content -->
-
 		<!-- //메인 끝 -->
 
 		<!-- Footer Area -->
@@ -145,6 +178,13 @@
 
 	</div>
 	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="<%=KPath%>/js/popper.min.js"></script>
+	<script src="<%=KPath%>/js/bootstrap.min.js"></script>
+	<script src="<%=KPath%>/js/plugins.js"></script>
+	<script src="<%=KPath%>/js/active.js"></script>
+	<script src="<%=KPath%>/js/scripts.js"></script>
 </body>
 
 </html>

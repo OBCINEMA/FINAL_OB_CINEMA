@@ -57,4 +57,9 @@ public class ScheduleServiceImpl implements ScheduleService{
 		return scheduleDAO.getCountSchedule();
 	}
 
+	@Override
+	public ScheduleVO getScheduleOne(ScheduleVO vo) {
+		return scheduleDAO.getScheduleOne(vo);
+	}
+
 }

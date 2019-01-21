@@ -152,17 +152,17 @@
 		console.log('test완료');
 		
 		$('#movieDetailModal-title').html(detail_title);
-		$('#movieDetailModal-poster').html('<img src="/resources/movieimg/'+detail_poster+' alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-poster').html('<img src="/resources/movieimg/'+detail_poster+'" alt="service thumb" style="width: 100%;">');
 		$('#movieDetailModal-content').html(detail_content);
 		$('#movieDetailModal-director').html(detail_director);
 		$('#movieDetailModal-gnr').html(detail_gnr);
 		$('#movieDetailModal-runningtime').html(detail_runningtime);
 		$('#movieDetailModal-ristrict').html(detail_ristrict);
-		$('#movieDetailModal-img1').html(detail_img1);
-		$('#movieDetailModal-img2').html(detail_img2);
-		$('#movieDetailModal-img3').html(detail_img3);
+		$('#movieDetailModal-img1').html('<img src="/resources/movieimg/'+detail_img1+'" alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-img2').html('<img src="/resources/movieimg/'+detail_img2+'" alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-img3').html('<img src="/resources/movieimg/'+detail_img3+'" alt="service thumb" style="width: 100%;">');
 		
-	    modal.style.display = "block";
+	    modal2.style.display = "block";
 	}
 	
 	
@@ -421,9 +421,6 @@
 	 	google.charts.setOnLoadCallback(drawChart);
 	 	google.charts.setOnLoadCallback(drawChart2);
 	}
-	
-
-	
 	
 	</script>
 	
