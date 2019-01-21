@@ -64,28 +64,6 @@
 		<main class="page-content" style="margin-top:146px">
 		
 		<section class="services-area section-padding-lg bg-grey" style="position:relative; margin: 0; padding:0;">
-			<!-- Sidebar -->
-			<div class="col-lg-3" style="position: fixed; display: inline-block">
-				<div class="widgets widgets-leftside" style="margin:0">
-				
-					<!-- Single Widget -->
-					<div class="single-widget widget-categories">
-						<h5 class="widget-title">My Page</h5>
-						<ul>
-							<li>
-							<a href="/myReservation.do">예매내역 조회/취소</a>
-							</li>
-							<li>
-							<a href="/updateUsersGo.do">내 정보 수정</a>
-							</li>
-						</ul>
-					</div>
-					<!--// Single Widget -->
-				
-				</div>
-			</div>
-			<!--// Sidebar -->
-			
 			<!-- 본문 -->
 			<div class="container" style="margin:500 0 0 0">
 				<div class="row">
