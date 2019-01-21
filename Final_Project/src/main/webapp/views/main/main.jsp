@@ -62,11 +62,42 @@
 						<div class="service service-style-4 text-center">
 							<div class="service-image" >
 								<img src="/resources/movieimg/${i.poster }"
-									alt="Service Thumb">
+									alt="Service Thumb" style="height: 410px;">
 							</div>
 							<div class="service-content">
 								<h5>
 									<a href="<%=contextPath%>/movieDetail.do?m_id=${i.m_id }">${i.title }</a>
+								</h5>
+							</div>
+						</div>
+					</div>
+					</c:forEach>
+					
+				</div>
+
+			</div>
+		</section>
+		<!--// Features Area --> </main>
+		<!-- //메인 끝 -->
+		<!--메인 영역 Content -->
+		<main class="page-content" style="margin-top:0px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
+		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
+			<div class="container">
+			<hr>
+			<h2 style="text-align: center;">극장</h2>
+
+				<div class="row justify-content-center service-slider-active cr-slider-dots-1">
+					<c:forEach var="i" items="${theaterList}">
+					<!-- Signle Service -->
+					<div class="col-lg-4 col-md-6 col-12">
+						<div class="service service-style-4 text-center">
+							<div class="service-image" >
+								<img src="/resources/theaterimg/${i.img1 }"
+									alt="Service Thumb" style="height: 250px;">
+							</div>
+							<div class="service-content">
+								<h5>
+									<a href="<%=contextPath%>/theaterList.do?t_id=${i.t_id }">${i.name }</a>
 								</h5>
 							</div>
 						</div>

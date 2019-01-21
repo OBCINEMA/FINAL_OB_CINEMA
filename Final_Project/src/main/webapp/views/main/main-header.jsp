@@ -50,13 +50,13 @@
 											</c:forEach>
 										</ul></li>
 
-									<li class="cr-dropdown"><a href="about-us.html">즐기기</a>
+									<li class="cr-dropdown"><a href="#">즐기기</a>
 										<ul>
 											<li><a href="about-us-2.html">이벤트</a></li>
 											<li><a href="about-us-3.html">영화추천</a></li>
 										</ul></li>
 
-									<li class="cr-dropdown"><a href="about-us.html">명예의 전당</a>
+									<li class="cr-dropdown"><a href="#">명예의 전당</a>
 										<ul>
 											<li><a href="about-us.html">A</a></li>
 											<li><a href="about-us-2.html">B</a></li>
