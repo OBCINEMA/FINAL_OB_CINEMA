@@ -14,7 +14,7 @@
 </head>
 <body>
 	<!-- Footer Area -->
-	<footer id="footer" class="footer-area">
+	<footer id="footer" class="footer-area" style="position:absolute; bottom:0;">
 		<!-- Footer Bottom Area -->
 		<div class="footer-bottom-area bg-dark">
 			<div class="container">
@@ -48,7 +48,6 @@
 	<script src="<%=KPath%>/js/plugins.js"></script>
 	<script src="<%=KPath%>/js/active.js"></script>
 	<script src="<%=KPath%>/js/scripts.js"></script>
-
 	<!-- Modernizer js -->
 <%-- 	<script src="<%=KPath%>/js/vendor/modernizr-3.5.0.min.js"></script> --%>
 </body>
