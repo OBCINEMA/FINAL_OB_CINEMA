@@ -104,6 +104,18 @@
 	var mListByVote;
 	var mList;
 	
+	//모달용 상세 정보
+	var detail_title;
+	var detail_poster;
+	var detail_content;
+	var detail_director;
+	var detail_gnr;
+	var detail_runningtime;
+	var detail_ristrict;
+	var detail_img1;
+	var detail_img2;
+	var detail_img3;
+	
 	//영화상세 모달 script**************************************************************
 // 		// Get the modal
 // 		var modal = document.getElementById('modalMovieDetail');
@@ -124,20 +136,19 @@
 // 		}
 	//**********************************************************************************
 	
-	
-	//영화 상세 모달
+	//영화 상세 모달(내가 선택한 영화)
 	function movieDetailModalOn(){
 		
-		var detail_title = votedmovie.title;
-		var detail_poster = votedmovie.poster;
-		var detail_content = votedmovie.content;
-		var detail_director = votedmovie.director;
-		var detail_gnr = votedmovie.gnr;
-		var detail_runningtime = votedmovie.runningtime;
-		var detail_ristrict = votedmovie.ristrict;
-		var detail_img1 = votedmovie.img1;
-		var detail_img2 = votedmovie.img2;
-		var detail_img3 = votedmovie.img3;
+		detail_title = votedmovie.title;
+		detail_poster = votedmovie.poster;
+		detail_content = votedmovie.content;
+		detail_director = votedmovie.director;
+		detail_gnr = votedmovie.gnr;
+		detail_runningtime = votedmovie.runningtime;
+		detail_ristrict = votedmovie.ristrict;
+		detail_img1 = votedmovie.img1;
+		detail_img2 = votedmovie.img2;
+		detail_img3 = votedmovie.img3;
 		
 		console.log('detail_title : ' + detail_title);
 		console.log('detail_poster : ' + detail_poster);
@@ -164,6 +175,47 @@
 		
 	    modal2.style.display = "block";
 	}
+	
+	//영화 상세 모달(득표 상위 영화 5개)
+	function movieDetailModalOn2(i){
+		
+		detail_title = mListByVote[i].title;
+		detail_poster = mListByVote[i].poster;
+		detail_content = mListByVote[i].content;
+		detail_director = mListByVote[i].director;
+		detail_gnr = mListByVote[i].gnr;
+		detail_runningtime = mListByVote[i].runningtime;
+		detail_ristrict = mListByVote[i].ristrict;
+		detail_img1 = mListByVote[i].img1;
+		detail_img2 = mListByVote[i].img2;
+		detail_img3 = mListByVote[i].img3;
+		
+		console.log('detail2_title : ' + detail_title);
+		console.log('detail2_poster : ' + detail_poster);
+		console.log('detail2_content : ' + detail_content);
+		console.log('detail2_director : ' + detail_director);
+		console.log('detail2_gnr : ' + detail_gnr);
+		console.log('detail2_runningtime : ' + detail_runningtime);
+		console.log('detail2_ristrict : ' + detail_ristrict);
+		console.log('detail2_img1 : ' + detail_img1);
+		console.log('detail2_img2 : ' + detail_img2);
+		console.log('detail2_img3 : ' + detail_img3);
+		console.log('test완료');
+		
+		$('#movieDetailModal-title').html(detail_title);
+		$('#movieDetailModal-poster').html('<img src="/resources/movieimg/'+detail_poster+'" alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-content').html(detail_content);
+		$('#movieDetailModal-director').html(detail_director);
+		$('#movieDetailModal-gnr').html(detail_gnr);
+		$('#movieDetailModal-runningtime').html(detail_runningtime);
+		$('#movieDetailModal-ristrict').html(detail_ristrict);
+		$('#movieDetailModal-img1').html('<img src="/resources/movieimg/'+detail_img1+'" alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-img2').html('<img src="/resources/movieimg/'+detail_img2+'" alt="service thumb" style="width: 100%;">');
+		$('#movieDetailModal-img3').html('<img src="/resources/movieimg/'+detail_img3+'" alt="service thumb" style="width: 100%;">');
+		
+	    modal2.style.display = "block";
+	}
+	
 	
 	
 	//차트 그리기(득표순 5개 차트)
@@ -338,15 +390,15 @@
 		for(var i in mListByVote){
 		str += '	<div class="row" style="margin:0;">';
 		str += '		<div class="row mListByVote-content-one" style="width: 100%; height:auto; margin:0 0 5px 0;">';
-		str += '			<div class="col-2" style="height:100px; line-height:100px;">';
-		str += '			<a href="#" style="margin:auto;">';
+		str += '			<div class="col" style="height:100px; line-height:100px; padding:0;">';
+		str += '			<a onclick="movieDetailModalOn2('+i+')" style="margin:auto;">';
 		str += '				<img class="votedmovie_img" src="/resources/movieimg/' + mListByVote[i].poster + '" alt="이미지파일명.jpg"';
 		str += '					style="height: 100px; margin:auto;">';
 		str += '			</a>';
 		str += '			</div>';
-		str += '			<div class="col-2" style="height:100px; line-height:100px; padding:0; margin: 0;">';
-		str += '			<a href="#" style="margin: auto;">';
-		str += '				<h2 style="margin: auto;">' + mListByVote[i].title + '</h2>';
+		str += '			<div class="col-3" style="height:100px; line-height:100px; padding:0; margin: 0;">';
+		str += '			<a onclick="movieDetailModalOn2('+i+')" style="margin: auto;">';
+		str += '				<h4 style="margin:auto;">' + mListByVote[i].title + '</h2>';
 		str += '			</a>';
 		str += '			</div>';
 		str += '			<div class="col-8" style="height:100px; line-height:100px; padding:0;">';
@@ -401,7 +453,7 @@
 		str += '						style="height: 130px; margin:auto;">';
 		str += '				</div>';
 		str += '				<div class="row mList-content-one-title"  style="margin:0; padding: 0; height:20px; line-height:20px;">';
-		str += '					<h6 style="margin: 2px auto; font-size:0.8em">'+ mList[i].title +'</h6>';
+		str += '					<h5 style="margin: 2px auto; font-size:0.8em">'+ mList[i].title +'</h6>';
 		if(onair!=0){
 		str += '					<br><h6 style="margin: 2px auto; font-size:0.8em">('+ onairStatus +')</h6>';
 		}

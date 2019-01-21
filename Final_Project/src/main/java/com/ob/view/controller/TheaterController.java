@@ -1,6 +1,8 @@
 package com.ob.view.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -30,16 +32,28 @@ public class TheaterController {
 	
 	@RequestMapping("theater.do")
 	@ResponseBody
-	public List<ScheduleVO> theater(TheaterVO theaterVO, ScreenVO screenVO, ScheduleVO scheduleVO, MovieVO movieVO
+//	public List<ScheduleVO> theater(TheaterVO theaterVO, ScreenVO screenVO, ScheduleVO scheduleVO, MovieVO movieVO
+	public Map<String, Object> theater(TheaterVO theaterVO, ScreenVO screenVO, ScheduleVO scheduleVO, MovieVO movieVO
 			, HttpServletRequest request, @RequestParam("t_id") String tt_id
 			, Model model) {
+		
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 		scheduleVO.setT_id(theaterVO.getT_id());
 		scheduleVO.setM_id(movieVO.getM_id());
 		
+		int t_id = Integer.parseInt(tt_id);
+		
+		TheaterVO theaterOne = new TheaterVO();
+		theaterOne.setT_id(t_id);
+		theaterOne = theaterService.getTheaterOne(theaterOne);
+		
 		List<ScheduleVO> scheduleList =scheduleService.getSchList(scheduleVO);
 		
-		return scheduleList;
+		map.put("scheduleList", scheduleList);
+		map.put("theaterOne", theaterOne);
+		
+		return map;
 	}
 	@RequestMapping("theaterList.do")
 	public String theaterList(TheaterVO theaterVO, Model model) {

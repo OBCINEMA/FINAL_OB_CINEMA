@@ -14,7 +14,7 @@
 </head>
 <body>
 	<!-- Footer Area -->
-	<footer id="footer" class="footer-area" style="position:absolute; bottom:0;">
+	<footer id="footer" class="footer-area" >
 		<!-- Footer Bottom Area -->
 		<div class="footer-bottom-area bg-dark">
 			<div class="container">

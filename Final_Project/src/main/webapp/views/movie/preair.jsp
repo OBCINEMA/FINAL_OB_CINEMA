@@ -18,7 +18,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>현재 상영작</title>
+<title>상영예정작</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -96,7 +96,7 @@
 					<div
 						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0">
 						<div class="section-title text-center">
-							<h4>상영중 영화</h4>
+							<h4>상영예정작</h4>
 						</div>
 					</div>
 				</div>
