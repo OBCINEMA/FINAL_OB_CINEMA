@@ -43,7 +43,7 @@
 											<li><a href="index-creative-agency.html">(관람가이드)</a></li>
 											<li><a href="/getVoteList.do">보고싶은 명화</a></li>
 										</ul></li>
-									<li class="cr-dropdown"><a href="about-us.html">극장</a>
+									<li class="cr-dropdown"><a href="#">극장</a>
 										<ul>
 											<c:forEach var="i" items="${theaterList}">
 											<li><a href="<%=contextPath%>/theaterList.do?t_id=${i.t_id }">${i.name }</a></li>
@@ -88,7 +88,8 @@
 										<c:if test="${Logininformation.id eq 'admin' }">									
 										<li><a href="<%=contextPath%>/admin_Main.do">관리자모드</a></li>
 										</c:if>
-										<li><a href="myReservation.do">마이페이지</a></li>
+										<li><a href="myReservation.do">예매내역 조회/취소</a></li>
+										<li><a href="updateUsersGo.do">내 정보 수정</a></li>
 									</ul>
 
 								</li>

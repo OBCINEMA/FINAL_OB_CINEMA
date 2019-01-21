@@ -39,6 +39,7 @@ IMP.request_pay({
     			var datachk = data;
     			alert("데이터 : " + datachk);
     			$("#okok").html("데이터성공 " + datachk);
+    			location.href = "/mainGO.do";
     		},
     		error : function(jqXHR, textStatus, errorThrown) {
 		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
@@ -64,7 +65,6 @@ IMP.request_pay({
     } else {
         var msg = '결제에 실패하였습니다.';
         msg += '에러내용 : ' + rsp.error_msg;
-
         alert(msg);
     }
 });

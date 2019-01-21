@@ -85,7 +85,7 @@
 							</ul>
 							<div>			
 								<a href="#" onclick="res(${movieOne.m_id })" class="cr-btn cr-btn-sm" 
-								style="background-color: #f6644f; float: right">예매</a>
+								style="background-color: #ce2c3c; float: right">예매</a>
 							</div>
 						</div>
 					</div>

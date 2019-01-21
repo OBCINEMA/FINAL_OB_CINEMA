@@ -6,6 +6,7 @@
 	String contextPath = request.getContextPath();
 	// theme 까지 들어온 경로 
 	String KPath = contextPath + "/resources/theme";
+	String MovieIMGPath = contextPath + "/resources/movieimg";
 %>
 <!DOCTYPE html>
 <html>
@@ -103,7 +104,24 @@
 //     money = money.toLocaleString();
 //     $("#totPrice").append(money);
 //     });
+
 function deleteRes(r_id){
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+
+	if(dd<10) {
+	    dd='0'+dd
+	} 
+
+	if(mm<10) {
+	    mm='0'+mm
+	} 
+
+	today = mm+'/'+dd+'/'+yyyy;
+	document.write(today);
+	
 	location.href = "deleteRes.do?r_id=" + r_id;
 }
 
@@ -124,32 +142,7 @@ function sendSeat(form) {
 
 		
 		<!--메인 영역 Content -->
-		<main class="page-content" style="margin-top:146px">
-		
-			<!-- Sidebar -->
-<!-- 			<div class="col-lg-3" style="position: fixed; display: inline-block"> -->
-<!-- 				<div class="widgets widgets-leftside" style="margin:0"> -->
-				
-<!-- 					Single Widget -->
-<!-- 					<div class="single-widget widget-categories"> -->
-<!-- 						<h5 class="widget-title">My Page</h5> -->
-<!-- 						<ul> -->
-<!-- 							<li> -->
-<!-- 							<a href="/myReservation.do">예매내역 조회/취소</a> -->
-<!-- 							</li> -->
-<!-- 							<li> -->
-<!-- 							<a href="/updateUsersGo.do">내 정보 수정</a> -->
-<!-- 							</li> -->
-<!-- 						</ul> -->
-<!-- 					</div> -->
-<!-- 					// Single Widget -->
-				
-<!-- 				</div> -->
-<!-- 			</div> -->
-			<!--// Sidebar -->
-			
-			<!-- 본문 -->
-					<!-- ///////////////////////////////// 여기부터 채우면됨 -->
+		<main class="page-content" style="margin-top:146px; margin-bottom: 249px;">
 	<div class="container" style="margin-top: 180px;">	
 		<div class="row">
 		<table class="table" style="text-align: center; border: 1px solid #dddddd">	
@@ -171,7 +164,7 @@ function sendSeat(form) {
  		<c:forEach var="i" begin="0"
 								end="${reservationList.size()-1 }" step="1"> 
 		<tr>
-			<td style="text-align: center">${movieList[i].poster}</td>
+			<td style="text-align: center"><img alt="${movieList[i].poster}" src="<%=MovieIMGPath %>/${movieList[i].poster}" style="width: 70px;height: 110px;"></td>
 			<td style="text-align: center">${movieList[i].title}</td>
 			<td style="text-align: center">${theaterList[i].name}</td>
 			<td style="text-align: center">${screenList[i].scr_name}</td>			
@@ -187,15 +180,12 @@ function sendSeat(form) {
  	<tr>
 			<td style="text-align: center" colspan="9"><h2>예약하신 정보가 없습니다</h2></td>
 	</tr>
- 	
  	</c:if>
- 	
 	</tbody>
 	</table>
 	</div>
     </div>
 	<br><br>
-					<!-- ///////////////////////////////// 여기부터 채우면끝 -->
 		</main>
 		<!-- //메인 끝 -->
 
