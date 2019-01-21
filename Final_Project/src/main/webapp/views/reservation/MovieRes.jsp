@@ -9,11 +9,8 @@
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
- --><script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
- 
- <!-- 모달 작동 -->
-<link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.css">
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+ <script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
 <head>
 
 <style>
@@ -124,15 +121,13 @@
 					return [(date >= monday && date <= sunday), ''];
 				}
 			});
-		
-		 $('#Date').datepicker('setDate', 'today');
-		 
-		theater("${movieRes.m_id }","${movieRes.title }","${movieRes.director }","${movieRes.gnr }","${movieRes.runningtime }","${movieRes.poster }");
+		theater('${movieRes.m_id }','${movieRes.title }','${movieRes.director }','${movieRes.gnr }','${movieRes.runningtime }','${movieRes.poster }');
+		$('#Date').datepicker('setDate', 'today');
 	});
-	
-	
+
 	//극장
 	function theater(m_id,title,director,gnr,runnintime,poster) {
+// 		alert(m_id,title,director,gnr,runnintime,poster);
 		$("#theater").empty();
 		$("#screen").empty();
 		$("#time").empty();
@@ -164,7 +159,7 @@
 				
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
-		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+		        alert("에러1111 발생~~ \n" + textStatus + " : " + errorThrown);
 		    }
 		})
 	}
@@ -233,7 +228,7 @@
 					$("#showData").html(str);
 				},
 				error : function(jqXHR, textStatus, errorThrown) {
-			        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+			        alert("에러2222 발생~~ \n" + textStatus + " : " + errorThrown);
 			    }
 			})
 	}
@@ -279,7 +274,7 @@
 				$("#showSeat").html(str);
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
-		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+		        alert("에러3333 발생~~ \n" + textStatus + " : " + errorThrown);
 		    }
 		});
 	}
@@ -325,7 +320,7 @@
 					}
 				},
 			error : function(jqXHR, textStatus, errorThrown) {
-		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+		        alert("에러444 발생~~ \n" + textStatus + " : " + errorThrown);
 		    }
 		})
 	}
@@ -337,7 +332,7 @@
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
 
-	<div class="container" style="margin-top: 140px;">
+	<div class="container" style="margin-top: 140px;margin-bottom: 40px;"">
 
 		<div class="container"
 			style="display: inline-block; text-align: center;">
@@ -466,18 +461,6 @@
 		<jsp:include page="../main/main-footer.jsp"></jsp:include>
 		<!-- //Footer Area -->
 		
-	<!-- JS Files -->
-	<%-- <script src="<%=KPath%>/js/popper.min.js"></script> --%>
-	<%-- <script src="<%=KPath%>/js/bootstrap.min.js"></script> --%>
-	<%-- <script src="<%=KPath%>/js/plugins.js"></script> --%>
-	<%-- <script src="<%=KPath%>/js/active.js"></script> --%>
-	<%-- <script src="<%=KPath%>/js/scripts.js"></script> --%>
-	
-	 <!-- 모달 작동 -->
-<script src="/resources/bootstrap/js/bootstrap.js"></script>
-	
-	
-	
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	
 </body>

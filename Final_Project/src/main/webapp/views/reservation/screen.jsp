@@ -121,7 +121,7 @@
 		})
     }
     
-    function sendSeat(form) {  
+    function sendSeat(form) {
     	form.action = "pay.do";
     	form.submit();
     }
@@ -134,7 +134,7 @@
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
 
-	<div class="container" style="margin-top: 140px;">
+	<div class="container" style="margin-top: 140px;margin-bottom: 40px;"">
 
 		<div class="container"
 			style="display: inline-block; text-align: center;">
@@ -208,7 +208,7 @@
 								    			var resCol = "${k }";
 								    			
 								    			$("#"+resRow+resCol).remove();
-								    			$("."+resRow+resCol).attr('style', 'background-color:gray; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;width: 27px;height: 27px;');
+								    			$("."+resRow+resCol).attr('style', 'background-color:gray; padding-left: 0px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;width: 27px;height: 27px; margin-right: 10px;');
 									    	</script>
 												</c:if>
 											</c:forEach>
@@ -291,17 +291,6 @@
 	<!-- Footer Area -->
 	<jsp:include page="../main/main-footer.jsp"></jsp:include>
 	<!-- //Footer Area -->
-
-	<!-- JS Files -->
-	<script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="<%=KPath%>/js/popper.min.js"></script>
-	<script src="<%=KPath%>/js/bootstrap.min.js"></script>
-	<script src="<%=KPath%>/js/plugins.js"></script>
-	<script src="<%=KPath%>/js/active.js"></script>
-	<script src="<%=KPath%>/js/scripts.js"></script>
-
-	<!-- 추가 : 로그인 modal JS File -->
-	<script src="<%=contextPath%>/resources/addjs/login.js"></script>
 
 </body>
 </html>

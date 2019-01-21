@@ -43,15 +43,12 @@
 
 
 	<!-- JS Files -->
-	<script src="<%=KPath%>/js/vendor/jquery-3.2.1.min.js"></script>
 	<script src="<%=KPath%>/js/popper.min.js"></script>
 	<script src="<%=KPath%>/js/bootstrap.min.js"></script>
 	<script src="<%=KPath%>/js/plugins.js"></script>
 	<script src="<%=KPath%>/js/active.js"></script>
 	<script src="<%=KPath%>/js/scripts.js"></script>
 
-	<!-- Modernizer js -->
-<%-- 	<script src="<%=KPath%>/js/vendor/modernizr-3.5.0.min.js"></script> --%>
 </body>
 
 </html>

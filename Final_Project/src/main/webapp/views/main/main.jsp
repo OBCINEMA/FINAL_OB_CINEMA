@@ -14,21 +14,20 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>OB 영화관</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>OB 영화관</title>
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="<%=KPath%>/images/favicon.ico">
 <link rel="apple-touch-icon" href="<%=KPath%>/images/icon.png">
 
 <!-- Google font (font-family: 'Roboto', sans-serif;) -->
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	rel="stylesheet">
 <!-- Google font (font-family: 'Roboto Condensed', sans-serif;) -->
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
 	rel="stylesheet">
 
 <!-- Stylesheets -->
@@ -38,11 +37,6 @@
 
 <!-- Color Variations -->
 <link rel="stylesheet" href="<%=KPath%>/css/color-variations.css">
-
-<!-- Modernizer js -->
-<script src="<%=KPath%>/js/vendor/modernizr-3.5.0.min.js"></script>
-
-
 
 </head>
 
@@ -57,12 +51,11 @@
 		<!-- //top Banner 영화슬라이드까지 끝 -->
 
 		<!--메인 영역 Content -->
-		<main class="page-content"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
-		<section class="services-area section-padding-lg bg-grey">
+		<main class="page-content" style="margin-top:146px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
+		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
 			<div class="container">
 
-				<div
-					class="row justify-content-center service-slider-active cr-slider-dots-1">
+				<div class="row justify-content-center service-slider-active cr-slider-dots-1">
 					<c:forEach var="i" items="${movieListOnair}">
 					<!-- Signle Service -->
 					<div class="col-lg-4 col-md-6 col-12">
@@ -84,25 +77,6 @@
 
 			</div>
 		</section>
-		<!-- 추천 영화 섹션 끝 -->
-		<div class="counter-area section-padding-md bg-white">
-			<div class="container">
-
-				<div class="row">
-					<div
-						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0">
-						<div class="section-title text-center">
-
-
-
-
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
 
 		<!-- Features Area -->
 		<section
@@ -173,16 +147,10 @@
 
 	</div>
 	<!-- //Main wrapper -->
-
-	<!-- JS Files -->
-	<script src="<%=KPath%>/js/popper.min.js"></script>
-	<script src="<%=KPath%>/js/bootstrap.min.js"></script>
-	<script src="<%=KPath%>/js/plugins.js"></script>
-	<script src="<%=KPath%>/js/active.js"></script>
-	<script src="<%=KPath%>/js/scripts.js"></script>
-
+	
 	<!-- 추가 : 로그인 modal JS File -->
-	<script src="<%=contextPath%>/resources/addjs/login.js"></script>
+<%-- 	<script src="<%=contextPath%>/resources/addjs/login.js"></script> --%>
+	
 </body>
 
 </html>

@@ -41,6 +41,15 @@
 	margin: 0 5px 0;
 }
 
+.myModal-content .btnRow #kim{ 
+	width: 170px;
+	height: 40px;
+/* 	background-color:#ce2c3c; */
+	background-color:#aaa;
+	color: #fff;
+	border-style:none;
+	margin: 0 5px 0;
+}
 .myModal-content .btnRow button:hover{ 
 	background-color:#555;
 }

@@ -64,6 +64,8 @@ public class MovieController {
 		
 		
 		model.addAttribute("movieRes",movieService.getMovieOne(movieVO));
+		System.out.println("movieVO : " + movieVO);
+		System.out.println("movieService.getMovieOne(movieVO) : " + movieService.getMovieOne(movieVO));
 		
 		//영화 전체 조회
 		model.addAttribute("movieList",movieService.getMovieListOnair());

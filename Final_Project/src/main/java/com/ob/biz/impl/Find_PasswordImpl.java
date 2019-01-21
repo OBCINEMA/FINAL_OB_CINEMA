@@ -11,25 +11,24 @@ import com.ob.biz.vo.UsersVO;
 // @Service : @Component를 상속받아 만든 비즈니스 로직처리 서비스 영역에 사용
 @Service("find_PasswrodService")
 public class Find_PasswordImpl implements Find_PasswordService {
-	@Autowired
-	private Find_PasswordDAO find_PasswordDAO;
+
 
 	@Override
-	public void send_mail(UsersVO vo, String div) throws Exception {
+	public String send_mail(UsersVO vo, String div) throws Exception {
 		// Mail Server 설정
 		String charSet = "utf-8";
-		String hostSMTP = "smtp.naver.com";
-		String hostSMTPid = "gukbongworld@gmail.com";
-		String hostSMTPpwd = "bitcamp1!";
+		String hostSMTP = "smtp.gmail.com";
+		String hostSMTPid = "zxztestid@gmail.com";
+		String hostSMTPpwd = "bitcamp!1";
 
 		// 보내는 사람 EMail, 제목, 내용
-		String fromEmail = "gukbongworld@gmail.com";
-		String fromName = "Spring Homepage";
+		String fromEmail = "zxztestid@gmail.com";
+		String fromName = "OB영화관";
 		String subject = "안녕하세요";
 		String msg = "";
 
 		if (div.equals("find_pw")) {
-			subject = "Spring Homepage 임시 비밀번호 입니다.";
+			subject = "[OB영화관] 임시 비밀번호 입니다.";
 			msg += "<div align='center' style='border:1px solid black; font-family:verdana'>";
 			msg += "<h3 style='color: blue;'>";
 			msg += vo.getId() + "님의 임시 비밀번호 입니다. 비밀번호를 변경하여 사용하세요.</h3>";
@@ -56,6 +55,7 @@ public class Find_PasswordImpl implements Find_PasswordService {
 		} catch (Exception e) {
 			System.out.println("메일발송 실패 : " + e);
 		}
+		return "mailsendOk";
 	}
 
 }
