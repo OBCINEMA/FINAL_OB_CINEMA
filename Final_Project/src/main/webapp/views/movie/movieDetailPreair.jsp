@@ -85,7 +85,7 @@
 		<!-- Page Content -->
 		<main class="page-content" style="margin-top: 146px;"> <!-- Service Details -->
 		<div class="pg-service-area bg-grey">
-			<div class="container">
+			<div class="row">
 				<div class="row">
 					<div class="col-lg-12">
 						<h2 class="pg-service-title">${movieOne.title }</h2>

@@ -63,7 +63,7 @@
 			
 		<!--메인 영역 Content -->
 		<main class="page-content bg-grey"  style="margin-top:146px; "> 
-			<div class="container" style="margin: 0; padding: 0; width: 100%;">
+			<div class="row" style="margin: 0; padding: 0; width: 100%;">
 			
 				<div class="row" style="background-image: url('/resources/img/headImg/filmtapes2.jpg'); background-repeat: no-repeat; background-size: cover; height: 400px; width: 100%; margin: 0 0 10px;">
 				<div style="margin:0; padding:0; width:100%; background-color:rgba(0,0,0,0.7); text-align: center;">
