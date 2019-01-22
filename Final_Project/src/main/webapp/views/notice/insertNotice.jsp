@@ -52,12 +52,12 @@
 		<!-- //Header -->
 
 		<!--메인 영역 Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
+		<main class="page-content" style="margin-top:146px;"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
 		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
 			<div class="container">
 				<div class="row">
 					<!-- ///////////////////////////////// 여기부터 채우면됨 -->
-					<div id="container" style="margin-top:146px">
+					<div id="container" style="margin-top:146px;">
 						<h1>글등록</h1>
 						<form action="/insertNotice.do?b_type=0" method="POST"
 							enctype="multipart/form-data">

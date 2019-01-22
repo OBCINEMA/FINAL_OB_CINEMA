@@ -25,10 +25,12 @@
 <link rel="apple-touch-icon" href="<%=KPath%>/images/icon.png">
 
 <!-- Google font (font-family: 'Roboto', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 	rel="stylesheet">
 <!-- Google font (font-family: 'Roboto Condensed', sans-serif;) -->
-<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700"
 	rel="stylesheet">
 
 <!-- Stylesheets -->
@@ -45,23 +47,21 @@
 	margin: 0 auto;
 }
 
-h1, h3 {
+/* h1, h3 {
 	text-align: center;
-}
-
+} */
 table {
 	border-collapse: collapse;
 }
 
-table, th, td {
+/* table, th, td {
 	border: 1px solid black;
 	margin: 0 auto;
-}
+} */
 
-th {
+/* th {
 	background-color: orange;
-}
-
+} */
 .center {
 	text-align: center;
 }
@@ -85,11 +85,11 @@ th {
 	padding: 3px 7px;
 	border: 1px solid none;
 	font-weight: bold;
-	color: black;
+	color: #f1f1f1;
 }
 
 .paging li a:hover {
-	background-color: white;
+	background-color: #f1f1f1;
 	color: black;
 }
 
@@ -103,7 +103,7 @@ th {
 	padding: 3px 7px;
 	border: 1px solid none;
 	background-color: black;
-	color: white;
+	color: red;
 	font-weight: bold;
 }
 </style>
@@ -123,23 +123,27 @@ th {
 		<!-- //Header -->
 
 		<!--메인 영역 Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
-		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
-			<div class="container">
+		<main class="page-content" style="margin-top:146px;"> <!-- Counter Area -->
+		<!-- 추천 영화 섹션 시작 -->
+		<section class="services-area section-padding-lg bg-grey"
+			style="padding: 0;">
+			<div class="container"
+				style="margin-left: 180px; border-left-width: 180px; padding-left: 150px; padding-top: 50px; padding-bottom: 0px;">
 				<div class="row">
 					<!-- ///////////////////////////////// 여기부터 채우면됨 -->
-					<form action="getNoticeList.do" method="GET">
+					<form action="getNoticeList.do" method="GET"
+						style="width: 900px; height: 700px;">
 						<%-- <input type="hidden" name="id" value="${Logininformation.id }"> --%>
 						<input type="hidden" name="cPage" value="${pvo.nowPage }">
-						<h3>공지사항</h3>
-						<table class="table">
-							<thead class="thead-dark">
+						<h2 class="center" style="margin-bottom: 50px; color: #f1f1f1;">공지사항</h2>
+						<table class="table table-hover" style="color: #f1f1f1;">
+							<thead>
 								<tr>
-									<th class="center" width="50">번호</th>
-									<th class="center" width="200">제목</th>
-									<th class="center" width="150">등록자</th>
-									<th class="center" width="150">등록일</th>
-									<th class="center" width="100">조회수</th>
+									<th class="center" width="100" style="font-size: 18px;">NO</th>
+									<th class="center" width="200" style="font-size: 18px;">제목</th>
+									<th class="center" width="150" style="font-size: 18px;">작성자</th>
+									<th class="center" width="150" style="font-size: 18px;">날짜</th>
+									<th class="center" width="100" style="font-size: 18px;">조회수</th>
 								</tr>
 							</thead>
 							<c:choose>
@@ -151,26 +155,26 @@ th {
 								<c:otherwise>
 									<c:forEach var="noticeList" items="${list }">
 										<tr>
-											<td class="center">${noticeList.b_id }</td>
-											<td class="center"><a
+											<td class="center" style="font-size: 15px;">${noticeList.b_id }</td>
+											<td class="center" style="font-size: 15px;"><a
 												href="getNotice.do?b_id=${noticeList.b_id }&cPage=${pvo.nowPage}">
 													${noticeList.title }</a></td>
-											<td class="center">${noticeList.name }</td>
-											<td class="center">${noticeList.regdate }</td>
-											<td class="center">${noticeList.hit }</td>
+											<td class="center" style="font-size: 15px;">${noticeList.name }</td>
+											<td class="center" style="font-size: 15px;">${noticeList.regdate }</td>
+											<td class="center" style="font-size: 15px;">${noticeList.hit }</td>
 										</tr>
 									</c:forEach>
 								</c:otherwise>
 							</c:choose>
 						</table>
 						<div class="container"
-							style="padding-left: 250px; padding-top: 0px;">
+							style="padding-left: 380px; padding-top: 20px;">
 							<ol class="paging">
 								<c:forEach var="k" begin="${pvo.beginPage }"
 									end="${pvo.endPage }">
 									<c:choose>
 										<c:when test="${k == pvo.nowPage }">
-											<li class="now">${k }</li>
+											<li class="now" style="font-size: 20px;">${k }</li>
 										</c:when>
 										<c:otherwise>
 											<li><a href="getNoticeList.do?b_type=0&cPage=${k }">${k }</a>
@@ -179,10 +183,10 @@ th {
 									</c:choose>
 								</c:forEach>
 							</ol>
-							<div>
+							<div style="width: 150px; margin-left: 375px; margin-top: 15px;">
 								<c:if test="${Logininformation.id == 'admin'}">
-									<button type="button" class="btn btn-danger"
-										onclick="javascript:location.href='/views/notice/insertNotice.jsp'">작성하기</button>
+									<button class="btn btn-danger" type="button"
+										onclick="javascript:location.href='/views/notice/insertNotice.jsp'">작성</button>
 									<!-- <input type="button" value="글쓰기"
 										onclick="javascript:location.href='/views/notice/insertNotice.jsp'"> -->
 								</c:if>
