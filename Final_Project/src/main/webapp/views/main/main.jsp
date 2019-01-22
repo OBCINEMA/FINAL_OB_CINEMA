@@ -47,14 +47,30 @@
 		<!-- Header 시작 -->
 		<jsp:include page="main-header.jsp"></jsp:include>
 		<!-- //Header 끝 -->
-
-		<!-- //top Banner 영화슬라이드까지 끝 -->
+		<!-- Features Area -->
+				<div class="row justify-content-center services-grid" style="margin-bottom: 0px;margin-top: 145px; background-image: url('/views/logo/메인.jpg'); background-repeat: no-repeat; background-size: cover; height: 629px;">
+				<div style="margin:0; padding; background-color:rgba(0,0,0,0.5);">
+					<!-- Signle Service -->
+					<div style="margin-top: 300px;">
+						<div class="service text-center" style="color:#ddd; font-size:1.4em; width:65%; margin:auto; font-weight: bold;">
+							<div class="service-icon">
+								<span> <i class="bi bi-color-plate"></i>
+								</span> <span> <i class="bi bi-color-plate"></i>
+								</span>
+							</div>
+							<div class="service-content">
+								<p>낙후된 시설로 대형 멀티플렉스 영화관에 밀려 지역의 폐물이 된 지역의 오래된 극장들을 모아, 간편하게 예매할 수 있는 UI를 제공하고 이용자들이 원하는 추억의 명화를 배분 상영함으로써 이용자를 유입시켜 되살리는 프로젝트.</p>
+							</div>
+						</div>
+					</div>
+					<!--// Signle Service -->
+				</div>
+				</div>
 
 		<!--메인 영역 Content -->
-		<main class="page-content" style="margin-top:146px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
+		<main class="page-content"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
 		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
 			<div class="container">
-
 				<div class="row justify-content-center service-slider-active cr-slider-dots-1">
 					<c:forEach var="i" items="${movieListOnair}">
 					<!-- Signle Service -->
@@ -79,97 +95,69 @@
 		</section>
 		<!--// Features Area --> </main>
 		<!-- //메인 끝 -->
-		<!--메인 영역 Content -->
-		<main class="page-content" style="margin-top:0px"> <!-- Counter Area --> <!-- 추천 영화 섹션 시작 -->
-		<section class="services-area section-padding-lg bg-grey" style="padding:0;">
-			<div class="container">
-			<hr>
-			<h2 style="text-align: center;">극장</h2>
-
-				<div class="row justify-content-center service-slider-active cr-slider-dots-1">
-					<c:forEach var="i" items="${theaterList}">
-					<!-- Signle Service -->
-					<div class="col-lg-4 col-md-6 col-12">
-						<div class="service service-style-4 text-center">
-							<div class="service-image" >
-								<img src="/resources/theaterimg/${i.img1 }"
-									alt="Service Thumb" style="height: 250px;">
-							</div>
-							<div class="service-content">
-								<h5>
-									<a href="<%=contextPath%>/theaterList.do?t_id=${i.t_id }">${i.name }</a>
-								</h5>
-							</div>
-						</div>
-					</div>
-					</c:forEach>
-					
-				</div>
-
-			</div>
-		</section>
-
-		<!-- Features Area -->
 		<section
 			class="features-area section-padding-top-xs section-padding-bottom-sm bg-grey">
-			<div class="container">
-				<div class="row justify-content-center services-grid">
-
-					<!-- Signle Service -->
-					<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-						<div class="service text-center">
-							<div class="service-icon">
-								<span> <i class="bi bi-color-plate"></i>
-								</span> <span> <i class="bi bi-color-plate"></i>
-								</span>
-							</div>
-							<div class="service-content">
-								<h4>친절</h4>
-								<p>There are many variations of passages of Lorem Ipsum, but
-									the majority</p>
-							</div>
-						</div>
-					</div>
-					<!--// Signle Service -->
-
-					<!-- Signle Service -->
-					<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-						<div class="service text-center">
-							<div class="service-icon">
-								<span> <i class="bi bi-support"></i>
-								</span> <span> <i class="bi bi-support"></i>
-								</span>
-							</div>
-							<div class="service-content">
-								<h4>감동</h4>
-								<p>There are many variations of passages of Lorem Ipsum, but
-									the majority</p>
-							</div>
-						</div>
-					</div>
-					<!--// Signle Service -->
-
-					<!-- Signle Service -->
-					<div class="col-lg-4 col-md-6 col-sm-6 col-12">
-						<div class="service text-center">
-							<div class="service-icon">
-								<span> <i class="bi bi-rocket2"></i>
-								</span> <span> <i class="bi bi-rocket2"></i>
-								</span>
-							</div>
-							<div class="service-content">
-								<h4>행복</h4>
-								<p>There are many variations of passages of Lorem Ipsum, but
-									the majority</p>
-							</div>
-						</div>
-					</div>
-					<!--// Signle Service -->
-
-				</div>
-			</div>
+		<div class="container">
+		<div class="row">
+		<div class="col">
+		<div class="embed-responsive embed-responsive-16by9" style="background-color: black;">
+		  <iframe width="764" height="573" src="https://www.youtube.com/embed/86hu4btOvXs?rel=0&autoplay=1&amp;loop=1&mute=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		</div>
+		</div>
+		</div>
 		</section>
-		<!--// Features Area --> </main>
+		<section
+			class="features-area section-padding-top-xs section-padding-bottom-sm bg-grey">
+		<div class="col">
+		<table class="table" style="background-color: white;height: 322px; color: white; background-color: black; border-color: black;">
+			  <thead>
+			    <tr>
+			      <th scope="col" colspan="4">공지사항</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td colspan="4">Mark</td>
+			    </tr>
+			    <tr>
+			      <td colspan="4">Mark</td>
+			    </tr>
+			    <tr>
+			      <td colspan="4">Jacob</td>
+			    </tr>
+			    <tr>
+			      <td colspan="4">Larry the Bird</td>
+			    </tr>
+			  </tbody>
+		</table>
+		</div>
+		</section>
+		<!--메인 영역 Content -->
+<!-- 		<main class="page-content" style="margin-top:0px"> Counter Area 추천 영화 섹션 시작 -->
+<!-- 		<section class="services-area section-padding-lg bg-grey" style="padding:0;"> -->
+<!-- 			<div class="container"> -->
+<!-- 				<div class="row justify-content-center service-slider-active cr-slider-dots-1"> -->
+<%-- 					<c:forEach var="i" items="${theaterList}"> --%>
+<!-- 					Signle Service -->
+<!-- 					<div class="col-lg-4 col-md-6 col-12"> -->
+<!-- 						<div class="service service-style-4 text-center"> -->
+<!-- 							<div class="service-image" > -->
+<%-- 								<img src="/resources/theaterimg/${i.img1 }" --%>
+<!-- 									alt="Service Thumb" style="height: 250px;"> -->
+<!-- 							</div> -->
+<!-- 							<div class="service-content"> -->
+<!-- 								<h5> -->
+<%-- 									<a href="<%=contextPath%>/theaterList.do?t_id=${i.t_id }">${i.name }</a> --%>
+<!-- 								</h5> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
+<%-- 					</c:forEach> --%>
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</section> -->
+		<!--// Features Area  </main> -->
 		<!-- //메인 끝 -->
 
 		<!-- Footer Area -->
