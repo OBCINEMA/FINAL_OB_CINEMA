@@ -79,7 +79,7 @@
 									<div class="row-text">아이디</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px; position:relative">
 											<input type="text" name="id" placeholder="입력해주세요" id="id" style="width:65%;">
-											<button type="button" id="idcheck" style="width: 120px; padding: 10px 5px; margin: 9px auto ; position:absolute; right:0">중복확인</button>
+											<button type="button" id="idcheck" style="width: 120px; padding: 10px 5px; margin: 9px auto ; position:absolute; right:0"  class="cr-btn">중복확인</button>
 											<input type="hidden" id="idcheckok" value="no">
 									</div>
 									&nbsp;&nbsp;&nbsp;<span id="idcheckmsg"></span>
