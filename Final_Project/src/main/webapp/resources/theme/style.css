@@ -967,7 +967,7 @@ blockquote footer {
 }
 
 .bg-dark {
-    background: #333333 !important;
+    background: #232222 !important;
 }
 
 .bg-black {
@@ -979,7 +979,7 @@ blockquote footer {
 }
 
 .bg-grey {
-    background: #f7f7f7 !important;
+    background: #000000 !important;
 }
 
 /* Background Image */
@@ -1469,7 +1469,7 @@ blockquote footer {
 }
 
 [data-black-overlay]:before {
-    background-color: #333333;
+    background-color: #232222;
 }
 
 [data-overlay="1"]:before,
@@ -7347,7 +7347,7 @@ a.video-popup-trigger i {
 }
 
 .counter-style-2 .counter h1 {
-    color: #333333;
+    color: #191818;
 }
 
 .counter-style-2 .counter h6 {
