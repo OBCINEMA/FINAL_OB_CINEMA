@@ -89,7 +89,7 @@
 				} else if (result == okID) {
 					alert("아이디가 있고");
 					$("#userID").html("회원님의 아이디는  : " + result).css("color",
-							"blue");
+							"white");
 					$("#show").css("display", "block");
 
 				}
@@ -166,30 +166,30 @@
 		<!-- //Header -->
 
 		<!-- Page Content -->
-		<main class="page-content" style="margin-top: 166px;"> <!-- Service Area -->
+		<main class="page-content" style="margin-top: 146px;"> <!-- Service Area -->
 		<section id="service-area"
-			class="service-area section-padding-lg bg-white">
+			class="service-area section-padding-lg bg-grey">
 			<div class="container" style="margin-top: -100px;">
 				<div class="row">
 
 					<div
-						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0 bg-grey">
-						<div class="section-title text-center">
+						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0 "  style="background-color: #303030;">
+						<div class="section-title text-center" >
 							<form method="post" name="findID">
 								<h6>Id찾기</h6>
-								<div class="row no-gutters">
+								<div class="row no-gutters" >
 									<div class="col-md-1">
-										<h6 style="margin-bottom: 0px; margin-top: 20px;">NAME:</h6>
+										<h6 style="margin-bottom: 0px; margin-top: 20px; color: #f1f1f1" >NAME:</h6>
 									</div>
 									<div class="col-md-3">
-										<input type="text" name="name" placeholder="Name" id="name_1">
+										<input type="text" name="name" placeholder="Name" id="name_1" style="background-color: #252525;">
 									</div>
-									<div class="col-md-1 offset-1">
-										<h6 style="margin-bottom: 0px; margin-top: 20px;">EMAIL:</h6>
+									<div class="col-md-1 offset-1" >
+										<h6 style="margin-bottom: 0px; margin-top: 20px; color: #f1f1f1">EMAIL:</h6>
 									</div>
 									<div class="col-md-4 ">
 										<input type="text" name="email" placeholder="Email"
-											id="email_1">
+											id="email_1" style="background-color: #252525;">
 									</div>
 									<div class="col-md-2">
 										<div class="single-input">
@@ -217,23 +217,23 @@
 				<div class="row" style="margin-top: 68px;">
 
 					<div
-						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0 bg-grey">
+						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0"  style="background-color: #303030;">
 						<div class="section-title text-center">
 							<form method="post" name="findPW">
 								<h6>Password찾기</h6>
 								<div class="row no-gutters">
 									<div class="col-md-1 ">
-										<h6 style="margin-bottom: 0px; margin-top: 20px;">ID:</h6>
+										<h6 style="margin-bottom: 0px; margin-top: 20px; color: #f1f1f1">ID:</h6>
 									</div>
 									<div class="col-md-3">
-										<input type="text" name="id" placeholder="ID" id="id_2">
+										<input type="text" name="id" placeholder="ID" id="id_2" style="background-color: #252525;">
 									</div>
 									<div class="col-md-1 offset-1">
-										<h6 style="margin-bottom: 0px; margin-top: 20px;">EMAIL:</h6>
+										<h6 style="margin-bottom: 0px; margin-top: 20px; color: #f1f1f1">EMAIL:</h6>
 									</div>
 									<div class="col-md-4 ">
 										<input type="text" name="email" placeholder="Email"
-											id="email_2">
+											id="email_2" style="background-color: #252525;">
 									</div>
 									<div class="col-md-2">
 										<div class="single-input">
