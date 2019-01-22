@@ -384,10 +384,10 @@
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
 
-	<div class="container" style="margin-top: 140px;margin-bottom: 40px;"">
+	<div class="container bg-grey" style="margin: 146px 0 40px;">
 
-		<div class="container"
-			style="display: inline-block; text-align: center;">
+<!-- 		<div class="container" -->
+<!-- 			style="display: inline-block; text-align: center;"> -->
 <!-- 			<div class='col-sm-3'> -->
 <!-- 				<img src="resources/img/영화.png" width="100"> -->
 <!-- 			</div> -->
@@ -400,10 +400,10 @@
 <!-- 			<div class='col-sm-3'> -->
 <!-- 				<img src="resources/img/화살표.png" width="100"> -->
 <!-- 			</div> -->
-		</div>
+<!-- 		</div> -->
 
 
-			<form action="schedule.do" method="post">
+			<form action="schedule.do" method="post" style="margin: auto; ">
 				<div class="pricing-plan card-group d-flex" style="height: 730px; font-weight: bold; font-size: large;" >
 					<div class="card set-price p-1 ">
 											<div class="card-header text-center pb-4 item">
