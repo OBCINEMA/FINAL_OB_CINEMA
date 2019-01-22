@@ -71,9 +71,9 @@
 				</div>
 				</div>
 				
-				<div class="votedmovie" style="display:flex"></div>
-				<div class="mListByVote" style="display:flex"></div>
-				<div class="mList" style="display:flex"></div>
+				<div class="votedmovie" style="margin:auto;"></div>
+				<div class="mListByVote"  style="margin:auto;"></div>
+				<div class="mList" style="margin:auto;" ></div>
 				
 				<jsp:include page="/views/vote/myModalMovieDetail.jsp"></jsp:include>
 				
