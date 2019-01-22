@@ -48,11 +48,10 @@
 		<jsp:include page="main-header.jsp"></jsp:include>
 		<!-- //Header 끝 -->
 		<!-- Features Area -->
-				<div class="row justify-content-center services-grid" style="margin-bottom: 0px;margin-top: 145px; background-image: url('/views/logo/메인.jpg'); background-repeat: no-repeat; background-size: cover; height: 629px;">
+				<div class="row justify-content-center services-grid" style="margin-bottom: 0px; margin-top: 146px; background-image: url('/views/logo/메인.jpg'); background-repeat: no-repeat; background-size: cover; height: 500px;">
 				<div style="margin:0; padding; background-color:rgba(0,0,0,0.5);">
 					<!-- Signle Service -->
-					<div style="margin-top: 300px;">
-						<div class="service text-center" style="color:#ddd; font-size:1.4em; width:65%; margin:auto; font-weight: bold;">
+						<div class="service text-center" style="color:#ddd; font-size:1.4em; width:65%; margin: 150px auto ; font-weight: bold;">
 							<div class="service-icon">
 								<span> <i class="bi bi-color-plate"></i>
 								</span> <span> <i class="bi bi-color-plate"></i>
@@ -62,7 +61,6 @@
 								<p>낙후된 시설로 대형 멀티플렉스 영화관에 밀려 지역의 폐물이 된 지역의 오래된 극장들을 모아, 간편하게 예매할 수 있는 UI를 제공하고 이용자들이 원하는 추억의 명화를 배분 상영함으로써 이용자를 유입시켜 되살리는 프로젝트.</p>
 							</div>
 						</div>
-					</div>
 					<!--// Signle Service -->
 				</div>
 				</div>

@@ -13,10 +13,10 @@
 
 /* Modal Content/Box */
 .myModalTheaterDetail-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    background-color: #252525;
+    margin: 2% auto 25%; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #252525;
     width: 800px;
     z-index: 1000; /* Sit on top */                       
 }

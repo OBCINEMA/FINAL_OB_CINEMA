@@ -89,6 +89,19 @@
 		font-size: 2rem;
 	}
 	
+	.bg
+	
+	.bg-grey tr,
+	.bg-grey th,
+	.bg-grey td {
+		border : none;
+	}
+	
+	.bg-grey td {
+		border-collapse: collapse;
+		background-color: #252525;
+	}
+	
 </style>
 <script>
 // $(document).ready(function() {
@@ -134,7 +147,7 @@ function sendSeat(form) {
 </head>
 <body>
 	<!-- 메인 영역 -->
-	<div class="wrapper" id="wrapper">
+	<div class="wrapper bg-grey" id="wrapper">
 
 		<!-- Header -->
 		<jsp:include page="../main/main-header.jsp"></jsp:include>
@@ -143,20 +156,20 @@ function sendSeat(form) {
 		
 		<!--메인 영역 Content -->
 		<main class="page-content" style="margin-top:146px; margin-bottom: 249px;">
-	<div class="container" style="margin-top: 180px;">	
+	<div class="container" style="margin: 0 auto 0; padding: 0; ">	
 		<div class="row">
-		<table class="table" style="text-align: center; border: 1px solid #dddddd">	
+		<table class="table" style="text-align: center; border: 1px solid #303030; margin: 30px auto 30px;">	
 	<thead>
 		<tr>
-			<th style="background-color: #fafafa; text-align: center;">사진</th>
-			<th style="background-color: #fafafa; text-align: center;">제목</th>
-			<th style="background-color: #fafafa; text-align: center;">극장</th>
-			<th style="background-color: #fafafa; text-align: center;">상영관</th>
-			<th style="background-color: #fafafa; text-align: center;">일자</th>
-			<th style="background-color: #fafafa; text-align: center;">시간</th>
-			<th style="background-color: #fafafa; text-align: center;">좌석</th>
-			<th style="background-color: #fafafa; text-align: center;">가격</th>
-			<th style="background-color: #fafafa; text-align: center;">예매취소</th>
+			<th style="background-color: #303030; text-align: center;">사진</th>
+			<th style="background-color: #303030; text-align: center;">제목</th>
+			<th style="background-color: #303030; text-align: center;">극장</th>
+			<th style="background-color: #303030; text-align: center;">상영관</th>
+			<th style="background-color: #303030; text-align: center;">일자</th>
+			<th style="background-color: #303030; text-align: center;">시간</th>
+			<th style="background-color: #303030; text-align: center;">좌석</th>
+			<th style="background-color: #303030; text-align: center;">가격</th>
+			<th style="background-color: #303030; text-align: center;">예매취소</th>
 		</tr>
 	</thead>
 	<tbody>

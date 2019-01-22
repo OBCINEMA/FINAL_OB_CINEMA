@@ -88,18 +88,19 @@
 		<!-- //Header -->
 
 		<!-- Page Content -->
-		<main class="page-content"> <!-- Portfolio Area -->
-		<section class="portfolio-area section-padding-lg bg-white">
-			<div class="container" style="margin-top: 50px;">
-			
+		<main class="page-content" style="margin-top: 146px;"> <!-- Portfolio Area -->
+		<section class="portfolio-area bg-grey">
+			<div class="container" style="background-image: url('/resources/img/headImg/projection.jpg'); background-repeat: no-repeat; background-size: cover; height: 400px; width: 100%; margin: 0 0 10px 0; padding: 0;">
+			<div style="margin:0; padding:0; width:100%; height: 100%; background-color:rgba(0,0,0,0.6); text-align: center;">
 				<div class="row">
 					<div
 						class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-12 offset-0">
-						<div class="section-title text-center">
-							<h4>상영예정작</h4>
+						<div class="section-title text-center" style="margin: 0; padding: 0; ">
+							<h2 style="margin: 150px auto; font-size:60px; color:#f1f1f1; position:relative;">상영 예정작</h2>
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 			
 			<div class="container">
@@ -133,7 +134,7 @@
 										<div class="portfolio-content" style="opacity: 0.9;">
 											<div class="portfolio-content-inner text-center">
 												<h6>${movieidx.title}</h6>
-												<hr>
+												<hr style="background-color: #ce2c3c; height: 3px;">
 												<h3>		
 													<a href="movieDetailPreair.do?m_id=${movieidx.m_id}"><img alt="영화정보"
 														src="<%=IMGPath%>/영화정보.png"></a>

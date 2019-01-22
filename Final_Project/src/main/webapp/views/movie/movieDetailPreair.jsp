@@ -15,7 +15,6 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Karbar - Multipurpose Bootstrap 4 Template</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -84,9 +83,9 @@
 
 
 		<!-- Page Content -->
-		<main class="page-content"> <!-- Service Details -->
-		<div class="pg-service-area section-padding-lg bg-white">
-			<div class="container" style="margin-top: 50px;">
+		<main class="page-content" style="margin-top: 146px;"> <!-- Service Details -->
+		<div class="pg-service-area bg-grey">
+			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
 						<h2 class="pg-service-title">${movieOne.title }</h2>

@@ -97,7 +97,8 @@ button.cr-btn.cr-btn-transparent:hover,
 }
 
 .portfolio:hover .portfolio-content {
-    background: rgba(246, 100, 79, 0.9);
+/*     background: rgba(206, 44, 60, 0.95); */
+    background: rgba(66, 66, 66, 0.95);
 }
 
 .header-sidemenu .cr-btn:hover,
@@ -120,4 +121,8 @@ button.cr-btn.cr-btn-white:hover {
 
 .bg-theme .callto-action-inner .cr-btn b {
     display: none;
+}
+
+.page-content p, .page-content li {
+	color: 7f7f7f;
 }
