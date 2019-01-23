@@ -99,7 +99,7 @@
 		<div class="row">
 		<div class="col">
 		<div class="embed-responsive embed-responsive-16by9" style="background-color: black;">
-		  <iframe width="764" height="573" src="https://www.youtube.com/embed/86hu4btOvXs?rel=0&autoplay=1&amp;loop=1&mute=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		  <iframe width="764" height="573" src="https://www.youtube.com/embed/86hu4btOvXs?rel=0&autoplay=1&loop=1&mute=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 		</div>
 		</div>
