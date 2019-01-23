@@ -47,6 +47,10 @@
 	margin: 0 auto;
 }
 
+a:visited{
+	color: #ce2c3c;
+}
+
 /* h1, h3 {
 	text-align: center;
 } */
@@ -103,7 +107,7 @@ table {
 	padding: 3px 7px;
 	border: 1px solid none;
 	background-color: black;
-	color: red;
+	color: #ce2c3c;
 	font-weight: bold;
 }
 </style>
