@@ -131,10 +131,11 @@
 										value="${theaterOne.phone }" /> <label class="control-label">극장 주소</label>
 									<input id="adress" type="text" name="adress"
 										class="input-large form-control m-b-sm"
-										value="${theaterOne.adress}" /> <label class="control-label">극장 상영관 수</label>
-									<input id="scr_num" type="text" name="scr_num"
-										class="input-large form-control m-b-sm"
-										value="${theaterOne.scr_num }" />
+										value="${theaterOne.adress}" /> <label class="control-label">맛집 소개</label>
+										
+										<textarea class="input-large form-control" id="scr_num"
+										name="scr_num" rows="10" cols="90">${theaterOne.scr_num}</textarea>
+								
 								
 									
 									

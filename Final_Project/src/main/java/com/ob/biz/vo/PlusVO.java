@@ -2,9 +2,9 @@ package com.ob.biz.vo;
 
 // screen table , schedule, table ,theater table , movie 4개 vo 필요한것 합친거
 public class PlusVO {
-	private int sch_id, m_id, t_id, scr_id, scr_seat_row, scr_seat_col, scr_seat_tot, scr_num;
+	private int sch_id, m_id, t_id, scr_id, scr_seat_row, scr_seat_col, scr_seat_tot;
 	private String time, price, scr_name, name, phone, adress, content, img1, img2, img3, img4, img5;
-	private String title, gnr, director, runningtime, restrict, poster;
+	private String title, gnr, director, runningtime, restrict, poster ,scr_num;
 	private int onair , vote;
 	public int getSch_id() {
 		return sch_id;
@@ -47,12 +47,6 @@ public class PlusVO {
 	}
 	public void setScr_seat_tot(int scr_seat_tot) {
 		this.scr_seat_tot = scr_seat_tot;
-	}
-	public int getScr_num() {
-		return scr_num;
-	}
-	public void setScr_num(int scr_num) {
-		this.scr_num = scr_num;
 	}
 	public String getTime() {
 		return time;
@@ -162,6 +156,12 @@ public class PlusVO {
 	public void setPoster(String poster) {
 		this.poster = poster;
 	}
+	public String getScr_num() {
+		return scr_num;
+	}
+	public void setScr_num(String scr_num) {
+		this.scr_num = scr_num;
+	}
 	public int getOnair() {
 		return onair;
 	}
@@ -178,13 +178,12 @@ public class PlusVO {
 	public String toString() {
 		return "PlusVO [sch_id=" + sch_id + ", m_id=" + m_id + ", t_id=" + t_id + ", scr_id=" + scr_id
 				+ ", scr_seat_row=" + scr_seat_row + ", scr_seat_col=" + scr_seat_col + ", scr_seat_tot=" + scr_seat_tot
-				+ ", scr_num=" + scr_num + ", time=" + time + ", price=" + price + ", scr_name=" + scr_name + ", name="
-				+ name + ", phone=" + phone + ", adress=" + adress + ", content=" + content + ", img1=" + img1
-				+ ", img2=" + img2 + ", img3=" + img3 + ", img4=" + img4 + ", img5=" + img5 + ", title=" + title
-				+ ", gnr=" + gnr + ", director=" + director + ", runningtime=" + runningtime + ", restrict=" + restrict
-				+ ", poster=" + poster + ", onair=" + onair + ", vote=" + vote + "]";
+				+ ", time=" + time + ", price=" + price + ", scr_name=" + scr_name + ", name=" + name + ", phone="
+				+ phone + ", adress=" + adress + ", content=" + content + ", img1=" + img1 + ", img2=" + img2
+				+ ", img3=" + img3 + ", img4=" + img4 + ", img5=" + img5 + ", title=" + title + ", gnr=" + gnr
+				+ ", director=" + director + ", runningtime=" + runningtime + ", restrict=" + restrict + ", poster="
+				+ poster + ", scr_num=" + scr_num + ", onair=" + onair + ", vote=" + vote + "]";
 	}
-	
 	
 	
 }
