@@ -66,16 +66,16 @@
 	<script type="text/javascript">
 	function login(frm){
 		var commentData=$("form[name=chk]").serialize();
-		alert("commentDate : " + commentData);
+		//alert("commentDate : " + commentData);
 		$.ajax({
 			url:"/loginchk.do",
 			type:"post",
 			data:commentData,
 			dataType:"text",
 			success: function(result){
-				alert(result);
+			//	alert(result);
 				if(result == "success"){
-					alert("로그인 되었습니다.");
+					//alert("로그인 되었습니다.");
 					window.location.reload();
 	// 				frm.action = "/getVoteList.do";
 	// 				frm.submit();

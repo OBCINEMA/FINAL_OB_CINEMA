@@ -222,7 +222,7 @@
 				dataType:"text",
 				contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 				success: function(result){
-					alert(result);
+					//alert(result);
 					if(result == "success"){
 						alert("회원 정보가 수정되었습니다.");
 						location.replace("mainGO.do");

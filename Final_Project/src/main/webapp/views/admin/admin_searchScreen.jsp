@@ -166,8 +166,8 @@
 	<!-- 수정 버튼 눌렀을때 -->
 	<script>
 	function updateGO(scr_id , t_id){
-		alert("scr_id = "+scr_id);
-		alert("t_id = "+t_id);
+		//alert("scr_id = "+scr_id);
+		//alert("t_id = "+t_id);
 		var check = confirm("수정 페이지로 이동합니다.");
 		if(check== true){
 			location.href="<%=contextPath%>/admin_updateScreen.do?scr_id="+scr_id+"&t_id="+t_id;

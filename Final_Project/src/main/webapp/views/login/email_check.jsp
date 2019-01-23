@@ -53,7 +53,7 @@ $(document).ready(function(){
 			   data : {"u_id":"${Logininformation.u_id}",email:$("#email").val()} ,
 			dataType:"text",
 			success: function(result){
-				alert(result);
+			 	//alert(result);
 				if(result == "success"){
 					alert("정상처리 되었습니다.");
 					location

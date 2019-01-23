@@ -184,8 +184,6 @@
 $(document).ready(function(){
   $(".detail").click(function(){
 	  var t_id = $(this).attr('name');
-    alert("눌렀냐");
-    alert(t_id);
     location.href="<%=contextPath%>/admin_getTheater.do?t_id="+t_id;
   });
 });
