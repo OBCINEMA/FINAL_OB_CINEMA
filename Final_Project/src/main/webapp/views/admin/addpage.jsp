@@ -104,7 +104,7 @@ body {
 	<script>
 		function openTheater(evt, t_id) {
 			var i, tabcontent, tablinks;
-			alert(t_id);
+			//alert(t_id);
 
 			tabcontent = document.getElementsByClassName("tabcontent");
 			for (i = 0; i < tabcontent.length; i++) {
