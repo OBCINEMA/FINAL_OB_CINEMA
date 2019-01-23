@@ -39,9 +39,9 @@
 										<ul>
 											<li><a href="<%=contextPath%>/checkMovieList.do">현재상영작</a></li>
 											<li><a href="getMovieListPreair.do">상영예정작</a></li>
-											<li><a href="index-marketing-agency.html">상영시간표</a></li>
-											<li><a href="index-creative-agency.html">(관람가이드)</a></li>
-											<li><a href="/getVoteList.do">보고싶은 명화</a></li>
+<!-- 											<li><a href="index-marketing-agency.html">상영시간표</a></li> -->
+<!-- 											<li><a href="index-creative-agency.html">(관람가이드)</a></li> -->
+<!-- 											<li><a href="/getVoteList.do">보고싶은 명화</a></li> -->
 										</ul></li>
 									<li class="cr-dropdown"><a href="#">극장</a>
 										<ul>
@@ -50,25 +50,25 @@
 											</c:forEach>
 										</ul></li>
 
-									<li class="cr-dropdown"><a href="#">즐기기</a>
+									 <li class="cr-dropdown"><a href="#">보고싶은 영화</a>
 										<ul>
-											<li><a href="about-us-2.html">이벤트</a></li>
-											<li><a href="about-us-3.html">영화추천</a></li>
+											<li><a href="/getVoteList.do">보고싶은 명화</a></li>
+<!-- 											<li><a href="about-us-3.html">영화추천</a></li> -->
 										</ul></li>
 
-									<li class="cr-dropdown"><a href="#">명예의 전당</a>
+									<!-- <li class="cr-dropdown"><a href="#">명예의 전당</a>
 										<ul>
 											<li><a href="about-us.html">A</a></li>
 											<li><a href="about-us-2.html">B</a></li>
 											<li><a href="about-us-3.html">C</a></li>
-										</ul></li>
+										</ul></li> -->
 
 
 									<li class="cr-dropdown"><a href="/getNoticeList.do?b_type=0&cPage=1">고객센터</a>
 										<ul>
 											<li><a href="/getNoticeList.do?b_type=0&cPage=1">공지사항</a></li>
-											<li><a href="contact-us-3.html">뭐쓸까?</a></li>
-											<li><a href="contact-us-4.html">모행?</a></li>
+											<!-- <li><a href="contact-us-3.html">뭐쓸까?</a></li>
+											<li><a href="contact-us-4.html">모행?</a></li> -->
 										</ul></li>
 
 									<!--   -->

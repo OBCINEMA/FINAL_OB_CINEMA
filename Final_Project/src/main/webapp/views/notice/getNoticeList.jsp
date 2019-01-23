@@ -144,7 +144,7 @@ table {
 							<thead>
 								<tr>
 									<th class="center" width="100" style="font-size: 18px;">NO</th>
-									<th class="center" width="200" style="font-size: 18px;">제목</th>
+									<th class="center" width="250" style="font-size: 18px;">제목</th>
 									<th class="center" width="150" style="font-size: 18px;">작성자</th>
 									<th class="center" width="150" style="font-size: 18px;">날짜</th>
 									<th class="center" width="100" style="font-size: 18px;">조회수</th>
@@ -160,7 +160,7 @@ table {
 									<c:forEach var="noticeList" items="${list }">
 										<tr>
 											<td class="center" style="font-size: 15px;">${noticeList.b_id }</td>
-											<td class="center" style="font-size: 15px;"><a
+											<td class="center" style="font-size: 15px; text-align: left;"><a
 												href="getNotice.do?b_id=${noticeList.b_id }&cPage=${pvo.nowPage}">
 													${noticeList.title }</a></td>
 											<td class="center" style="font-size: 15px;">${noticeList.name }</td>

@@ -105,7 +105,7 @@
 		</div>
 		</div>
 		</section>
-		<section
+<!-- 		<section
 			class="features-area section-padding-top-xs section-padding-bottom-sm bg-grey">
 		<div class="col">
 		<table class="table" style="background-color: white;height: 322px; color: white; background-color: black; border-color: black;">
@@ -130,7 +130,7 @@
 			  </tbody>
 		</table>
 		</div>
-		</section>
+		</section> -->
 		<!--메인 영역 Content -->
 <!-- 		<main class="page-content" style="margin-top:0px"> Counter Area 추천 영화 섹션 시작 -->
 <!-- 		<section class="services-area section-padding-lg bg-grey" style="padding:0;"> -->

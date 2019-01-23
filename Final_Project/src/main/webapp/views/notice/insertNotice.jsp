@@ -109,7 +109,7 @@ table {
 								</li>
 								<li>
 									<button class="btn btn-danger" type="button"
-										onclick="location.href = 'getNoticeList.do?b_type=0&cPage=1'">목록</button>
+										onclick="location.href = '/getNoticeList.do?b_type=0&cPage=1'">목록</button>
 								</li>
 							</ul>
 						</div>
