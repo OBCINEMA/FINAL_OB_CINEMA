@@ -73,52 +73,52 @@
 					<div class="col-md-6" style="padding: 40px; margin:auto;">
 						<div class="pg-contact-form mr-0 mr-lg-3" style="padding:30px">
 
-							<form id="contact-form" name="signupform" method="post">
-								<fieldset style="padding: 20px 30px; min-width:500px">
-									<legend>회원가입</legend>
-									<div class="row-text">아이디</div>
+							<form id="contact-form" name="signupform" method="post" >
+								<fieldset style="padding: 20px 30px; min-width:500px; background-color: #303030"  >
+									<legend><span style="color: #ce2c3c">회원가입</span></legend>
+									<div class="row-text" style="color: #f1f1f1">아이디</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px; position:relative">
-											<input type="text" name="id" placeholder="입력해주세요" id="id" style="width:65%;">
+											<input type="text" name="id" placeholder="입력해주세요" id="id" style="width:65%; background-color: #252525">
 											<button type="button" id="idcheck" style="width: 120px; padding: 10px 5px; margin: 9px auto ; position:absolute; right:0"  class="cr-btn">중복확인</button>
-											<input type="hidden" id="idcheckok" value="no">
+											<input type="hidden" id="idcheckok" value="no" style="background-color: #252525">
 									</div>
 									&nbsp;&nbsp;&nbsp;<span id="idcheckmsg"></span>
 										
 									
-									<div class="row-text">비밀번호</div>
+									<div class="row-text" style="color: #f1f1f1">비밀번호</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
-											<input type="password" name="password" id="password" style="width:65%;">
+											<input type="password" name="password" id="password" style="width:65%; background-color: #252525" >
 									</div>
 									
-									<div class="row-text">비밀번호확인</div>
+									<div class="row-text" style="color: #f1f1f1">비밀번호확인</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
 											<input type="password" name="passwordCHK"
-												id="passwordCHK" style="width:65%;">
+												id="passwordCHK" style="width:65%; background-color: #252525" >
 									</div>
 									&nbsp;&nbsp;&nbsp;<span id="passwordCHKText" ></span>
 									
-									<div class="row-text">이름</div>
+									<div class="row-text" style="color: #f1f1f1">이름</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
 											<input type="text" name="name" placeholder="입력해주세요"
-												id="name" style="width:65%;">
+												id="name" style="width:65%; background-color: #252525;">
 									</div>
 									
-									<div class="row-text">생년월일</div>
+									<div class="row-text" style="color: #f1f1f1">생년월일</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
-											<input type="date" name="birth" id="birth"placeholder="ex)2000-01-01" style="width:65%;">
+											<input type="date" name="birth" id="birth"placeholder="ex)2000-01-01" style="width:65%;  background-color: #252525" >
 
 									</div>
 									
-									<div class="row-text">핸드폰</div>
+									<div class="row-text" style="color: #f1f1f1">핸드폰</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
 											<input type="text" name="phone"
-												placeholder="ex)010-0000-0000" id="phone" style="width:65%;">
+												placeholder="ex)010-0000-0000" id="phone" style="width:65%;  background-color: #252525" >
 									</div>
 									
-									<div class="row-text">이메일</div>
+									<div class="row-text" style="color: #f1f1f1">이메일</div>
 									<div class="row" style="margin:0 0 5px 0; padding:0 15px;">
 											<input type="email" name="email" placeholder="입력해주세요"
-												id="email" style="width:65%;">
+												id="email" style="width:65%;  background-color: #252525" >
 									</div>
 
 <!-- 								<div class="col-md-4"> -->
