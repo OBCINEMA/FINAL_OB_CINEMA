@@ -40,7 +40,7 @@
 											<li><a href="<%=contextPath%>/checkMovieList.do">현재상영작</a></li>
 											<li><a href="getMovieListPreair.do">상영예정작</a></li>
 <!-- 											<li><a href="index-marketing-agency.html">상영시간표</a></li> -->
-											<li><a href="#">관람가이드(준비중)</a></li>
+											<li><a href="#">관람가이드</a></li>
 <!-- 											<li><a href="/getVoteList.do">보고싶은 명화</a></li> -->
 										</ul></li>
 									<li class="cr-dropdown"><a href="#">극장</a>
@@ -67,7 +67,7 @@
 									<li class="cr-dropdown"><a href="/getNoticeList.do?b_type=0&cPage=1">고객센터</a>
 										<ul>
 											<li><a href="/getNoticeList.do?b_type=0&cPage=1">공지사항</a></li>
- 											<li><a href="#">이벤트(준비중)</a></li>
+ 											<li><a href="#">이벤트</a></li>
 											<li><a href="#">문의 게시판</a></li>
 										</ul></li>
 

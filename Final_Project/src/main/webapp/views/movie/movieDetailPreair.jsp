@@ -135,7 +135,7 @@
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=MovieIMGPath %>/${movieOne.img1 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 100%; height: 310px;">
 								</div>
 							</div>
 						</div>
@@ -146,7 +146,7 @@
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=MovieIMGPath %>/${movieOne.img2 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 100%; height: 310px;">
 								</div>
 							</div>
 						</div>
@@ -157,7 +157,7 @@
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=MovieIMGPath %>/${movieOne.img3 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 100%; height: 310px;">
 								</div>
 							</div>
 						</div>

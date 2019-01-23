@@ -137,7 +137,7 @@ $(document).ready(function() {
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=TheaterIMGPath %>/${theaterVO.img2 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 210px;">
 								</div>
 							</div>
 						</div>
@@ -148,7 +148,7 @@ $(document).ready(function() {
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=TheaterIMGPath %>/${theaterVO.img3 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 210px;">
 								</div>
 							</div>
 						</div>

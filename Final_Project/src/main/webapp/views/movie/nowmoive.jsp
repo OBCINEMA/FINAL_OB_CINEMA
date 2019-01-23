@@ -98,7 +98,7 @@
 									<div class="portfolio">
 										<div class="portfoilo-thumb">
 											<img src="<%=MovieIMGPath %>/${movieidx.poster}"
-												alt="${moiceidx.title}">
+												alt="${moiceidx.title}" style="height: 300px;">
 										</div>
 										<div class="portfolio-content" style="opacity: 0.9;">
 											<div class="portfolio-content-inner text-center">
