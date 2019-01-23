@@ -3,8 +3,8 @@ package com.ob.biz.vo;
 import org.springframework.web.multipart.MultipartFile;
 
 public class TheaterVO {
-	private int t_id, scr_num;
-	private String name, phone, adress, content, img1, img2, img3, img4, img5, restraunt_title, restraunt_phone, restraunt_address; 
+	private int t_id;
+	private String name, phone, adress, content, img1, img2, img3, img4, img5, restraunt_title, restraunt_phone, restraunt_address, scr_num;
 	
 
 	// 파일 관련 필드 추가
@@ -17,23 +17,7 @@ public class TheaterVO {
 	public void setT_id(int t_id) {
 		this.t_id = t_id;
 	}
-
-	public int getScr_num() {
-		return scr_num;
-	}
-
-	public void setScr_num(int scr_num) {
-		this.scr_num = scr_num;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
+	
 	public String getPhone() {
 		return phone;
 	}
@@ -160,6 +144,22 @@ public class TheaterVO {
 
 	public void setRestraunt_address(String restraunt_address) {
 		this.restraunt_address = restraunt_address;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getScr_num() {
+		return scr_num;
+	}
+
+	public void setScr_num(String scr_num) {
+		this.scr_num = scr_num;
 	}
 
 	@Override
