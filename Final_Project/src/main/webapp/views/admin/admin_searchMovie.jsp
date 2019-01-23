@@ -194,8 +194,8 @@
 $(document).ready(function(){
   $(".detail").click(function(){
 	  var m_id = $(this).attr('name');
-    alert("눌렀냐");
-    alert(m_id);
+   // alert("눌렀냐");
+    //alert(m_id);
     location.href="<%=contextPath%>/admin_getMovie.do?m_id="+m_id;
   });
 });

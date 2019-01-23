@@ -172,10 +172,10 @@
 				data : {'id':id},
 				dataType:"text",
 				success: function(result){
-					alert(result);
+					//alert(result);
 					if(result == "0"){
 						var str='';
-						alert("사용가능");
+						//alert("사용가능");
 						$("#idcheckmsg").html("<span style='color: blue;'><b>사용가능</b></span>");
 					} else if (result == "1") {
 						alert("현재 사용중인 아이디입니다 다시 입력해주세요.");

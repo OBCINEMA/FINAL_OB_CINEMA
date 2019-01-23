@@ -114,7 +114,6 @@ $(document).ready(function(){
 <script>
 	function myFunction() {
 		alert("이메일은 필수로 입력해야합니다.");
-		alert("${Logininformation.u_id}");
 	}
 </script>
 
