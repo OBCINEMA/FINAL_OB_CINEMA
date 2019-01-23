@@ -265,7 +265,7 @@
 				data : {id: $("#id").val(), password: $("#password").val(), name: $("#name").val(), birth: $("#birth").val(),phone:$("#phone").val(),email:$("#email").val()} ,
 				dataType:"text",
 				success: function(result){
-							alert(result);
+							//alert(result);
 							if(result == "success"){
 								alert("회원가입 되었습니다.");
 								location.replace("<%=contextPath%>/mainGO.do");

@@ -35,7 +35,7 @@
 							</a>
 						</div>
 						<div class="row" style="padding:0 0 5px 0;">
-						<a href="https://kauth.kakao.com/oauth/authorize?client_id=2609b2266d44516fd921046db0f62d8d&redirect_uri=http://localhost:8080/kakaologin.do&response_type=code"
+						<a href="https://kauth.kakao.com/oauth/authorize?client_id=2609b2266d44516fd921046db0f62d8d&redirect_uri=http://203.236.209.177:8080/kakaologin.do&response_type=code"
 							style="display:inline; margin:auto;">
 							<img alt="카카오" class="loginBtn" src="/resources/img/loginBtn/kakao_account_login_btn_medium_narrow.png">
 						</a>
