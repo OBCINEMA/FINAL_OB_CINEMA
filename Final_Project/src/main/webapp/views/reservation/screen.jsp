@@ -133,26 +133,8 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
-
+	<section class="services-area section-padding-lg bg-grey"">
 	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
-
-		<div class="container"
-			style="display: inline-block; text-align: center;">
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/영화.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/상영관.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/좌석.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/화살표.png" width="100"> -->
-<!-- 			</div> -->
-		</div>
-
-
 		<form method="post">
 			<div class="pricing-plan d-flex" style="height: 825px;">
 				<div class="card set-price p-1 d-none d-lg-none d-lg-block">
@@ -246,7 +228,6 @@
 									src="resources/movieimg/${movieVO.poster }" width="100"></div><br> <div id="movieDetail"
 								style="font-weight: bold; color: black;">${movieVO.title }<br>${movieVO.director }
 									<br>${movieVO.gnr }<br>${movieVO.runningtime }<br>
-									<a href="movieDetail.do?m_id=' + m_id +'">상세보기</a></div></li>
 
 							<li>
 								<div id="theaterScreenTime" style="font-weight: bold; color: black;">
@@ -288,6 +269,7 @@
 			</div>
 		</form>
 	</div>
+	</section>
 	<!-- Footer Area -->
 	<jsp:include page="../main/main-footer.jsp"></jsp:include>
 	<!-- //Footer Area -->

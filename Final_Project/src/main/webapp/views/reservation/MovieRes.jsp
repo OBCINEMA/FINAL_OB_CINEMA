@@ -242,34 +242,34 @@
 							
 							if(num != -1) {
 								if(this.time == 8) {												  
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
 								} else if (this.time == 11){
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',11)" value="11시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',11)" value="11시">';
 								} else if (this.time == 14){
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',14)" value="14시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',14)" value="14시">';
 								} else if (this.time == 17){
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',17)" value="17시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',17)" value="17시">';
 								} else if (this.time == 20){
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',20)" value="20시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',20)" value="20시">';
 								} else if (this.time == 23){
-									str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',23)" value="23시">';
+									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',23)" value="23시">';
 								}
 							}
 							
 							if(num == -1) {
 							str += '<h4 style="font-weight: bold; text-align: center; ">상영관' + i +'</h4>';
 							if(this.time == 8) {
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
 							} else if (this.time == 11){
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',11)" value="11시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',11)" value="11시">';
 							} else if (this.time == 14){
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',14)" value="14시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',14)" value="14시">';
 							} else if (this.time == 17){
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',17)" value="17시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',17)" value="17시">';
 							} else if (this.time == 20){
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',20)" value="20시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',20)" value="20시">';
 							} else if (this.time == 23){
-								str += '<input type="button" style="width: 90px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',23)" value="23시">';
+								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',23)" value="23시">';
 							}
 							i++;
 							};
@@ -307,10 +307,10 @@
 					
 					showSeat(m_id,scr_id,time,data.scr_seat_row,data.scr_seat_col);
 					
-					str += '상영관:'+data.scr_name+'<br>';
-					str += '좌석:'+data.restSeat+'<br>';
-					str += '예매가능좌석 : <input type="button" name="check_seat" style="width: 12px;height: 12px;padding-right: 0px;padding-left: 0px; background-color: #007bff;"><br>';
-					str += '예매불가좌석 : <input type="button" name="check_seat" style="width: 12px;height: 12px;padding-right: 0px;padding-left: 0px; background-color: #888;">';
+					str += '상영관 - '+data.scr_name+'<br>';
+					str += '남은 좌석 - '+data.restSeat+'<br>';
+					str += '예매가능좌석 - <input type="button" name="check_seat" style="width: 12px;height: 12px;padding-right: 0px;padding-left: 0px; background-color: #007bff;"><br>';
+					str += '예매불가좌석 - <input type="button" name="check_seat" style="width: 12px;height: 12px;padding-right: 0px;padding-left: 0px; background-color: #888;">';
 					str += '<div class="row">';
 					str += '<div class="col-md-4">';
 					str += '<input type="hidden" name = "scr_id" value=' + scr_id + '>';
@@ -383,26 +383,8 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
-<!-- 	<section class="services-area section-padding-lg bg-grey""> -->
+	<section class="services-area section-padding-lg bg-grey">
 	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
-
-		<div class="container"
-			style="display: inline-block; text-align: center;">
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/영화.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/상영관.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/화살표.png" width="100"> -->
-<!-- 			</div> -->
-<!-- 			<div class='col-sm-3'> -->
-<!-- 				<img src="resources/img/화살표.png" width="100"> -->
-<!-- 			</div> -->
-		</div>
-
-
 			<form action="schedule.do" method="post" style="margin: auto; ">
 				<div class="pricing-plan card-group d-flex" style="height: 730px; font-weight: bold; font-size: large;" >
 					<div class="card set-price p-1 ">
@@ -488,7 +470,7 @@
 							<h5 class="h1 card-title" style="color: black">상영관</h5>
 
 						</div>
-						<div class="card-body d-flex flex-column" style="height:500px;">
+						<div class="card-body d-flex flex-column" style="height:500px; overflow:auto;">
 						<div >
 							<span id="showData">영화와 극장을 선택하면 시간표가 나옵니다.</span>
 						</div>
@@ -514,7 +496,7 @@
 			<jsp:include page="/views/reservation/myModalTheaterDetail.jsp"></jsp:include>
 			
 		</div>
-<!-- 		</section> -->
+		</section>
 		<!-- Footer Area -->
 		<jsp:include page="../main/main-footer.jsp"></jsp:include>
 		<!-- //Footer Area -->

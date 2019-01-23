@@ -122,6 +122,7 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
+	<section class="services-area section-padding-lg bg-grey">
 	<div class="container" style="margin-top: 180px;">	
 		<div class="row">
 		<table class="table" style="text-align: center; border: 1px solid #dddddd">	
@@ -181,6 +182,7 @@
 		</div>
 		</div>
 	</form>
+	</section>
 	<!-- Footer Area -->
 	<jsp:include page="../main/main-footer.jsp"></jsp:include>
 	<!-- //Footer Area -->
