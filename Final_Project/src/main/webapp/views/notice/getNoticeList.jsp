@@ -106,7 +106,7 @@ table {
 .paging .now {
 	padding: 3px 7px;
 	border: 1px solid none;
-	background-color: black;
+	background-color: #252525;
 	color: #ce2c3c;
 	font-weight: bold;
 }
