@@ -53,8 +53,8 @@
 					<!-- Signle Service -->
 						<div class="service text-center" style="color:#ddd; font-size:1.4em; width:65%; margin: 150px auto ; font-weight: bold;">
 							<div class="service-icon">
-								<span> <i class="bi bi-color-plate"></i>
-								</span> <span> <i class="bi bi-color-plate"></i>
+								<span> <img alt="#" src="/views/logo/handshake3.png">
+								</span> <span> <img alt="#" src="/views/logo/handshake3.png">
 								</span>
 							</div>
 							<div class="service-content">
@@ -105,32 +105,6 @@
 		</div>
 		</div>
 		</section>
-<!-- 		<section
-			class="features-area section-padding-top-xs section-padding-bottom-sm bg-grey">
-		<div class="col">
-		<table class="table" style="background-color: white;height: 322px; color: white; background-color: black; border-color: black;">
-			  <thead>
-			    <tr>
-			      <th scope="col" colspan="4">공지사항</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <td colspan="4">Mark</td>
-			    </tr>
-			    <tr>
-			      <td colspan="4">Mark</td>
-			    </tr>
-			    <tr>
-			      <td colspan="4">Jacob</td>
-			    </tr>
-			    <tr>
-			      <td colspan="4">Larry the Bird</td>
-			    </tr>
-			  </tbody>
-		</table>
-		</div>
-		</section> -->
 		<!--메인 영역 Content -->
 <!-- 		<main class="page-content" style="margin-top:0px"> Counter Area 추천 영화 섹션 시작 -->
 <!-- 		<section class="services-area section-padding-lg bg-grey" style="padding:0;"> -->

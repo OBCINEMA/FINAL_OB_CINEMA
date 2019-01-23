@@ -16,23 +16,19 @@
 	<!-- Footer Area -->
 	<footer id="footer" class="footer-area" >
 		<!-- Footer Bottom Area -->
-		<div class="footer-bottom-area bg-dark">
+		<div class="footer-bottom-area bg-dark" style="padding-top: 1px; padding-bottom: 1px;">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-8">
-						<ul class="footer-social">
-							<li><a href="https://www.facebook.com/">Facebook</a></li>
-							<li><a href="https://twitter.com/">Twitter</a></li>
-							<li><a href="https://plus.google.com/">Google+</a></li>
-							<li><a href="https://www.linkedin.com/">Linkedin</a></li>
-							<li><a href="https://www.behance.net/">Behance</a></li>
-						</ul>
+				<div class="row" style="font-size: small;">
+					<div class="logo">
+						<a href="/mainGO.do">
+						<img src="/views/logo/로고1.png" alt="logo secondary dark" style="height: 100px; width: 150px;">
+						</a>
 					</div>
-					<div class="col-lg-4">
-						<p class="footer-copyright">
-							Copyright &copy; <a href="#">Themes-Hub</a> 2018. All Right
-							Reserved
-						</p>
+					<div style="margin-left: 100px;">
+						(주)영화사 RETRO CINEMA (03760) 서울 마포구 백범로 23 구프라자 3층 RETRO CINEMA<br>
+						TEL: 02-363-5333  |  FAX: 02-747-7785<br>
+						대표자명: 임선기  |  사업자등록번호: 101-81-39786<br>
+						
 					</div>
 				</div>
 			</div>

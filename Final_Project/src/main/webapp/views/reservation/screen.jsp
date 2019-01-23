@@ -134,7 +134,7 @@
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
 
-	<div class="container" style="margin-top: 140px;margin-bottom: 40px;"">
+	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
 
 		<div class="container"
 			style="display: inline-block; text-align: center;">
