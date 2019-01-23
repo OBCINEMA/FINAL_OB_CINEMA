@@ -130,7 +130,7 @@ a {
 }
 
 a:visited {
-    color: #ce2c3c;
+    color: #9f9f9f;
 }
 
 a:focus {
@@ -979,7 +979,7 @@ blockquote footer {
 }
 
 .bg-grey {
-    background: #252525 !important;
+    background: #151515 !important;
 }
 
 /* Background Image */

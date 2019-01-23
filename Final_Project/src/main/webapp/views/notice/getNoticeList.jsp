@@ -47,10 +47,6 @@
 	margin: 0 auto;
 }
 
-a:visited{
-	color: #ce2c3c;
-}
-
 /* h1, h3 {
 	text-align: center;
 } */
@@ -93,8 +89,8 @@ table {
 }
 
 .paging li a:hover {
-	background-color: #f1f1f1;
-	color: black;
+/* 	background-color: #f1f1f1; */
+	color: #ce2c3c;
 }
 
 .paging .disable {
@@ -106,10 +102,41 @@ table {
 .paging .now {
 	padding: 3px 7px;
 	border: 1px solid none;
-	background-color: #252525;
+/* 	background-color: #252525; */
 	color: #ce2c3c;
 	font-weight: bold;
 }
+
+.table {
+	border-collapse: collapse;
+}
+
+.table tr{
+	border-collapse: collapse;
+}
+
+.table th{
+	background-color: #4f4f4f;
+}
+
+.table td{
+	background-color: #303030;
+	border-collapse: collapse;
+}
+
+.row > .row {
+ 	margin: auto;
+ 	width: 900px;
+ 	height: 550px;
+	padding: 50px;
+	margin: 20px auto 40px;
+}
+
+.paging {
+	width: 30%;
+}
+
+
 </style>
 </head>
 
@@ -131,12 +158,10 @@ table {
 		<!-- 추천 영화 섹션 시작 -->
 		<section class="services-area section-padding-lg bg-grey"
 			style="padding: 0;">
-			<div class="container"
-				style="margin-left: 180px; border-left-width: 180px; padding-left: 150px; padding-top: 50px; padding-bottom: 0px;">
+			<div class="row">
 				<div class="row">
 					<!-- ///////////////////////////////// 여기부터 채우면됨 -->
-					<form action="getNoticeList.do" method="GET"
-						style="width: 900px; height: 700px;">
+					<form action="getNoticeList.do" method="GET">
 						<%-- <input type="hidden" name="id" value="${Logininformation.id }"> --%>
 						<input type="hidden" name="cPage" value="${pvo.nowPage }">
 						<h2 class="center" style="margin-bottom: 50px; color: #f1f1f1;">공지사항</h2>
@@ -171,9 +196,9 @@ table {
 								</c:otherwise>
 							</c:choose>
 						</table>
-						<div class="container"
-							style="padding-left: 380px; padding-top: 20px;">
-							<ol class="paging">
+						<div class="row">
+						<div style="margin:auto;">
+							<ol class="paging" >
 								<c:forEach var="k" begin="${pvo.beginPage }"
 									end="${pvo.endPage }">
 									<c:choose>
@@ -197,6 +222,7 @@ table {
 								<c:if test="${Logininformation.id != 'admin'}">
 								</c:if>
 							</div>
+						</div>
 						</div>
 					</form>
 					<!-- ///////////////////////////////// 여기부터 채우면끝 -->
