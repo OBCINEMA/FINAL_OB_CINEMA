@@ -118,7 +118,7 @@
 
 					<!-- Portfolios -->
 					<div class="row no-gutters portfolios portfolios-style-1"
-						style="height: 900px; width: 700px; position: relative;left: 170px;" data-show="9" data-load="6">
+						style="height: 900px; width: 700px; position: relative;left: 50px;" data-show="9" data-load="6">
 
 						<c:forEach var="movieidx" items="${movieListPreair}">
 							<c:if test="${not empty movieidx.poster}">

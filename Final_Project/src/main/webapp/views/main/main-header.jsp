@@ -35,22 +35,22 @@
 							</div>
 							<nav class="menu">
 								<ul>
-									<li class="cr-dropdown"><a href="#">영화/예매</a>
+									<li class="cr-dropdown"><a href="#" style="font-size: 18px">영화/예매</a>
 										<ul>
 											<li><a href="<%=contextPath%>/checkMovieList.do">현재상영작</a></li>
-											<li><a href="getMovieListPreair.do">상영예정작</a></li>
+											<li><a href="getMovieListPreair.do" >상영예정작</a></li>
 <!-- 											<li><a href="index-marketing-agency.html">상영시간표</a></li> -->
 											<li><a href="#">관람가이드</a></li>
 <!-- 											<li><a href="/getVoteList.do">보고싶은 명화</a></li> -->
 										</ul></li>
-									<li class="cr-dropdown"><a href="#">극장</a>
+									<li class="cr-dropdown"><a href="#" style="font-size: 18px">극장</a>
 										<ul>
 											<c:forEach var="i" items="${theaterList}">
 											<li><a href="<%=contextPath%>/theaterList.do?t_id=${i.t_id }">${i.name }</a></li>
 											</c:forEach>
 										</ul></li>
 
-									 <li ><a href="/getVoteList.do">보고싶은 명화</a>
+									 <li ><a href="/getVoteList.do" style="font-size: 18px">보고싶은 명화</a>
 <!-- 										<ul> -->
 <!-- 											<li><a href="/getVoteList.do">보고싶은 명화</a></li> -->
 <!-- <!-- 											<li><a href="about-us-3.html">영화추천</a></li> -->
@@ -64,7 +64,7 @@
 										</ul></li> -->
 
 
-									<li class="cr-dropdown"><a href="/getNoticeList.do?b_type=0&cPage=1">고객센터</a>
+									<li class="cr-dropdown"><a href="/getNoticeList.do?b_type=0&cPage=1" style="font-size: 18px">고객센터</a>
 										<ul>
 											<li><a href="/getNoticeList.do?b_type=0&cPage=1">공지사항</a></li>
  											<li><a href="#">이벤트</a></li>
@@ -82,7 +82,7 @@
 							<c:if test="${not empty Logininformation}">
 							<nav class="menu">
 								<ul>
-								<li class="cr-dropdown">${Logininformation.name} 님 환영합니다.
+								<li class="cr-dropdown" style="font-size: 16px">${Logininformation.name} 님 환영합니다.
 									<ul>
 										<li><a href="<%=contextPath%>/logOUT.do">로그아웃</a></li>
 										<c:if test="${Logininformation.id eq 'admin' }">									
