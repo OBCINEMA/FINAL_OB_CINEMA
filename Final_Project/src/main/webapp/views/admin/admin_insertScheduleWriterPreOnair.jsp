@@ -73,7 +73,6 @@
 					})
 					});
 		$("#screenAdd").change(function() {								
-			alert("바뀜");
 			var t_id = $('#t_id option:selected').val();
 			var scr_id = $('#scr_id option:selected').val();
 			$.ajax({url : '/getTIME.do',

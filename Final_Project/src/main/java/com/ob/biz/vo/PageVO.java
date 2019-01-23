@@ -4,7 +4,7 @@ public class PageVO {
 	private int nowPage = 1;
 	private int nowBlock = 1;
 	
-	private int numPerPage = 5;
+	private int numPerPage = 6;
 	private int pagePerBlock = 5;
 	
 	private int totalRecord = 0;

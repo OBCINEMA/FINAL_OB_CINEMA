@@ -72,35 +72,37 @@
 								<img style="width: 220px; height: 250px"
 									alt="${theaterOne.img1}"
 									src="<%=TheaterIMGPath %>/${theaterOne.img1}">
-									<p><label class="control-label">${theaterOne.img1}</label></p>
-									
+								<p>
+									<label class="control-label">${theaterOne.img1}</label>
+								</p>
+
 							</div>
 							<div class="panel panel-white">
 								<img style="width: 220px; height: 250px"
 									alt="${theaterOne.img2}"
-									src="<%=TheaterIMGPath %>/${theaterOne.img2}">
-									<label class="control-label">${theaterOne.img2}</label>
+									src="<%=TheaterIMGPath %>/${theaterOne.img2}"> <label
+									class="control-label">${theaterOne.img2}</label>
 							</div>
 							<div class="panel panel-white">
 								<img style="width: 220px; height: 250px"
 									alt="${theaterOne.img3}"
-									src="<%=TheaterIMGPath %>/${theaterOne.img3}">
-									<label class="control-label">${theaterOne.img3}</label>
+									src="<%=TheaterIMGPath %>/${theaterOne.img3}"> <label
+									class="control-label">${theaterOne.img3}</label>
 							</div>
 							<div class="panel panel-white">
 								<img style="width: 220px; height: 250px"
 									alt="${theaterOne.img4}"
-									src="<%=TheaterIMGPath %>/${theaterOne.img4}">
-									<label class="control-label">${theaterOne.img4}</label>
+									src="<%=TheaterIMGPath %>/${theaterOne.img4}"> <label
+									class="control-label">${theaterOne.img4}</label>
 							</div>
 							<div class="panel panel-white">
 								<img style="width: 220px; height: 250px"
 									alt="${theaterOne.img5}"
-									src="<%=TheaterIMGPath %>/${theaterOne.img5}">
-									<label class="control-label">${theaterOne.img5}</label>
+									src="<%=TheaterIMGPath %>/${theaterOne.img5}"> <label
+									class="control-label">${theaterOne.img5}</label>
 							</div>
-							
-							
+
+
 
 						</div>
 						<div class="col-md-5">
@@ -108,22 +110,22 @@
 								<label class="control-label">번호</label> <input id="t_id"
 									type="text" class="input-large form-control m-b-sm" readonly
 									onfocus="this.blur();" value="${theaterOne.t_id }" /> <label
-									class="control-label">극장 이름</label> <input id="name" type="text"
-									class="input-large form-control m-b-sm" readonly
+									class="control-label">극장 이름</label> <input id="name"
+									type="text" class="input-large form-control m-b-sm" readonly
 									onfocus="this.blur();" value="${theaterOne.name }" /> <label
-									class="control-label">극장 전화번호</label> <input id="phone" type="text"
-									class="input-large form-control m-b-sm" readonly
+									class="control-label">극장 전화번호</label> <input id="phone"
+									type="text" class="input-large form-control m-b-sm" readonly
 									onfocus="this.blur();" value="${theaterOne.phone }" /> <label
 									class="control-label">극장 주소</label> <input id="adress"
 									type="text" class="input-large form-control m-b-sm" readonly
 									onfocus="this.blur();" value="${theaterOne.adress}" /> <label
-									class="control-label">극장 상영관 수</label> <input id="scr_num"
-									type="text" class="input-large form-control m-b-sm" readonly
-									onfocus="this.blur();" value="${theaterOne.scr_num }" />
+									class="control-label">맛집 소개</label>
+									<textarea class="input-large form-control" id="scr_num"
+									rows="10" cols="90" readonly onfocus="this.blur();">${theaterOne.scr_num}</textarea>
 									
 									
-							
-								
+
+
 							</div>
 							<div class="panel panel-white">
 								<label class="control-label">극장 설명</label>
@@ -134,7 +136,8 @@
 						</div>
 						<div class="col-md-2">
 							<div class="panel panel-white">
-								<input type="button" value="수정페이지"  onclick="updateGO(${theaterOne.t_id})">
+								<input type="button" value="수정페이지"
+									onclick="updateGO(${theaterOne.t_id})">
 							</div>
 
 						</div>
@@ -153,8 +156,8 @@
 		<!-- /Page Content -->
 	</div>
 	<!-- /Page Container -->
-	
-		<!-- 수정 버튼 눌렀을때 -->
+
+	<!-- 수정 버튼 눌렀을때 -->
 	<script>
 	function updateGO(t_id){
 		var check = confirm("수정 페이지로 이동합니다.");

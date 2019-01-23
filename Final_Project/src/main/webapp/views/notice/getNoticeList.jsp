@@ -62,6 +62,7 @@ table {
 /* th {
 	background-color: orange;
 } */
+
 .center {
 	text-align: center;
 }
@@ -105,6 +106,10 @@ table {
 /* 	background-color: #252525; */
 	color: #ce2c3c;
 	font-weight: bold;
+}
+
+a:visited {
+	color: purple;
 }
 
 .table {
@@ -159,17 +164,17 @@ table {
 		<section class="services-area section-padding-lg bg-grey"
 			style="padding: 0;">
 			<div class="row">
-				<div class="row">
+				<div class="row" style="margin-bottom: 200px; margin-top: 0px;">
 					<!-- ///////////////////////////////// 여기부터 채우면됨 -->
 					<form action="getNoticeList.do" method="GET">
 						<%-- <input type="hidden" name="id" value="${Logininformation.id }"> --%>
 						<input type="hidden" name="cPage" value="${pvo.nowPage }">
 						<h2 class="center" style="margin-bottom: 50px; color: #f1f1f1;">공지사항</h2>
-						<table class="table table-hover" style="color: #f1f1f1;">
+						<table class="table table-hover" style="color: #f1f1f1; width: 950; height: auto;">
 							<thead>
 								<tr>
 									<th class="center" width="100" style="font-size: 18px;">NO</th>
-									<th class="center" width="250" style="font-size: 18px;">제목</th>
+									<th class="center" width="350" style="font-size: 18px;">제목</th>
 									<th class="center" width="150" style="font-size: 18px;">작성자</th>
 									<th class="center" width="150" style="font-size: 18px;">날짜</th>
 									<th class="center" width="100" style="font-size: 18px;">조회수</th>
@@ -196,8 +201,8 @@ table {
 								</c:otherwise>
 							</c:choose>
 						</table>
-						<div class="row">
-						<div style="margin:auto;">
+						<div class="row" style="padding-top: 15px;">
+						<div style="margin-left: 340px;">
 							<ol class="paging" >
 								<c:forEach var="k" begin="${pvo.beginPage }"
 									end="${pvo.endPage }">
@@ -212,7 +217,7 @@ table {
 									</c:choose>
 								</c:forEach>
 							</ol>
-							<div style="width: 150px; margin-left: 375px; margin-top: 15px;">
+							<div style="width: 150px; margin-left: 375px; margin-top: 15px; padding-right: 15px;">
 								<c:if test="${Logininformation.id == 'admin'}">
 									<button class="btn btn-danger" type="button"
 										onclick="javascript:location.href='/views/notice/insertNotice.jsp'">작성</button>

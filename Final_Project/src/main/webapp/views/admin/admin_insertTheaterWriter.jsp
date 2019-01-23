@@ -81,9 +81,10 @@
 												class="form-control input-rounded"></textarea></td>
 									</tr>
 									<tr>
-										<th>상영관 수</th>
-										<td><input type="text" name="scr_num"
-											class="form-control input-rounded" value="1"></td>
+										<th>맛집 소개</th>
+										
+											<td><textarea name="scr_num" rows="10" cols="40"
+												class="form-control input-rounded"></textarea></td>
 									</tr>
 									<tr>
 										<th>극장전화번호</th>

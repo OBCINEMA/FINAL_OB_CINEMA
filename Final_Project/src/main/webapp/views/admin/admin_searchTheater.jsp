@@ -69,7 +69,7 @@
 
 			<div class="page-inner">
 				<div class="page-title">
-					<h3 class="breadcrumb-header">영화 리스트</h3>
+					<h3 class="breadcrumb-header">극장 리스트</h3>
 				</div>
 				<div id="main-wrapper">
 					<div class="row">
@@ -87,7 +87,7 @@
 													<th>번호</th>
 													<th>극장사진</th>
 													<th>극장이름</th>
-													<th>상영관 수</th>
+													<th>맛집 소개</th>
 													<th>전화번호</th>
 													<th>주소</th>
 													<th>비고</th>
