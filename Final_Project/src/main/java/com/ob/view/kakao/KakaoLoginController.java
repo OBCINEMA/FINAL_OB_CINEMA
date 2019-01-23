@@ -1,5 +1,6 @@
 package com.ob.view.kakao;
 
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.ob.biz.service.UsersService;
 import com.ob.biz.vo.UsersVO;
+
 
 @Controller
 public class KakaoLoginController {
@@ -31,6 +33,8 @@ public class KakaoLoginController {
 		UsersVO vo = KakaoLogin.changeData(profile);
 		vo.setId("k_" + vo.getId());
 		vo.setGrade(1);
+		
+
 		//
 		if (usersService.idcheck(vo) < 1) {
 			System.out.println("zzzz" + vo);
