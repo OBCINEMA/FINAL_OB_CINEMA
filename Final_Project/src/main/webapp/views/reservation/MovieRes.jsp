@@ -383,11 +383,11 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
+<!-- 	<section class="services-area section-padding-lg bg-grey""> -->
+	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
 
-	<div class="container bg-grey" style="margin: 146px 0 40px;">
-
-<!-- 		<div class="container" -->
-<!-- 			style="display: inline-block; text-align: center;"> -->
+		<div class="container"
+			style="display: inline-block; text-align: center;">
 <!-- 			<div class='col-sm-3'> -->
 <!-- 				<img src="resources/img/영화.png" width="100"> -->
 <!-- 			</div> -->
@@ -400,7 +400,7 @@
 <!-- 			<div class='col-sm-3'> -->
 <!-- 				<img src="resources/img/화살표.png" width="100"> -->
 <!-- 			</div> -->
-<!-- 		</div> -->
+		</div>
 
 
 			<form action="schedule.do" method="post" style="margin: auto; ">
@@ -514,6 +514,7 @@
 			<jsp:include page="/views/reservation/myModalTheaterDetail.jsp"></jsp:include>
 			
 		</div>
+<!-- 		</section> -->
 		<!-- Footer Area -->
 		<jsp:include page="../main/main-footer.jsp"></jsp:include>
 		<!-- //Footer Area -->
