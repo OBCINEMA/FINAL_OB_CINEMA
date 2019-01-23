@@ -232,7 +232,7 @@
 						$("#theater").html("극장 " + name);
 						
 						var strr = "";
-						strr += '<img src="resources/theaterimg/' + img + '" width="300"><li><a onclick="theaterDetailModalOn()">극장정보 상세보기</a></li>';
+						strr += '<img src="resources/theaterimg/' + img + '" width="300"><li><a onclick="theaterDetailModalOn()" style="color : #ce2c3c">극장정보 상세보기</a></li>';
 						
 						$("#theaterImg").html(strr);
 						
@@ -383,9 +383,9 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
-	<section class="services-area section-padding-lg bg-grey">
-	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
-			<form action="schedule.do" method="post" style="margin: auto; ">
+	<section class="services-area section-padding-lg" style="background-color: #252525">
+	<div class="container" style="margin-top: 50px;margin-bottom: 40px;">
+			<form action="schedule.do" method="post" style="margin: auto; box-shadow: 10px 10px 6px #121212;">
 				<div class="pricing-plan card-group d-flex" style="height: 730px; font-weight: bold; font-size: large;" >
 					<div class="card set-price p-1 ">
 											<div class="card-header text-center pb-4 item">

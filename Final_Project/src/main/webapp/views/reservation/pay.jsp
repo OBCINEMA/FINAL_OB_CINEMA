@@ -122,7 +122,6 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
-	<section class="services-area section-padding-lg bg-grey">
 	<div class="container" style="margin-top: 180px;">	
 		<div class="row">
 		<table class="table" style="text-align: center; border: 1px solid #dddddd">	
@@ -172,7 +171,8 @@
 		<tr><td>
 		신용카드&nbsp<input type="radio" name="pay_type" value="card" style="display: inline-block; width: 15px; margin-top: 0px;">&nbsp&nbsp&nbsp
 		핸드폰&nbsp<input type="radio" name="pay_type" value="phone" style="display: inline-block; width: 15px; margin-top: 0px;">&nbsp&nbsp&nbsp
-		계좌입금&nbsp<input type="radio" name="pay_type" value="Transfer" style="display: inline-block; width: 15px; margin-top: 0px;">
+		계좌입금&nbsp<input type="radio" name="pay_type" value="Transfer" style="display: inline-block; width: 15px; margin-top: 0px;">&nbsp&nbsp&nbsp
+		카카오페이&nbsp<input type="radio" name="pay_type" value="kakao" style="display: inline-block; width: 15px; margin-top: 0px;">
 		</td></tr>
 		<tr><td colspan="2" style="text-align: center;">
 			<input type="button" value="결제하기" onclick="sendPay(this.form)" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px">
@@ -182,7 +182,6 @@
 		</div>
 		</div>
 	</form>
-	</section>
 	<!-- Footer Area -->
 	<jsp:include page="../main/main-footer.jsp"></jsp:include>
 	<!-- //Footer Area -->

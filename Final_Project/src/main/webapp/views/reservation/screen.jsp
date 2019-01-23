@@ -133,13 +133,13 @@
 	<!-- Header 시작 -->
 	<jsp:include page="../main/main-header.jsp"></jsp:include>
 	<!-- //Header 끝 -->
-	<section class="services-area section-padding-lg bg-grey"">
-	<div class="container" style="margin-top: 140px;margin-bottom: 40px;">
+	<section class="services-area section-padding-lg"  style="background-color: #252525">
+	<div class="container" style="margin-top: 50px;margin-bottom: 40px;">
 		<form method="post">
-			<div class="pricing-plan d-flex" style="height: 825px;">
+			<div class="pricing-plan d-flex" style="margin: auto; box-shadow: 10px 10px 6px #121212;">
 				<div class="card set-price p-1 d-none d-lg-none d-lg-block">
 					<div class="card-header text-center pb-4 item"
-						style="width: 860px;">
+						style="width: 993px;">
 						<h5 class="h1 card-title" style="color: black">인원/좌석선택</h5>
 
 					</div>
@@ -219,7 +219,7 @@
 
 				<div class="card advanced p-1">
 					<div class="card-header text-center pb-4 item">
-						<h5 class="h1 card-title" style="color: black">예매정보</h5>
+						<h5 class="h1 card-title" style="color: black">정보</h5>
 
 					</div>
 					<div class="card-body d-flex flex-column">
@@ -276,6 +276,3 @@
 
 </body>
 </html>
-
-
-

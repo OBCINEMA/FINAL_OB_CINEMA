@@ -37,9 +37,9 @@ IMP.request_pay({
     		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
     		success : function(data) {
     			var datachk = data;
-    			alert("데이터 : " + datachk);
+    			alert("결제성공!");
     			$("#okok").html("데이터성공 " + datachk);
-    			location.href = "/mainGO.do";
+    			location.href = "/myReservation.do";
     		},
     		error : function(jqXHR, textStatus, errorThrown) {
 		        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
@@ -71,7 +71,7 @@ IMP.request_pay({
 </script>
 </head>
 <body>
-결제내역 : <div id="okok"></div>
+<div id="okok"></div>
 
 </body>
 </html>

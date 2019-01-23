@@ -163,9 +163,27 @@ function idChk(){
 							<div class="service service-style-4 text-center">
 								<div class="service-image">
 									<img src="<%=TheaterIMGPath %>/${theaterVO.img4 }"
-										alt="service thumb">
+										alt="service thumb" style="height: 200px;">
 								</div>
 							</div>
+							<div>
+							식당소개 - 일본라면 전문식당<br>
+							연락처 - 서울특별시 마포구 서교동 343-13<br>
+							전화번호 - 02-323-3225<br>
+						</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<div class="service service-style-4 text-center">
+								<div class="service-image">
+									<img src="<%=TheaterIMGPath %>/${theaterVO.img5 }"
+										alt="service thumb" style="height: 200px;">
+								</div>
+							</div>
+							<div>
+							식당소개 - 명동교자는 대한민국 서울특별시 중구에 위치한 음식점으로 1966년에 개업했다. 칼국수를 전문으로 하는 음식점이다<br>
+							연락처 - 서울특별시 중구 명동2가 명동10길 29<br>
+							전화번호 - 02-776-5348<br>
+						</div>
 						</div>
 						<!--// Signle Service -->
 					</div>
