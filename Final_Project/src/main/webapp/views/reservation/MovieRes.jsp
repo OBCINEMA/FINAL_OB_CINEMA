@@ -240,7 +240,6 @@
 						$.each(scheduleList, function(member){
 							var num = idArr.indexOf(this.scr_id);
 							var now = new Date().getHours();
-							alert("현재시간 : " + now);
 							
 							if(num != -1 && this.time>now) {
 								if(this.time == 8) {												  
