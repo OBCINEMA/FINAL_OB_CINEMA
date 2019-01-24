@@ -70,7 +70,7 @@
 						</ul></li>
 
 					<li><a href="/admin_voteRefresh.do"> <i
-							class="menu-icon icon-show_chart"></i><span>투표갱신</span>
+							class="menu-icon icon-show_chart"></i><span>투표초기화</span>
 					</a></li>
 				
 				<!--  -->
