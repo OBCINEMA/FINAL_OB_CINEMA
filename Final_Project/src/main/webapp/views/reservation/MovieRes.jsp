@@ -239,8 +239,10 @@
 						var idArr = new Array();
 						$.each(scheduleList, function(member){
 							var num = idArr.indexOf(this.scr_id);
+							var now = new Date().getHours();
+							alert("현재시간 : " + now);
 							
-							if(num != -1) {
+							if(num != -1 && this.time>now) {
 								if(this.time == 8) {												  
 									str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
 								} else if (this.time == 11){
@@ -256,7 +258,7 @@
 								}
 							}
 							
-							if(num == -1) {
+							if(num == -1 && this.time>now) {
 							str += '<h4 style="font-weight: bold; text-align: center; ">상영관' + i +'</h4>';
 							if(this.time == 8) {
 								str += '<input type="button" style="width: 80px;margin-left: 10px;margin-right: 10px;margin-top: 10px;" class="btn btn-light btn-lg" onclick="seat('+ m_id + ',' + this.scr_id + ',' + "'" + t_id + "'" + ',8)" value="8시">';
