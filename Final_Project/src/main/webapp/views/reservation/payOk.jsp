@@ -71,7 +71,5 @@ IMP.request_pay({
 </script>
 </head>
 <body>
-<div id="okok"></div>
-
 </body>
 </html>

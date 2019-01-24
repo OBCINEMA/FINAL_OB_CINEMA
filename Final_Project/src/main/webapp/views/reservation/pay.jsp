@@ -104,11 +104,59 @@
 	}
 	
 </style>
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <script>
-    function sendPay(form) {
-    	form.action = "payTest.do";
-    	form.submit();
-    }
+function sendPay(form) {
+	console.log(form.value);
+	$.ajax({
+		type : "POST",
+		dataType : "text",
+		url : "payTest.do?pay_type=" + form.value,
+		success : function() {
+			var IMP = window.IMP; // 생략가능
+			IMP.init('imp78918944'); // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
+
+			IMP.request_pay({
+			    pg : 'inicis',
+			    pay_method : '${pay_info.pay_type}',
+			    merchant_uid : 'merchant_' + new Date().getTime(),
+			    name : '주문명:결제테스트',
+			    amount : "${totPrice}",
+			    buyer_email : "${usersVO.email}",
+			    buyer_name : "${usersVO.name}",
+			    buyer_tel : "${usersVO.phone}",
+			}, function(rsp) {
+			    if ( rsp.success ) {
+			    	//[1] 서버단에서 결제정보 조회를 위해 jQuery ajax로 imp_uid 전달하기
+			    	$.ajax({
+			    		type: 'POST',
+			    		dataType: 'text',
+			    		url: "payOk.do", //cross-domain error가 발생하지 않도록 동일한 도메인으로 전송
+			    		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			    		success : function(data) {
+			    			var datachk = data;
+			    			alert("결제성공!");
+			    			location.href = "/myReservation.do";
+			    		},
+			    		error : function(jqXHR, textStatus, errorThrown) {
+					        alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+					        $("#okok").html("데이터실패 " + jqXHR, textStatus, errorThrown);
+					    }
+			    	})
+			    } else {
+			        var msg = '결제에 실패하였습니다.';
+			        msg += '에러내용 : ' + rsp.error_msg;
+
+			        alert(msg);
+			    }
+			});
+			
+		},
+		error : function(jqXHR, textStatus, errorThrown) {
+	        alert("333에러 발생~~ \n" + textStatus + " : " + errorThrown);
+	    }
+	})
+}
     
     $(document).ready(function() {
     var money = ${totPrice}; //2,312,000원
@@ -175,7 +223,7 @@
 		카카오페이&nbsp<input type="radio" name="pay_type" value="kakao" style="display: inline-block; width: 15px; margin-top: 0px;">
 		</td></tr>
 		<tr><td colspan="2" style="text-align: center;">
-			<input type="button" value="결제하기" onclick="sendPay(this.form)" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px">
+			<input type="button" value="결제하기" onclick="sendPay(this.form.pay_type)" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px">
 			<input type="reset" value="취소하기" class="cr-btn cr-btn-sm" style="margin-top: 30px;background-color: #ce2c3c;height: 58px; display: inline-block; width: 120px;">
 		</td></tr>
 		</table>

@@ -119,23 +119,26 @@
 //     });
 
 function deleteRes(r_id){
-	var today = new Date();
-	var dd = today.getDate();
-	var mm = today.getMonth()+1; //January is 0!
-	var yyyy = today.getFullYear();
+// 	var today = new Date();
+// 	var dd = today.getDate();
+// 	var mm = today.getMonth()+1; //January is 0!
+// 	var yyyy = today.getFullYear();
 
-	if(dd<10) {
-	    dd='0'+dd
-	} 
+// 	if(dd<10) {
+// 	    dd='0'+dd
+// 	} 
 
-	if(mm<10) {
-	    mm='0'+mm
-	} 
+// 	if(mm<10) {
+// 	    mm='0'+mm
+// 	} 
 
-	today = mm+'/'+dd+'/'+yyyy;
-	document.write(today);
-	
-	location.href = "deleteRes.do?r_id=" + r_id;
+// 	today = mm+'/'+dd+'/'+yyyy;
+// 	document.write(today);
+
+	var ok = confirm("취소하시겠습니까?")
+	if(ok == true){
+		location.href = "deleteRes.do?r_id=" + r_id;
+	}
 }
 
 function sendSeat(form) {
