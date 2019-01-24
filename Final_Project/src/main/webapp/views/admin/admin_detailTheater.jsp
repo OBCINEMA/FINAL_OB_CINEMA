@@ -119,18 +119,19 @@
 									class="control-label">극장 주소</label> <input id="adress"
 									type="text" class="input-large form-control m-b-sm" readonly
 									onfocus="this.blur();" value="${theaterOne.adress}" /> <label
-									class="control-label">맛집 소개</label>
-									<textarea class="input-large form-control" id="scr_num"
-									rows="10" cols="90" readonly onfocus="this.blur();">${theaterOne.scr_num}</textarea>
-									
-									
+									class="control-label">극장 설명</label>
+								<textarea class="input-large form-control" id="content"
+									rows="10" cols="90" readonly onfocus="this.blur();">${theaterOne.content}</textarea>
+
+
 
 
 							</div>
 							<div class="panel panel-white">
-								<label class="control-label">극장 설명</label>
-								<textarea class="input-large form-control" id="content"
-									rows="10" cols="90" readonly onfocus="this.blur();">${theaterOne.content}</textarea>
+								<label class="control-label">맛집 소개</label>
+								<textarea class="input-large form-control" id="scr_num"
+									rows="10" cols="90" readonly onfocus="this.blur();">${theaterOne.scr_num}</textarea>
+
 							</div>
 
 						</div>

@@ -87,9 +87,9 @@
 													<th>번호</th>
 													<th>극장사진</th>
 													<th>극장이름</th>
-													<th>맛집 소개</th>
 													<th>전화번호</th>
 													<th>주소</th>
+													<th>맛집 소개</th>
 													<th>비고</th>
 												</tr>
 											</thead>
@@ -103,9 +103,9 @@
 															src="<%=TheaterIMGPath %>/${theater.img1}"></td>
 														<td><a href="admin_getTheater.do?t_id=${theater.t_id }">
 																${theater.name } </a></td>
-														<td>${theater.scr_num}</td>
 														<td>${theater.phone }</td>
 														<td>${theater.adress}</td>
+														<td>${theater.scr_num}</td>
 														<td><input type="button" value="상세" class="detail"
 															name="${theater.t_id}">
 															<div>
